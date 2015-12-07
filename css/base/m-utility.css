@@ -151,6 +151,12 @@ category: heading
     .heading-b {
       font-size: 16px; } }
 
+.acms-entry .heading-b {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
 /*doc
 ---
 title: 見出し3

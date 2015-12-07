@@ -132,7 +132,14 @@ category: heading
   border-bottom: 2px solid $border-color;;
 }
 
-
+.acms-entry {
+  .heading-b{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 
 /*doc
 ---
