@@ -1,7 +1,7 @@
 
 #a-blog cms初期プレーンテーマ
 
-## サンプル
+#### サンプル
 [http://www.masizime.com/acms/]
 
 - site2015のカスタムフィールド値を引き継ぐ
