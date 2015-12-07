@@ -1,5 +1,9 @@
 
-#a-blog cmsプレーンテーマ
+#a-blog cms初期プレーンテーマ
+
+## サンプル
+[http://www.masizime.com/acms/]
+
 - site2015のカスタムフィールド値を引き継ぐ
 - レイアウト機能
 - ユニット設定
@@ -65,8 +69,10 @@ $ bundle exec hologram _hologram/config.yml
 
 ### Guidelines
 [http://www.masizime.com/guideline/](http://www.masizime.com/guideline/)
-# sass Mixins
-[https://github.com/tamshow/masizime.sass.mixins)
+#### sass Mixins
+[https://github.com/tamshow/masizime.sass.mixins]
+
+
 
 
 
