@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/*
+ *    @ Footer Layout
+ *    @ footer-sm
+ *    @ footer-md
+ *    @ include
+
+
+*/
+/* @  Footer Layout
+ * ------------------------------------------------------------ */
+/* @  footer-sm
+ * ------------------------------------------------------------ */
+/* @  footer-md
+ * ------------------------------------------------------------ */
+/* @  include
+ * ------------------------------------------------------------ */
+@media only screen and (max-width: 37.4375em) {
+  .footer {
+    border-top: 1px solid #ccc; }
+    .footer__inner {
+      padding-left: 10px;
+      padding-right: 10px; }
+
+  .f-nav {
+    margin-left: -10px;
+    margin-right: -10px; }
+    .f-nav__body {
+      border-top: 1px solid #ccc; }
+    .f-nav__item {
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+      background: none; }
+      .f-nav__item:hover {
+        text-decoration: none; }
+      .f-nav__item a {
+        text-decoration: none;
+        line-height: 1;
+        display: block;
+        padding: 15px; }
+        .f-nav__item a:after {
+          float: right;
+          content: "";
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale; }
+
+  .f-copy {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-align: center; }
+
+  .f-address {
+    margin-top: 20px; }
+
+  .f-menu {
+    text-align: center;
+    font-size: 10px; }
+    .f-menu:before {
+      content: "";
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: block;
+      font-size: 3em; }
+
+  .f-dropdown__toggle {
+    line-height: 1;
+    padding: 8px 10px;
+    text-align: center;
+    cursor: pointer; }
+
+  .f-dropdown__body {
+    height: auto;
+    overflow: hidden; }
+
+  .f-dropdown__body.is-toggle--hidden {
+    height: 0;
+    overflow: hidden; } }
+@media only screen and (min-width: 37.5em) {
+  html,
+  body {
+    height: 100%; }
+
+  body {
+    display: table;
+    width: 100%; }
+
+  .content {
+    display: table-row;
+    height: 1px;
+    height: 100%; }
+
+  .footer-bottom {
+    display: table-row;
+    height: 1px; }
+
+  .footer {
+    border-top: solid 1px #ccc;
+    padding: .5em; }
+
+  .footer__inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px 10px 10px; }
+    .footer__inner:before, .footer__inner:after {
+      content: " ";
+      display: table; }
+    .footer__inner:after {
+      clear: both; }
+
+  .f-nav {
+    text-align: center; }
+    .f-nav__item {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.8;
+      display: inline-block; }
+      .f-nav__item:before {
+        content: " | ";
+        width: 1em;
+        padding-left: 5px; }
+      .f-nav__item:first-child:before {
+        display: none;
+        padding-left: 0; }
+    .f-nav__item--omega:after {
+      display: none; }
+
+  .f-logo {
+    text-align: center;
+    margin: 15px auto 10px; }
+
+  .f-copy {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px; }
+
+  .f-address {
+    margin-top: 20px; } }
+.ie8 html,
+.ie8 body {
+  height: 100%; }
+.ie8 body {
+  display: table;
+  width: 100%; }
+.ie8 .content {
+  display: table-row;
+  height: 1px;
+  height: 100%; }
+.ie8 .footer-bottom {
+  display: table-row;
+  height: 1px; }
+.ie8 .footer {
+  border-top: solid 1px #ccc;
+  padding: .5em; }
+.ie8 .footer__inner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 7px 10px 10px; }
+  .ie8 .footer__inner:before, .ie8 .footer__inner:after {
+    content: " ";
+    display: table; }
+  .ie8 .footer__inner:after {
+    clear: both; }
+.ie8 .f-nav {
+  text-align: center; }
+  .ie8 .f-nav__item {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.8;
+    display: inline-block; }
+    .ie8 .f-nav__item:before {
+      content: " | ";
+      width: 1em;
+      padding-left: 5px; }
+    .ie8 .f-nav__item:first-child:before {
+      display: none;
+      padding-left: 0; }
+  .ie8 .f-nav__item--omega:after {
+    display: none; }
+.ie8 .f-logo {
+  text-align: center;
+  margin: 15px auto 10px; }
+.ie8 .f-copy {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px; }
+.ie8 .f-address {
+  margin-top: 20px; }

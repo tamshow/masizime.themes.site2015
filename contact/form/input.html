@@ -1,0 +1,266 @@
+<div class="form-unit">
+ <h2 class="heading-b">お問い合わせの内容をご入力ください。 <span class="req">必須</span></h2>
+
+ <div class="form-field entry-container<!-- BEGIN inquiry:validator --> form-err<!-- END inquiry:validator -->">
+  <textarea id="inquiry" name="inquiry" rows="5" class="w100p js-placeholder form-control" title="お問い合わせ内容を入力してください。">{inquiry}</textarea>
+  <input type="hidden" name="field[]" value="inquiry"/>
+  <input type="hidden" name="inquiry:v#required"/>
+  <input type="hidden" name="inquiry:c" value="KV"/>
+  <!-- BEGIN inquiry:validator --> <p class="acms-text-error">お問い合わせ内容が入力されていません。</p> <!-- END inquiry:validator -->
+ </div>
+</div>
+<div class="form-unit">
+ <h2 class="heading-b">お客様情報をご入力ください。</h2>
+
+ <div class="entry-container">
+  <div class="table-a table--block">
+   <table>
+
+    <tr>
+     <th class="form-head"><label for="name1">お名前 <span class="req">必須</span></label></th>
+     <td class="form-field<!-- BEGIN name1:validator --> form-err<!-- END name1:validator --><!-- BEGIN name2:validator --> form-err<!-- END name2:validator -->">
+      <input id="name1" type="text" name="name1" value="{name1}" class="w30p form-control"/>
+      <input type="hidden" name="field[]" value="name1"/>
+      <input type="hidden" name="name1:v#required"/>
+      <input type="hidden" name="name1:c" value="KV"/>　
+      <input id="name2" type="text" name="name2" value="{name2}" class="w30p form-control"/>
+      <input type="hidden" name="field[]" value="name2"/>
+      <input type="hidden" name="name2:v#required"/>
+      <input type="hidden" name="name2:c" value="KV"/><span class="form-middle"> 様</span>
+      <!-- BEGIN name1:validator --> <p class="acms-text-error">姓が入力されていません。</p> <!-- END name1:validator -->
+      <!-- BEGIN name2:validator --> <p class="acms-text-error">名が入力されていません。</p> <!-- END name2:validator -->
+     </td>
+    </tr>
+    <tr>
+     <th class="form-head"><label for="kana1">フリガナ <span class="req">必須</span></label></th>
+     <td class="form-field<!-- BEGIN kana1:validator --> form-err<!-- END kana1:validator --><!-- BEGIN kana2:validator --> form-err<!-- END kana2:validator -->">
+      <input id="kana1" type="text" name="kana1" value="{kana1}" class="w30p form-control"/>
+      <input type="hidden" name="field[]" value="kana1"/>
+      <input type="hidden" name="kana1:v#required"/>
+      <input type="hidden" name="kana1:c" value="KV"/>　
+      <input id="kana2" type="text" name="kana2" value="{kana2}" class="w30p form-control"/>
+      <input type="hidden" name="field[]" value="kana2"/>
+      <input type="hidden" name="kana2:v#required"/>
+      <input type="hidden" name="kana2:c" value="KV"/><span class="form-middle"> 様</span>
+      <!-- BEGIN kana1:validator --> <p class="acms-text-error">セイが入力されていません。</p> <!-- END kana1:validator -->
+      <!-- BEGIN kana2:validator --> <p class="acms-text-error">メイが入力されていません。</p> <!-- END kana2:validator -->
+     </td>
+    </tr>
+    <tr>
+     <th class="form-head"><label for="zip1">郵便番号 <span class="req">必須</span></label></th>
+     <td class="form-field<!-- BEGIN zip1:validator --> form-err<!-- END zip1:validator --><!-- BEGIN zip2:validator --> form-err<!-- END zip2:validator -->">
+      <input id="zip1" type="text" name="zip1" value="{zip1}" class="w30p form-control"/>
+      <input type="hidden" name="field[]" value="zip1"/>
+      <input type="hidden" name="zip1:v#required"/>
+      <input type="hidden" name="zip1:v#digits"/>
+      <input type="hidden" name="zip1:c" value="KV"/><span class="form-middle"> ー</span>
+      <input id="zip2" type="text" name="zip2" value="{zip2}" class="w30p form-control"/>
+      <input type="hidden" name="field[]" value="zip2"/>
+      <input type="hidden" name="zip2:v#required"/>
+      <input type="hidden" name="zip2:v#digits"/>
+      <input type="hidden" name="zip2:c" value="KV"/>
+      <!-- BEGIN zip1:validator --> <p class="acms-text-error">郵便番号（3桁）が入力されていません。</p> <!-- END zip1:validator -->
+      <!-- BEGIN zip2:validator --> <p class="acms-text-error">郵便番号（4桁）が入力されていません。</p> <!-- END zip2:validator -->
+     </td>
+    </tr>
+    <tr>
+     <th class="form-head">都道府県 <span class="req">必須</span></th>
+     <td class="form-field<!-- BEGIN pref_code:validator --> form-err<!-- END pref_code:validator -->">
+      <select id="pref_code" name="pref_code" class="form-control">
+       <option value="" selected="selected">都道府県</option>
+       <option value="北海道"
+           {pref_code:selected#北海道}>北海道
+       </option>
+       <option value="青森県"
+           {pref_code:selected#青森県}>青森県
+       </option>
+       <option value="岩手県"
+           {pref_code:selected#岩手県}>岩手県
+       </option>
+       <option value="宮城県"
+           {pref_code:selected#宮城県}>宮城県
+       </option>
+       <option value="秋田県"
+           {pref_code:selected#秋田県}>秋田県
+       </option>
+       <option value="山形県"
+           {pref_code:selected#山形県}>山形県
+       </option>
+       <option value="福島県"
+           {pref_code:selected#福島県}>福島県
+       </option>
+       <option value="茨城県"
+           {pref_code:selected#茨城県}>茨城県
+       </option>
+       <option value="栃木県"
+           {pref_code:selected#栃木県}>栃木県
+       </option>
+       <option value="群馬県"
+           {pref_code:selected#群馬県}>群馬県
+       </option>
+       <option value="埼玉県"
+           {pref_code:selected#埼玉県}>埼玉県
+       </option>
+       <option value="千葉県"
+           {pref_code:selected#千葉県}>千葉県
+       </option>
+       <option value="東京都"
+           {pref_code:selected#東京都}>東京都
+       </option>
+       <option value="神奈川県"
+           {pref_code:selected#神奈川県}>神奈川県
+       </option>
+       <option value="新潟県"
+           {pref_code:selected#新潟県}>新潟県
+       </option>
+       <option value="富山県"
+           {pref_code:selected#富山県}>富山県
+       </option>
+       <option value="石川県"
+           {pref_code:selected#石川県}>石川県
+       </option>
+       <option value="福井県"
+           {pref_code:selected#福井県}>福井県
+       </option>
+       <option value="山梨県"
+           {pref_code:selected#山梨県}>山梨県
+       </option>
+       <option value="長野県"
+           {pref_code:selected#長野県}>長野県
+       </option>
+       <option value="岐阜県"
+           {pref_code:selected#岐阜県}>岐阜県
+       </option>
+       <option value="静岡県"
+           {pref_code:selected#静岡県}>静岡県
+       </option>
+       <option value="愛知県"
+           {pref_code:selected#愛知県}>愛知県
+       </option>
+       <option value="三重県"
+           {pref_code:selected#三重県}>三重県
+       </option>
+       <option value="滋賀県"
+           {pref_code:selected#滋賀県}>滋賀県
+       </option>
+       <option value="京都府"
+           {pref_code:selected#京都府}>京都府
+       </option>
+       <option value="大阪府"
+           {pref_code:selected#大阪府}>大阪府
+       </option>
+       <option value="兵庫県"
+           {pref_code:selected#兵庫県}>兵庫県
+       </option>
+       <option value="奈良県"
+           {pref_code:selected#奈良県}>奈良県
+       </option>
+       <option value="和歌山県"
+           {pref_code:selected#和歌山県}>和歌山県
+       </option>
+       <option value="鳥取県"
+           {pref_code:selected#鳥取県}>鳥取県
+       </option>
+       <option value="島根県"
+           {pref_code:selected#島根県}>島根県
+       </option>
+       <option value="岡山県"
+           {pref_code:selected#岡山県}>岡山県
+       </option>
+       <option value="広島県"
+           {pref_code:selected#広島県}>広島県
+       </option>
+       <option value="山口県"
+           {pref_code:selected#山口県}>山口県
+       </option>
+       <option value="徳島県"
+           {pref_code:selected#徳島県}>徳島県
+       </option>
+       <option value="香川県"
+           {pref_code:selected#香川県}>香川県
+       </option>
+       <option value="愛媛県"
+           {pref_code:selected#愛媛県}>愛媛県
+       </option>
+       <option value="高知県"
+           {pref_code:selected#高知県}>高知県
+       </option>
+       <option value="福岡県"
+           {pref_code:selected#福岡県}>福岡県
+       </option>
+       <option value="佐賀県"
+           {pref_code:selected#佐賀県}>佐賀県
+       </option>
+       <option value="長崎県"
+           {pref_code:selected#長崎県}>長崎県
+       </option>
+       <option value="熊本県"
+           {pref_code:selected#熊本県}>熊本県
+       </option>
+       <option value="大分県"
+           {pref_code:selected#大分県}>大分県
+       </option>
+       <option value="宮崎県"
+           {pref_code:selected#宮崎県}>宮崎県
+       </option>
+       <option value="鹿児島県"
+           {pref_code:selected#鹿児島県}>鹿児島県
+       </option>
+       <option value="沖縄県"
+           {pref_code:selected#沖縄県}>沖縄県
+       </option>
+      </select>
+      <input type="hidden" name="field[]" value="pref_code"/>
+      <input type="hidden" name="pref_code:v#required"/>
+      <!-- BEGIN pref_code:validator -->
+      <p class="acms-text-error">都道府県が選択されていません。</p><!-- END pref_code:validator -->
+     </td>
+    </tr>
+    <tr>
+     <th class="form-head">市区町村・番地 <span class="req">必須</span></th>
+     <td class="form-field<!-- BEGIN address1:validator --> form-err<!-- END address1:validator -->">
+      <input id="address1" type="text" name="address1" value="{address1}" class="w100p form-control"/>
+      <input type="hidden" name="field[]" value="address1"/>
+      <input type="hidden" name="address1:v#required"/>
+      <input type="hidden" name="address1:c" value="KV"/>
+      <!-- BEGIN address1:validator --><p class="acms-text-error">住所が入力されていません。</p><!-- END address1:validator -->
+     </td>
+    </tr>
+    <tr>
+     <th class="form-head">建物名・部屋番号 <span class="any">任意</span></th>
+     <td class="form-field">
+      <input id="address2" type="text" name="address2" value="{address2}" class="w100p form-control"/>
+      <input type="hidden" name="field[]" value="address2"/>
+      <input type="hidden" name="address2:c" value="KV"/>
+     </td>
+    </tr>
+    <tr>
+     <th class="form-field">電話番号 <span class="req">必須</span></th>
+     <td class="form-field<!-- BEGIN tel:validator --> form-err<!-- END tel:validator -->">
+      <input id="tel" type="text" name="tel" value="{tel}" class="w70p form-control"/>
+      <input type="hidden" name="field[]" value="tel"/>
+      <input type="hidden" name="tel:v#required"/>
+      <input type="hidden" name="tel:c" value="KV"/>
+      <!-- BEGIN tel:validator -->
+      <p class="acms-text-error">電話番号が入力されていません。</p>
+      <!-- END tel:validator -->
+     </td>
+    </tr>
+    <tr>
+     <th class="form-head">メールアドレス <span class="req">必須</span></th>
+     <td class="form-field<!-- BEGIN email:validator --> form-err<!-- END email:validator -->">
+      <input id="email" type="text" name="email" value="{email}" class="w70p form-control"/>
+      <input type="hidden" name="field[]" value="email"/>
+      <input type="hidden" name="email:v#email"/>
+      <input type="hidden" name="email:v#required"/>
+      <input type="hidden" name="email:c" value="KV"/>
+      <!-- BEGIN email:validator --><p class="acms-text-error">メールアドレスが正しくありません。</p><!-- END email:validator -->
+     </td>
+    </tr>
+
+   </table>
+  </div>
+ </div>
+</div>
+
+

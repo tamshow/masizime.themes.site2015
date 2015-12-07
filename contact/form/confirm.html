@@ -1,0 +1,56 @@
+<div class="form-unit">
+ <h2 class="heading-c">お問い合わせの内容をご確認ください。 <span class="req">必須</span></h2>
+
+ <div class="entry-container">
+  <div class="table-a table--block">
+   <table>
+    <tr class="form-field">
+     <td>{inquiry}[escape|nl2br]</td>
+    </tr>
+   </table>
+  </div>
+ </div>
+</div>
+<div class="form-unit">
+ <h2 class="heading-c">お客様情報をご入力ください。</h2>
+
+ <div class="entry-container">
+  <div class="table-a table--block">
+   <table>
+    <tr>
+     <th class="form-head">お名前 <span class="req">必須</span></th>
+     <td class="form-field">{name1}{name2}様</td>
+    </tr>
+    <tr>
+     <th class="form-head">フリガナ <span class="req">必須</span></th>
+     <td class="form-field">{kana1}{kana2}様</td>
+    </tr>
+    <tr>
+     <th class="form-head">郵便番号 <span class="req">必須</span></th>
+     <td class="form-field">{zip1}-{zip2}</td>
+    </tr>
+    <tr>
+     <th class="form-head">都道府県 <span class="req">必須</span></th>
+     <td class="form-field">{pref_code}</td>
+    </tr>
+    <tr>
+     <th class="form-head">市区町村・番地 <span class="req">必須</span></th>
+     <td class="form-field">{address1}[escape|nl2br]</td>
+    </tr>
+    <tr>
+     <th class="form-head">建物名・部屋番号 <span class="any">任意</span></th>
+     <td class="form-field">{address2}[escape|nl2br]</td>
+    </tr>
+    <tr>
+     <th class="form-head">電話番号 <span class="req">必須</span></th>
+     <td class="form-field">{tel}</td>
+    </tr>
+    <tr>
+     <th class="form-head">メールアドレス <span class="req">必須</span></th>
+     <td class="form-field">{email}</td>
+    </tr>
+
+   </table>
+  </div>
+ </div>
+</div>

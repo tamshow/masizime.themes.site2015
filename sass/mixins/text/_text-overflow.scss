@@ -1,0 +1,13 @@
+@charset "utf-8";
+// @ Text Overflow
+// ------------------------------------------------------------
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+    word-wrap: normal;//forIE
+  white-space: nowrap;
+}
+
+
+
+

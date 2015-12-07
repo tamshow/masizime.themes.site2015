@@ -1,0 +1,63 @@
+/*
+ *    @ Content Layout
+ *    @ content
+ *    @ alpha-block
+ *    @ beta-block
+
+*/
+/* @  Content Layout
+ * ------------------------------------------------------------ */
+.ie8 body {
+  min-width: 1200px; }
+
+@media only screen and (min-width: 37.5em) {
+  body, html {
+    min-width: 1200px; } }
+@media only screen and (max-width: 37.4375em) {
+  body, html {
+    overflow-x: hidden;
+    min-width: 320px; } }
+
+/* @ content
+ * ------------------------------------------------------------ */
+.content__inner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 30px; }
+  .content__inner:before, .content__inner:after {
+    content: " ";
+    display: table; }
+  .content__inner:after {
+    clear: both; }
+  .content__inner:before, .content__inner:after {
+    content: " ";
+    display: table; }
+  .content__inner:after {
+    clear: both; }
+
+/* @ alpha-block
+ * ------------------------------------------------------------ */
+.alpha-block {
+  float: right;
+  width: 880px;
+  padding-top: 23px; }
+  @media only screen and (max-width: 37.4375em) {
+    .alpha-block {
+      width: auto;
+      float: none;
+      padding-top: 10px; } }
+
+/* @ beta-block
+ * ------------------------------------------------------------ */
+.beta-block {
+  width: 280px;
+  float: left;
+  padding-top: 23px; }
+  @media only screen and (max-width: 37.4375em) {
+    .beta-block {
+      width: auto;
+      float: none;
+      padding-top: 10px; } }

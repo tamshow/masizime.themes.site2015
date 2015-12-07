@@ -1,0 +1,40 @@
+<div class="footer-bottom">
+ <footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+   <p id="footer-anc" class="sr-only">フッターの始まりです</p>
+   <h3 class="f-dropdown__toggle is-visible--sm">
+    <span class="f-menu">メニュー</span>
+   </h3>
+   <div class="f-nav f-dropdown__body is-toggle--hidden">
+    <nav class="f-nav__body">
+     <ul>
+      <li class="f-nav__item"><a href="%{BASE_URL}docs">スタイルガイド</a></li>
+      <li class="f-nav__item"><a href="%{BASE_URL}docs/sample1.html">ユニットグループ</a></li>
+      <li class="f-nav__item"><a href="%{BASE_URL}docs/sample2.html">ユニットグループ内で配置</a></li>
+      <li class="f-nav__item"><a href="%{BASE_URL}docs/sample3.html">画像の配置とUG段組みの処理</a></li>
+      <li class="f-nav__item"><a href="%{BASE_URL}contact">お問い合わせ</a></li>
+     </ul>
+    </nav>
+   </div>
+   <!-- BEGIN_MODULE Blog_Field id="global" -->
+   <dl class="f-address">
+    <!-- BEGIN companyName -->
+    <dt class="companyName">{companyName}</dt>
+    <!-- END companyName -->
+    <!-- BEGIN zip:veil -->
+    <dd class="companyDetail">〒{zip}</dd>
+    <!-- END zip:veil -->
+    <!-- BEGIN address -->
+    <dd class="companyDetail">{address}</dd>
+    <!-- END address -->
+    <!-- BEGIN tel -->
+    <dd class="companyDetail">TEL : <a href="tel:{tel}">{tel}</a><!-- BEGIN_MODULE Touch_SessionWithCompilation -->
+     <span class="editLink">[<a href="%{SCRIPT_ROOT}bid/%{BID}/admin/blog_edit/#acms_custom" class="js-popup_setting">編集</a>]</span><!-- END_MODULE Touch_SessionWithCompilation -->
+    </dd>
+    <!-- END tel -->
+   </dl>
+   <p class="f-copy"><!-- BEGIN_MODULE Blog_Field -->{siteFooter}[raw]<!-- END_MODULE Blog_Field --></p>
+   <!-- END_MODULE Blog_Field -->
+  </div>
+ </footer>
+</div>

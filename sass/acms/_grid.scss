@@ -1,0 +1,944 @@
+/* ------------------------------
+ グリッドシステム
+------------------------------- */
+// コンテナー
+.acms-container{
+	max-width: $acms-container;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: ($grid-space / 2);
+	padding-left: ($grid-space / 2);
+	@include box-sizing(border-box);
+}
+
+
+
+// ---------------
+// グリッドシステムの全体を囲むコンテナー
+// ---------------
+
+.acms-grid,
+.acms-grid-r {
+	margin-left: ($grid-space / -2);
+	margin-right: ($grid-space / -2);
+	@include clearfix();
+}
+
+//.acms-grid-negativeは左右-10pxになって欲しくないときに使用する
+.acms-grid-negative {
+	margin-left: ($mobile-grid-space / -2);
+	margin-right: ($mobile-grid-space / -2);
+}
+
+//各acms-col-の左右の幅
+[class*='acms-col'] {
+	min-height: 1px;
+	padding-left: ($grid-space / 2); //各col-はpaddingを左右に着ける
+	padding-right: ($grid-space / 2); //各col-はpaddingを左右に着ける
+}
+
+@media (min-width : $breakpoint-md-min) {
+	.acms-grid,
+	.acms-grid-r {
+		margin-left: ($grid-space / -2);
+		margin-right: ($grid-space / -2);
+	}
+	[class*='acms-col'] {
+		padding-left: ($grid-space / 2); //各col-はpadding左右に着ける
+		padding-right: ($grid-space / 2); //各col-はpadding左右に着ける
+	}
+}
+
+[class*='acms-col'],
+[class*='acms-col']:before,
+[class*='acms-col']:after {
+	@include box-sizing(border-box);
+}
+
+
+// ---------------
+// 幅
+// ---------------
+// 1カラム
+.acms-col-1{
+	float: left;
+	width: $acms-col-1;
+}
+// 2カラム
+.acms-col-2{
+	float: left;
+	width: $acms-col-2;
+}
+// 3カラム
+.acms-col-3{
+	float: left;
+	width: $acms-col-3;
+}
+// 4カラム
+.acms-col-4{
+	float: left;
+	width: $acms-col-4;
+}
+// 5カラム
+.acms-col-5{
+	float: left;
+	width: $acms-col-5;
+}
+// 6カラム
+.acms-col-6{
+	float: left;
+	width: $acms-col-6;
+}
+// 7カラム
+.acms-col-7{
+	float: left;
+	width: $acms-col-7;
+}
+// 8カラム
+.acms-col-8{
+	float: left;
+	width: $acms-col-8;
+}
+// 9カラム
+.acms-col-9{
+	float: left;
+	width: $acms-col-9;
+}
+// 10カラム
+.acms-col-10{
+	float: left;
+	width: $acms-col-10;
+}
+// 11カラム
+.acms-col-11{
+	float: left;
+	width: $acms-col-11;
+}
+// 12カラム
+.acms-col-12{
+	float: none;
+	width: $acms-col-12;
+}
+
+// ---------------
+// pushとpull
+// ---------------
+[class*='acms-push'],
+[class*='acms-pull']{
+	position: relative;
+}
+// ---------------
+// push 左の位置
+// ---------------
+// 1カラム
+.acms-push-1{
+	left: $acms-col-1;
+}
+// 2カラム
+.acms-push-2{
+	left: $acms-col-2;
+}
+// 3カラム
+.acms-push-3{
+	left: $acms-col-3;
+}
+// 4カラム
+.acms-push-4{
+	left: $acms-col-4;
+}
+// 5カラム
+.acms-push-5{
+	left: $acms-col-5;
+}
+// 6カラム
+.acms-push-6{
+	left: $acms-col-6;
+}
+// 7カラム
+.acms-push-7{
+	left: $acms-col-7;
+}
+// 8カラム
+.acms-push-8{
+	left: $acms-col-8;
+}
+// 9カラム
+.acms-push-9{
+	left: $acms-col-9;
+}
+// 10カラム
+.acms-push-10{
+	left: $acms-col-10;
+}
+// 11カラム
+.acms-push-11{
+	left: $acms-col-11;
+}
+
+// ---------------
+// pull 右の位置
+// ---------------
+// 1カラム
+.acms-pull-1{
+	right: $acms-col-1;
+}
+// 2カラム
+.acms-pull-2{
+	right: $acms-col-2;
+}
+// 3カラム
+.acms-pull-3{
+	right: $acms-col-3;
+}
+// 4カラム
+.acms-pull-4{
+	right: $acms-col-4;
+}
+// 5カラム
+.acms-pull-5{
+	right: $acms-col-5;
+}
+// 6カラム
+.acms-pull-6{
+	right: $acms-col-6;
+}
+// 7カラム
+.acms-pull-7{
+	right: $acms-col-7;
+}
+// 8カラム
+.acms-pull-8{
+	right: $acms-col-8;
+}
+// 9カラム
+.acms-pull-9{
+	right: $acms-col-9;
+}
+// 10カラム
+.acms-pull-10{
+	right: $acms-col-10;
+}
+// 11カラム
+.acms-pull-11{
+	right: $acms-col-11;
+}
+
+
+//---------------
+//小幅のグリッド
+//---------------
+@media (min-width : $breakpoint-sm-min)  {
+	// カラム
+	[class*='acms-col-sm'] {
+		float: left;
+	}
+
+	// ---------------
+	// 幅
+	// ---------------
+	// 1カラム
+	.acms-col-sm-1{
+		width: $acms-col-1;
+	}
+	// 2カラム
+	.acms-col-sm-2{
+		width: $acms-col-2;
+	}
+	// 3カラム
+	.acms-col-sm-3{
+		width: $acms-col-3;
+	}
+	// 4カラム
+	.acms-col-sm-4{
+		width: $acms-col-4;
+	}
+	// 5カラム
+	.acms-col-sm-5{
+		width: $acms-col-5;
+	}
+	// 6カラム
+	.acms-col-sm-6{
+		width: $acms-col-6;
+	}
+	// 7カラム
+	.acms-col-sm-7{
+		width: $acms-col-7;
+	}
+	// 8カラム
+	.acms-col-sm-8{
+		width: $acms-col-8;
+	}
+	// 9カラム
+	.acms-col-sm-9{
+		width: $acms-col-9;
+	}
+	// 10カラム
+	.acms-col-sm-10{
+		width: $acms-col-10;
+	}
+	// 11カラム
+	.acms-col-sm-11{
+		width: $acms-col-11;
+	}
+	// 12カラム
+	.acms-col-sm-12{
+		float: none;
+		width: $acms-col-12;
+	}
+
+	// ---------------
+	// push 左の位置
+	// ---------------
+	[class*='acms-push-sm'] {
+		position: relative;
+		right: auto;
+	}
+	// pushしない
+	.acms-push-sm-auto{
+		left: auto;
+	}
+	// 1カラム
+	.acms-push-sm-1{
+		left: $acms-col-1;
+	}
+	// 2カラム
+	.acms-push-sm-2{
+		left: $acms-col-2;
+	}
+	// 3カラム
+	.acms-push-sm-3{
+		left: $acms-col-3;
+	}
+	// 4カラム
+	.acms-push-sm-4{
+		left: $acms-col-4;
+	}
+	// 5カラム
+	.acms-push-sm-5{
+		left: $acms-col-5;
+	}
+	// 6カラム
+	.acms-push-sm-6{
+		left: $acms-col-6;
+	}
+	// 7カラム
+	.acms-push-sm-7{
+		left: $acms-col-7;
+	}
+	// 8カラム
+	.acms-push-sm-8{
+		left: $acms-col-8;
+	}
+	// 9カラム
+	.acms-push-sm-9{
+		left: $acms-col-9;
+	}
+	// 10カラム
+	.acms-push-sm-10{
+		left: $acms-col-10;
+	}
+	// 11カラム
+	.acms-push-sm-11{
+		left: $acms-col-11;
+	}
+
+	// ---------------
+	// pull 右の位置
+	// ---------------
+	[class*='acms-pull-sm'] {
+		position: relative;
+		left: auto;
+	}
+	// pullしない
+	.acms-pull-sm-auto{
+		right: auto;
+	}
+	// 1カラム
+	.acms-pull-sm-1{
+		right: $acms-col-1;
+	}
+	// 2カラム
+	.acms-pull-sm-2{
+		right: $acms-col-2;
+	}
+	// 3カラム
+	.acms-pull-sm-3{
+		right: $acms-col-3;
+	}
+	// 4カラム
+	.acms-pull-sm-4{
+		right: $acms-col-4;
+	}
+	// 5カラム
+	.acms-pull-sm-5{
+		right: $acms-col-5;
+	}
+	// 6カラム
+	.acms-pull-sm-6{
+		right: $acms-col-6;
+	}
+	// 7カラム
+	.acms-pull-sm-7{
+		right: $acms-col-7;
+	}
+	// 8カラム
+	.acms-pull-sm-8{
+		right: $acms-col-8;
+	}
+	// 9カラム
+	.acms-pull-sm-9{
+		right: $acms-col-9;
+	}
+	// 10カラム
+	.acms-pull-sm-10{
+		right: $acms-col-10;
+	}
+	// 11カラム
+	.acms-pull-sm-11{
+		right: $acms-col-11;
+	}
+
+}
+
+//---------------
+//中くらい幅のグリッド
+//---------------
+@media (min-width : $breakpoint-md-min) {
+
+	[class*='acms-col-md'] {
+		float: left;
+	}
+
+
+	// ---------------
+	// 幅
+	// ---------------
+
+	// 1カラム
+	.acms-col-md-1{
+		width: $acms-col-1;
+	}
+	// 2カラム
+	.acms-col-md-2{
+		width: $acms-col-2;
+	}
+	// 3カラム
+	.acms-col-md-3{
+		width: $acms-col-3;
+	}
+	// 4カラム
+	.acms-col-md-4{
+		width: $acms-col-4;
+	}
+	// 5カラム
+	.acms-col-md-5{
+		width: $acms-col-5;
+	}
+	// 6カラム
+	.acms-col-md-6{
+		width: $acms-col-6;
+	}
+	// 7カラム
+	.acms-col-md-7{
+		width: $acms-col-7;
+	}
+	// 8カラム
+	.acms-col-md-8{
+		width: $acms-col-8;
+	}
+	// 9カラム
+	.acms-col-md-9{
+		width: $acms-col-9;
+	}
+	// 10カラム
+	.acms-col-md-10{
+		width: $acms-col-10;
+	}
+	// 11カラム
+	.acms-col-md-11{
+		width: $acms-col-11;
+	}
+	// 12カラム
+	.acms-col-md-12{
+		float: none;
+		width: $acms-col-12;
+	}
+
+	// ---------------
+	// push 左の位置
+	// ---------------
+	[class*='acms-push-md'] {
+		position: relative;
+		right: auto;
+	}
+	// pushしない
+	.acms-push-md-auto{
+		left: auto;
+	}
+	// 1カラム
+	.acms-push-md-1{
+		left: $acms-col-1;
+	}
+	// 2カラム
+	.acms-push-md-2{
+		left: $acms-col-2;
+	}
+	// 3カラム
+	.acms-push-md-3{
+		left: $acms-col-3;
+	}
+	// 4カラム
+	.acms-push-md-4{
+		left: $acms-col-4;
+	}
+	// 5カラム
+	.acms-push-md-5{
+		left: $acms-col-5;
+	}
+	// 6カラム
+	.acms-push-md-6{
+		left: $acms-col-6;
+	}
+	// 7カラム
+	.acms-push-md-7{
+		left: $acms-col-7;
+	}
+	// 8カラム
+	.acms-push-md-8{
+		left: $acms-col-8;
+	}
+	// 9カラム
+	.acms-push-md-9{
+		left: $acms-col-9;
+	}
+	// 10カラム
+	.acms-push-md-10{
+		left: $acms-col-10;
+	}
+	// 11カラム
+	.acms-push-md-11{
+		left: $acms-col-11;
+	}
+
+	// ---------------
+	// pull 右の位置
+	// ---------------
+	[class*='acms-pull-md'] {
+		position: relative;
+		left: auto;
+	}
+	// pullしない
+	.acms-pull-md-auto{
+		right: auto;
+	}
+	// 1カラム
+	.acms-pull-md-1{
+		right: $acms-col-1;
+	}
+	// 2カラム
+	.acms-pull-md-2{
+		right: $acms-col-2;
+	}
+	// 3カラム
+	.acms-pull-md-3{
+		right: $acms-col-3;
+	}
+	// 4カラム
+	.acms-pull-md-4{
+		right: $acms-col-4;
+	}
+	// 5カラム
+	.acms-pull-md-5{
+		right: $acms-col-5;
+	}
+	// 6カラム
+	.acms-pull-md-6{
+		right: $acms-col-6;
+	}
+	// 7カラム
+	.acms-pull-md-7{
+		right: $acms-col-7;
+	}
+	// 8カラム
+	.acms-pull-md-8{
+		right: $acms-col-8;
+	}
+	// 9カラム
+	.acms-pull-md-9{
+		right: $acms-col-9;
+	}
+	// 10カラム
+	.acms-pull-md-10{
+		right: $acms-col-10;
+	}
+	// 11カラム
+	.acms-pull-md-11{
+		right: $acms-col-11;
+	}
+}
+
+
+
+//---------------
+//デスクトップ幅（1024px以上）のグリッド
+//---------------
+@media (min-width : $breakpoint-lg-min) {
+
+	[class*='acms-col-lg'] {
+		float: left;
+	}
+	// ---------------
+	// 幅
+	// ---------------
+
+	// 1カラム
+	.acms-col-lg-1{
+		width: $acms-col-1;
+	}
+	// 2カラム
+	.acms-col-lg-2{
+		width: $acms-col-2;
+	}
+	// 3カラム
+	.acms-col-lg-3{
+		width: $acms-col-3;
+	}
+	// 4カラム
+	.acms-col-lg-4{
+		width: $acms-col-4;
+	}
+	// 5カラム
+	.acms-col-lg-5{
+		width: $acms-col-5;
+	}
+	// 6カラム
+	.acms-col-lg-6{
+		width: $acms-col-6;
+	}
+	// 7カラム
+	.acms-col-lg-7{
+		width: $acms-col-7;
+	}
+	// 8カラム
+	.acms-col-lg-8{
+		width: $acms-col-8;
+	}
+	// 9カラム
+	.acms-col-lg-9{
+		width: $acms-col-9;
+	}
+	// 10カラム
+	.acms-col-lg-10{
+		width: $acms-col-10;
+	}
+	// 11カラム
+	.acms-col-lg-11{
+		width: $acms-col-11;
+	}
+	// 12カラム
+	.acms-col-lg-12{
+		float: none;
+		width: $acms-col-12;
+	}
+
+	// ---------------
+	// push 左の位置
+	// ---------------
+
+	[class*='acms-push-lg'] {
+		position: relative;
+		right: auto;
+	}
+	// pushしない
+
+	.acms-push-lg-auto{
+		left: auto;
+	}
+	// 1カラム
+	.acms-push-lg-1{
+		left: $acms-col-1;
+	}
+	// 2カラム
+	.acms-push-lg-2{
+		left: $acms-col-2;
+	}
+	// 3カラム
+	.acms-push-lg-3{
+		left: $acms-col-3;
+	}
+	// 4カラム
+	.acms-push-lg-4{
+		left: $acms-col-4;
+	}
+	// 5カラム
+	.acms-push-lg-5{
+		left: $acms-col-5;
+	}
+	// 6カラム
+	.acms-push-lg-6{
+		left: $acms-col-6;
+	}
+	// 7カラム
+	.acms-push-lg-7{
+		left: $acms-col-7;
+	}
+	// 8カラム
+	.acms-push-lg-8{
+		left: $acms-col-8;
+	}
+	// 9カラム
+	.acms-push-lg-9{
+		left: $acms-col-9;
+	}
+	// 10カラム
+	.acms-push-lg-10{
+		left: $acms-col-10;
+	}
+	// 11カラム
+	.acms-push-lg-11{
+		left: $acms-col-11;
+	}
+
+	// ---------------
+	// pull 右の位置
+	// ---------------
+	[class*='acms-pull-lg'] {
+		position: relative;
+		left: auto;
+	}
+	// pullしない
+	.acms-pull-lg-auto{
+		right: auto;
+	}
+	// 1カラム
+	.acms-pull-lg-1{
+		right: $acms-col-1;
+	}
+	// 2カラム
+	.acms-pull-lg-2{
+		right: $acms-col-2;
+	}
+	// 3カラム
+	.acms-pull-lg-3{
+		right: $acms-col-3;
+	}
+	// 4カラム
+	.acms-pull-lg-4{
+		right: $acms-col-4;
+	}
+	// 5カラム
+	.acms-pull-lg-5{
+		right: $acms-col-5;
+	}
+	// 6カラム
+	.acms-pull-lg-6{
+		right: $acms-col-6;
+	}
+	// 7カラム
+	.acms-pull-lg-7{
+		right: $acms-col-7;
+	}
+	// 8カラム
+	.acms-pull-lg-8{
+		right: $acms-col-8;
+	}
+	// 9カラム
+	.acms-pull-lg-9{
+		right: $acms-col-9;
+	}
+	// 10カラム
+	.acms-pull-lg-10{
+		right: $acms-col-10;
+	}
+	// 11カラム
+	.acms-pull-lg-11{
+		right: $acms-col-11;
+	}
+}
+
+//---------------
+//デスクトップ幅（1440px以上）のグリッド
+//---------------
+@media (min-width : $breakpoint-xl-min) {
+
+	[class*='acms-col-xl'] {
+		float: left;
+	}
+
+
+	// ---------------
+	// 幅
+	// ---------------
+
+	// 1カラム
+	.acms-col-xl-1{
+		width: $acms-col-1;
+	}
+	// 2カラム
+	.acms-col-xl-2{
+		width: $acms-col-2;
+	}
+	// 3カラム
+	.acms-col-xl-3{
+		width: $acms-col-3;
+	}
+	// 4カラム
+	.acms-col-xl-4{
+		width: $acms-col-4;
+	}
+	// 5カラム
+	.acms-col-xl-5{
+		width: $acms-col-5;
+	}
+	// 6カラム
+	.acms-col-xl-6{
+		width: $acms-col-6;
+	}
+	// 7カラム
+	.acms-col-xl-7{
+		width: $acms-col-7;
+	}
+	// 8カラム
+	.acms-col-xl-8{
+		width: $acms-col-8;
+	}
+	// 9カラム
+	.acms-col-xl-9{
+		width: $acms-col-9;
+	}
+	// 10カラム
+	.acms-col-xl-10{
+		width: $acms-col-10;
+	}
+	// 11カラム
+	.acms-col-xl-11{
+		width: $acms-col-11;
+	}
+	// 12カラム
+	.acms-col-xl-12{
+		float: none;
+		width: $acms-col-12;
+	}
+
+	// ---------------
+	// push 左の位置
+	// ---------------
+	[class*='acms-push-xl'] {
+		position: relative;
+		right: auto;
+	}
+	// pushしない
+	.acms-push-xl-auto{
+		left: auto;
+	}
+	// 1カラム
+	.acms-push-xl-1{
+		left: $acms-col-1;
+	}
+	// 2カラム
+	.acms-push-xl-2{
+		left: $acms-col-2;
+	}
+	// 3カラム
+	.acms-push-xl-3{
+		left: $acms-col-3;
+	}
+	// 4カラム
+	.acms-push-xl-4{
+		left: $acms-col-4;
+	}
+	// 5カラム
+	.acms-push-xl-5{
+		left: $acms-col-5;
+	}
+	// 6カラム
+	.acms-push-xl-6{
+		left: $acms-col-6;
+	}
+	// 7カラム
+	.acms-push-xl-7{
+		left: $acms-col-7;
+	}
+	// 8カラム
+	.acms-push-xl-8{
+		left: $acms-col-8;
+	}
+	// 9カラム
+	.acms-push-xl-9{
+		left: $acms-col-9;
+	}
+	// 10カラム
+	.acms-push-xl-10{
+		left: $acms-col-10;
+	}
+	// 11カラム
+	.acms-push-xl-11{
+		left: $acms-col-11;
+	}
+
+	// ---------------
+	// pull 右の位置
+	// ---------------
+	[class*='acms-pull-xl'] {
+		position: relative;
+		left: auto;
+	}
+	// pullしない
+	.acms-pull-xl-auto{
+		right: auto;
+	}
+	// 1カラム
+	.acms-pull-xl-1{
+		right: $acms-col-1;
+	}
+	// 2カラム
+	.acms-pull-xl-2{
+		right: $acms-col-2;
+	}
+	// 3カラム
+	.acms-pull-xl-3{
+		right: $acms-col-3;
+	}
+	// 4カラム
+	.acms-pull-xl-4{
+		right: $acms-col-4;
+	}
+	// 5カラム
+	.acms-pull-xl-5{
+		right: $acms-col-5;
+	}
+	// 6カラム
+	.acms-pull-xl-6{
+		right: $acms-col-6;
+	}
+	// 7カラム
+	.acms-pull-xl-7{
+		right: $acms-col-7;
+	}
+	// 8カラム
+	.acms-pull-xl-8{
+		right: $acms-col-8;
+	}
+	// 9カラム
+	.acms-pull-xl-9{
+		right: $acms-col-9;
+	}
+	// 10カラム
+	.acms-pull-xl-10{
+		right: $acms-col-10;
+	}
+	// 11カラム
+	.acms-pull-xl-11{
+		right: $acms-col-11;
+	}
+
+}
+
+
+// ---------------
+// エントリー(.acms-entry)内グリッド
+// ---------------
+
+.acms-entry .acms-col-12 {
+	clear: both;
+}

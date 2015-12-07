@@ -1,0 +1,26 @@
+<!-- BEGIN_MODULE Entry_Body -->
+<div class="entry">
+ <div class="entry__head">
+  <!-- BEGIN_MODULE Touch_Keyword -->
+  <h1 class="entry__title heading-a">「%{KEYWORD}」 で検索</h1>
+  <!-- END_MODULE Touch_Keyword -->
+  <!-- BEGIN_MODULE Touch_NotKeyword -->
+  <h1 class="entry__title heading-a">キーワード未入力</h1>
+  <!-- END_MODULE Touch_NotKeyword -->
+ </div>
+ <div class="entry__body acms-entry">
+  <ul class="headline-list">
+   <!-- BEGIN entry:loop -->
+   <li class="headline-list__item">
+    <a href="{url}">
+     <span class="headline-list__date">{date#Y}.{date#m}.{date#d}</span>
+     <span class="headline-list__text">{title}[trim(80, '...')]</span>
+    </a>
+   </li>
+   <!-- END entry:loop -->
+  </ul>
+ </div>
+ <!--#include file="/include/part/index_pagination.html"-->
+</div>
+<!-- END_MODULE Entry_Body -->
+

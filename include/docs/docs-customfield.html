@@ -1,0 +1,453 @@
+<h2 class="heading-c">ブログのカスタムフィールド</h2>
+<h3 class="heading-d">SEO</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>タイトル</th>
+    <td>{blog_meta_title}</td>
+    <td>ブログの METAタグ（Title）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>キーワード</th>
+    <td>{blog_meta_keywords}</td>
+    <td>ブログの METAタグ（Keywords）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>概要文</th>
+    <td>{blog_meta_description}</td>
+    <td>ブログの METAタグ（Description）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>検索エンジン</th>
+    <td>{blog_meta_robots}</td>
+    <td>チェックするとこのブログをインデックスされないようにします。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>サイトマップ</th>
+    <td>{blog_meta_sitemap}</td>
+    <td>チェックするとこのブログをサイトマップに出力しないようにします。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>RSS</th>
+    <td>{blog_meta_rss}</td>
+    <td>チェックするとこのブログのエントリーをRSSに出力しないようにします。</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+<h3 class="heading-d">サイト設定 基本</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>サイト ロゴ</th>
+    <td>{siteLogo}</td>
+    <td>サイトのロゴ画像を設定します。（リサイズされません）</td>
+    <td></td>
+   </tr>
+   <tr>
+    <th>サイト タイトル</th>
+    <td>{siteName}</td>
+    <td>サイトのタイトルを文字で表示させる際に設定します。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>サイト 説明</th>
+    <td>{siteDescription}</td>
+    <td>ロゴの下に表示する説明文を設定します</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>フッターテキスト</th>
+    <td>{siteFooter}</td>
+    <td>フッターのテキストを設定します。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>ログインヘッダー</th>
+    <td>{loginHeaderImage}</td>
+    <td>ログイン画面のヘッダーを設定します。幅：960px</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+<h3 class="heading-d">アクセス解析</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>Google Analytics</th>
+    <td> {googleAnalytics}</td>
+    <td>Google Analytics の解析用のタグを設定します。</td>
+    <td></td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+
+<h3 class="heading-d">OGP設定</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>Facebook admins</th>
+    <td> {fbAdmins}</td>
+    <td>FacebookのIDを設定します。</td>
+    <td></td>
+   </tr>
+   <tr>
+    <th>OGP画像</th>
+    <td> {ogpImage}</td>
+    <td>Facebook等で利用するOGP画像を設定します。</td>
+    <td></td>
+   </tr>
+  </table>
+ </div>
+</div>
+<h3 class="heading-d">会社情報</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>会社名</th>
+    <td> {companyName}</td>
+    <td>会社名を設定します。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>郵便番号</th>
+    <td> {zip}</td>
+    <td>郵便番号を設定します。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>住所</th>
+    <td> {address}</td>
+    <td>住所を設定します。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>電話番号</th>
+    <td> {tel}</td>
+    <td>電話番号を設定します。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>電話の受付時間</th>
+    <td> {telTime}</td>
+    <td>電話の受付時間を設定します。</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+<h3 class="heading-d">メインビジュアルの設定</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>メインタイトル</th>
+    <td> {mainVisualTitle}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>メインリード文</th>
+    <td> {mainVisualLead}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+
+<h2 class="heading-c">カテゴリーのカスタムフィールド</h2>
+<h3 class="heading-d">SEO</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>タイトル</th>
+    <td>{category_meta_title}</td>
+    <td>カテゴリーの METAタグ（Title）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>キーワード</th>
+    <td>{category_meta_keywords}</td>
+    <td>カテゴリーの METAタグ（Keywords）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>概要文</th>
+    <td>{category_meta_description}</td>
+    <td>カテゴリーの METAタグ（Description）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>検索エンジン</th>
+    <td>{category_meta_robots}</td>
+    <td>チェックするとこのカテゴリーをインデックスされないようにします。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>サイトマップ</th>
+    <td>{category_meta_sitemap}</td>
+    <td>チェックするとこのカテゴリーをサイトマップに出力しないようにします。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>RSS</th>
+    <td>{category_meta_rss}</td>
+    <td>チェックするとこのカテゴリーのエントリーをRSSに出力しないようにします。</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+<h3 class="heading-d">ページタイトル設定</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>メインイメージ</th>
+    <td>{pageImage}</td>
+    <td>カテゴリーの メインイメージを設定します。</td>
+    <td> -</td>
+   </tr>
+
+   <tr>
+    <th>説明文</th>
+    <td>{pageDescription}</td>
+    <td>カテゴリーの 説明文を設定します。</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+<h3 class="heading-d">お問い合わせの設定</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>補足テキスト</th>
+    <td>{contactSupplementary}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+
+<h2 class="heading-c">エントリーのカスタムフィールド</h2>
+<h3 class="heading-d">SEO</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>タイトル</th>
+    <td>{entry_meta_title}</td>
+    <td>エントリーの METAタグ（Title）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>キーワード</th>
+    <td>{entry_meta_keywords}</td>
+    <td>エントリーの METAタグ（Keywords）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>概要文</th>
+    <td>{entry_meta_description}</td>
+    <td>エントリーの METAタグ（Description）を設定します。</td>
+    <td>:search value="0"</td>
+   </tr>
+   <tr>
+    <th>検索エンジン</th>
+    <td>{entry_meta_robots}</td>
+    <td>チェックするとこのエントリーをインデックスされないようにします。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>サイトマップ</th>
+    <td>{entry_meta_sitemap}</td>
+    <td>チェックするとこのエントリーをサイトマップに出力しないようにします。</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>RSS</th>
+    <td>{entry_meta_rss}</td>
+    <td>チェックするとこのエントリーをRSSに出力しないようにします。</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+<h3 class="heading-d">一覧の表示設定</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>一覧で表示する画像</th>
+    <td>{entryIndexImage}</td>
+    <td>一覧で表示する画像を設定します。</td>
+    <td> -</td>
+   </tr>
+
+   <tr>
+    <th>一覧で表示する説明文</th>
+    <td>{entryIndexTxt}</td>
+    <td>一覧で表示する説明文を設定します。</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+
+<h3 class="heading-d">エントリーの表示設定</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>ページネイションを隠す</th>
+    <td>{pagerState}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+
+  </table>
+ </div>
+</div>
+
+
+<h2 class="heading-c">モジュールのカスタムフィールド</h2>
+<h3 class="heading-d">モジュールの設定</h3>
+<div class="entry-container">
+ <div class="table-a">
+  <table>
+   <tr>
+    <th>フィールド名</th>
+    <th>フィールド値</th>
+    <th>フィールド説明</th>
+    <th>備考</th>
+   </tr>
+   <tr>
+    <th>見出し</th>
+    <td>{module_heading}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>小見出し</th>
+    <td>{module_sub_heading}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>リード文</th>
+    <td>{module_lead}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>属性1</th>
+    <td>{module_attr1}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+   <tr>
+    <th>属性2</th>
+    <td>{module_attr2}</td>
+    <td> -</td>
+    <td> -</td>
+   </tr>
+  </table>
+ </div>
+</div>

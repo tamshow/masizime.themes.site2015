@@ -1,0 +1,428 @@
+@charset "utf-8";
+/* @ text
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: テキスト装飾
+name: tool-text
+category: tool-text
+---
+
+<div class="styleguide-table"></div>
+View                                                                      | Class          |  Description
+-----------------------------------------------------------------------   | ------------   |   ---------   |
+<p class="text">ダミーテキストです。ご了承ください。</p>                       | `text`         |               |
+<p class="text-bold">ダミーテキストです。ご了承ください。</p>                  | `text-bold`    |               |
+<p class="text-left">ダミーテキストです。ご了承ください。</p>                  | `text-left`    |               |
+<p class="text-center">ダミーテキストです。ご了承ください。</p>                | `text-center`  |               |
+<p class="text-right">ダミーテキストです。ご了承ください。</p>                 | `text-right`   |               |
+<p class="text-point">ダミーテキストです。ご了承ください。</p>                 | `text-point`   |               |
+<p class="text-strike">ダミーテキストです。ご了承ください。</p>                | `text-strike`  |               |
+<p class="text-caption">ダミーテキストです。ご了承ください。</p>               | `text-caption` |               |
+<p class="text-small">ダミーテキストです。ご了承ください。</p>                 | `text-small`   |               |
+<p class="text-square">ダミーテキストです。ご了承ください。</p>                | `text-square`  |               |
+<p class="text-button"><a href="">ダミーテキストです。ご了承ください。</a></p> | `text-button`  |               |
+
+*/
+
+
+
+
+
+.text{ }
+.text-caption{  }
+.text-bold { font-weight: bold;}
+.text-link--under {
+  text-decoration: underline!important;
+  &:hover {
+    text-decoration: none!important;;
+  }
+}
+
+.text-link--under-none {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-small { @include fsize(.8em);}
+.text-point {
+  @include p(3px,2px,2px);
+  background-color: $main-color;
+  color: #FFF;
+  display: inline-block;
+}
+.text-strike { text-decoration: line-through !important; }
+.text-square {
+  color: #FFF;
+  background-color: $main-color;
+  @include p(4px, 6px);
+  @include mt(-1px);
+  border-radius: 4px;
+}
+
+.text-button a {
+  background-color: $main-color;
+  display: inline-block;
+  border-radius: 5px;
+  @include p(8px, 30px, 7px);
+  color: #FFF;
+  @include mouse-effect;
+}
+
+.text-button a,
+.text-button a:hover {
+  text-decoration: none;
+  color: #FFF;
+}
+
+
+
+/*doc
+---
+title: bulleted-space
+name: bulleted-space
+category: tool-text
+---
+<div class="styleguide-table"></div>
+View                                                  | Class    |  Description
+---------------------------------------------------   | ------   |   ---------   |
+<p class="bulleted-space">・ダミーテキストです。<br> ダミーテキストです。</p>  | `bulleted-space`    |   箇条書き左スペース            |
+
+*/
+
+//箇条書き左スペース
+.bulleted-space {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+
+/*doc
+---
+title: text-border
+name: text-border
+category: tool-text
+---
+
+ミドルスクリーンは`--md`<br>
+スモールスクリーンは`--sm`
+
+<div class="styleguide-table"></div>
+View                                                  | Class    |  Description
+---------------------------------------------------   | ------   |   ---------   |
+<p class="bdtn">border-top: none;</p>  | `bdtn`    |               |
+<p class="bdrn">border-right: none;</p>  | `bdrn`    |               |
+<p class="bdbn">border-bottom: none;</p>  | `bdbn`    |               |
+<p class="bdln">border-left: none;</p>  | `bdln`    |               |
+<p class="bdt">border-top: 1px solid $border-color;</p>  | `bdt`    |               |
+<p class="bdr">border-right: 1px solid $border-color;</p>  | `bdr`    |               |
+<p class="bdb">border-bottom: 1px solid $border-color;</p>  | `bdb`    |               |
+<p class="bdl">border-left: 1px solid $border-color;</p>  | `bdl`    |               |
+
+*/
+//border
+.bdtn {  border-top: none!important; }
+.bdrn {  border-right: none!important; }
+.bdbn {  border-bottom: none!important; }
+.bdln {  border-left: none!important; }
+
+.bdt {  border-top: 1px solid $border-color;}
+.bdr {  border-right: 1px solid $border-color;}
+.bdb {  border-bottom: 1px solid $border-color;}
+.bdl {  border-left: 1px solid $border-color;}
+
+
+
+
+/*doc
+---
+title: text-decoration
+name: text-decoration
+category: tool-text
+---
+
+ミドルスクリーンは`--md`<br>
+スモールスクリーンは`--sm`
+
+<div class="styleguide-table"></div>
+View                                                  | Class    |  Description
+---------------------------------------------------   | ------   |   ---------   |
+<p class="tdu">text-decoration: underline;</p>  | `tdu`    |               |
+
+*/
+//text-decoration
+.tdu {text-decoration: underline!important;
+&:hover{ text-decoration: none!important;}
+}
+
+/*doc
+---
+title: vertical-aligin
+name: vertical-aligin
+category: tool-text
+---
+
+ミドルスクリーンは`--md`<br>
+スモールスクリーンは`--sm`
+
+<div class="styleguide-table"></div>
+View                                                  | Class                                       |  Description
+---------------------------------------------------   | -----------------------------------------   |  ---------   |
+<p><img src="static/img/icon.png" class="va-15p"> vertical-align: -15%</p>            | `va-15p`    |              |
+<p><img src="static/img/icon.png" class="va15p"> vertical-align: 15%;</p>             | `va15p`     |              |
+<p><img src="static/img/icon.png" class="vabl"> vertical-align: baseline;</p>         | `vabl`      |              |
+<p><img src="static/img/icon.png" class="vab"> vertical-align: bottom;</p>            | `vab`       |              |
+<p><img src="static/img/icon.png" class="vainhe"> vertical-align: inherit;</p>        | `vainhe`    |              |
+<p><img src="static/img/icon.png" class="vat"> vertical-align: top;</p>               | `vat`       |              |
+<p><img src="static/img/icon.png" class="vatb"> vertical-align: text-bottom;</p>      | `vatb`      |              |
+<p><img src="static/img/icon.png" class="vatt"> vertical-align: text-top;</p>         | `vatt`      |              |
+<p><img src="static/img/icon.png" class="vasup"> vertical-align: super;</p>           | `vasup`     |              |
+<p><img src="static/img/icon.png" class="vasub"> vertical-align: sub;</p>             | `vasub`     |              |
+<p><img src="static/img/icon.png" class="vam"> vertical-align: middle;</p>            | `vam`       |              |
+
+*/
+
+//vertical-aligin
+.va-15p { vertical-align: -15%; }
+.va15p { vertical-align: 15%; }
+
+.vabl { vertical-align: baseline;}
+.vab { vertical-align: bottom;}
+.vainhe { vertical-align: inherit;}
+.vat { vertical-align: top;}
+.vatb { vertical-align: text-bottom;}
+.vatt { vertical-align: text-top;}
+.vasup { vertical-align: super;}
+.vasub { vertical-align: sub;}
+.vam { vertical-align: middle;}
+
+@include max-media($screen-md-max) {
+  .vabl--md { vertical-align: baseline;}
+  .vab--md { vertical-align: bottom;}
+  .vainhe--md { vertical-align: inherit;}
+  .vat--md { vertical-align: top;}
+  .vatb--md { vertical-align: text-bottom;}
+  .vatt--md { vertical-align: text-top;}
+  .vasup--md { vertical-align: super;}
+  .vasub--md { vertical-align: sub;}
+  .vam--md { vertical-align: middle;}
+}
+@include max-media($screen-md-max) {
+  .vabl--sm { vertical-align: baseline;}
+  .vab--sm { vertical-align: bottom;}
+  .vainhe--sm { vertical-align: inherit;}
+  .vat--sm { vertical-align: top;}
+  .vatb--sm { vertical-align: text-bottom;}
+  .vatt--sm { vertical-align: text-top;}
+  .vasup--sm { vertical-align: super;}
+  .vasub--sm { vertical-align: sub;}
+  .vam--sm { vertical-align: middle;}
+}
+
+/*doc
+---
+title: text-indent
+name: text-indent
+category: tool-text
+---
+
+ミドルスクリーンは`--md`<br>
+スモールスクリーンは`--sm`
+
+<div class="styleguide-table"></div>
+View                                                 | Class       | Description
+---------------------------------------------------- | ---------   |  ---------   |
+<p class="ti-0_1em">text-indent: -0.1em;</p>         | `ti-0_1em`  |             |
+<p class="ti-0_2em">text-indent: -0.2em;</p>         | `ti-0_2em`  |             |
+<p class="ti-0_3em">text-indent: -0.3em;</p>         | `ti-0_3em`  |             |
+<p class="ti-0_4em">text-indent: -0.4em;</p>         | `ti-0_4em`  |             |
+<p class="ti-0_5em">text-indent: -0.5em;</p>         | `ti-0_5em`  |             |
+<p class="ti-0_6em">text-indent: -0.6em;</p>         | `ti-0_6em`  |             |
+<p class="ti-0_7em">text-indent: -0.7em;</p>         | `ti-0_7em`  |             |
+<p class="ti-0_8em">text-indent: -0.8em;</p>         | `ti-0_8em`  |             |
+<p class="ti-0_9em">text-indent: -0.9em;</p>         | `ti-0_9em`  |             |
+*/
+
+//text-indent
+.ti-0_1em {text-indent: -.1em;}
+.ti-0_2em {text-indent: -.2em;}
+.ti-0_3em {text-indent: -.3em;}
+.ti-0_4em {text-indent: -.4em;}
+.ti-0_5em {text-indent: -.5em;}
+.ti-0_6em {text-indent: -.6em;}
+.ti-0_7em {text-indent: -.7em;}
+.ti-0_8em {text-indent: -.8em;}
+.ti-0_9em {text-indent: -.9em;}
+
+@include max-media($screen-md-max) {
+  .ti-0_1em--md {text-indent: -.1em;}
+  .ti-0_2em--md {text-indent: -.2em;}
+  .ti-0_3em--md {text-indent: -.3em;}
+  .ti-0_4em--md {text-indent: -.4em;}
+  .ti-0_5em--md {text-indent: -.5em;}
+  .ti-0_6em--md {text-indent: -.6em;}
+  .ti-0_7em--md {text-indent: -.7em;}
+  .ti-0_8em--md {text-indent: -.8em;}
+  .ti-0_9em--md {text-indent: -.9em;}
+}
+
+@include max-media($screen-sm-max) {
+  .ti-0_1em--sm {text-indent: -.1em;}
+  .ti-0_2em--sm {text-indent: -.2em;}
+  .ti-0_3em--sm {text-indent: -.3em;}
+  .ti-0_4em--sm {text-indent: -.4em;}
+  .ti-0_5em--sm {text-indent: -.5em;}
+  .ti-0_6em--sm {text-indent: -.6em;}
+  .ti-0_7em--sm {text-indent: -.7em;}
+  .ti-0_8em--sm {text-indent: -.8em;}
+  .ti-0_9em--sm {text-indent: -.9em;}
+}
+
+
+
+/*doc
+---
+title: line-height
+name: line-height
+category: tool-text
+---
+
+ミドルスクリーンは`--md`<br>
+スモールスクリーンは`--sm`
+
+<div class="styleguide-table"></div>
+View                                             | Class                    |   Description
+------------------------------------------------ | ------------------------ |   --------- |
+<p class="lh1">line-height: 1;<br>line-height: 1;</p>           | `lh1`     |             |
+<p class="lh1_1">line-height: 1.1;<br>line-height: 1.1;</p>     | `lh1_1`   |             |
+<p class="lh1_2">line-height: 1.2;<br>line-height: 1.2;</p>     | `lh1_2`   |             |
+<p class="lh1_3">line-height: 1.3;<br>line-height: 1.3;</p>     | `lh1_3`   |             |
+<p class="lh1_4">line-height: 1.4;<br>line-height: 1.4;</p>     | `lh1_4`   |             |
+<p class="lh1_5">line-height: 1.5;<br>line-height: 1.5;</p>     | `lh1_5`   |             |
+<p class="lh1_6">line-height: 1.6;<br>line-height: 1.6;</p>     | `lh1_6`   |             |
+<p class="lh1_7">line-height: 1.7;<br>line-height: 1.7;</p>     | `lh1_7`   |             |
+<p class="lh1_8">line-height: 1.8;<br>line-height: 1.8;</p>     | `lh1_8`   |             |
+<p class="lh1_9">line-height: 1.9;<br>line-height: 1.9;</p>     | `lh1_9`   |             |
+<p class="lh2">line-height: 2;<br>line-height: 2;</p>           | `lh2`     |             |
+
+*/
+//line-height
+.lh1  {line-height: 1;}
+.lh1_1{line-height: 1.1;}
+.lh1_2{line-height: 1.2;}
+.lh1_3{line-height: 1.3;}
+.lh1_4{line-height: 1.4;}
+.lh1_5{line-height: 1.5;}
+.lh1_6{line-height: 1.6;}
+.lh1_7{line-height: 1.7;}
+.lh1_8{line-height: 1.8;}
+.lh1_9{line-height: 1.9;}
+.lh2  {line-height: 2;}
+
+
+@include max-media($screen-md-max){
+  .lh1--md  {line-height: 1;}
+  .lh1_1--md{line-height: 1.1;}
+  .lh1_2--md{line-height: 1.2;}
+  .lh1_3--md{line-height: 1.3;}
+  .lh1_4--md{line-height: 1.4;}
+  .lh1_5--md{line-height: 1.5;}
+  .lh1_6--md{line-height: 1.6;}
+  .lh1_7--md{line-height: 1.7;}
+  .lh1_8--md{line-height: 1.8;}
+  .lh1_9--md{line-height: 1.9;}
+  .lh2--md  {line-height: 2;}
+}
+
+@include max-media($screen-sm-max){
+  .lh1--sm  {line-height: 1;}
+  .lh1_1--sm{line-height: 1.1;}
+  .lh1_2--sm{line-height: 1.2;}
+  .lh1_3--sm{line-height: 1.3;}
+  .lh1_4--sm{line-height: 1.4;}
+  .lh1_5--sm{line-height: 1.5;}
+  .lh1_6--sm{line-height: 1.6;}
+  .lh1_7--sm{line-height: 1.7;}
+  .lh1_8--sm{line-height: 1.8;}
+  .lh1_9--sm{line-height: 1.9;}
+  .lh2--sm  {line-height: 2;}
+}
+
+/*doc
+---
+title: letter-spacing
+name: letter-spacing
+category: tool-text
+---
+
+<div class="styleguide-table"></div>
+View                                                      | Class        |   Description
+--------------------------------------------------------- | ------------ |    ------------ |
+<p class="ls-0_1em">letter-spacing: -0.1em;</p>     | `ls-0_1em`   |                 |
+<p class="ls-0_2em">letter-spacing: -0.2em;</p>     | `ls-0_2em`   |                 |
+<p class="ls-0_3em">letter-spacing: -0.3em;</p>     | `ls-0_3em`   |                 |
+<p class="ls-0_4em">letter-spacing: -0.4em;</p>     | `ls-0_4em`   |                 |
+<p class="ls-0_5em">letter-spacing: -0.5em;</p>     | `ls-0_5em`   |                 |
+<p class="ls-0_6em">letter-spacing: -0.6em;</p>     | `ls-0_6em`   |                 |
+<p class="ls-0_7em">letter-spacing: -0.7em;</p>     | `ls-0_7em`   |                 |
+<p class="ls-0_8em">letter-spacing: -0.8em;</p>     | `ls-0_8em`   |                 |
+<p class="ls-0_9em">letter-spacing: -0.9em;</p>     | `ls-0_9em`   |                 |
+<p class="ls0_1em">letter-spacing: 0.1em;</p>       | `ls0_1em`   |                  |
+<p class="ls0_2em">letter-spacing: 0.2em;</p>       | `ls0_2em`   |                  |
+<p class="ls0_3em">letter-spacing: 0.3em;</p>       | `ls0_3em`   |                  |
+<p class="ls0_4em">letter-spacing: 0.4em;</p>       | `ls0_4em`   |                  |
+<p class="ls0_5em">letter-spacing: 0.5em;</p>       | `ls0_5em`   |                  |
+<p class="ls0_6em">letter-spacing: 0.6em;</p>       | `ls0_6em`   |                  |
+<p class="ls0_7em">letter-spacing: 0.7em;</p>       | `ls0_7em`   |                  |
+<p class="ls0_8em">letter-spacing: 0.8em;</p>       | `ls0_8em`   |                  |
+<p class="ls0_9em">letter-spacing: 0.9em;</p>       | `ls0_9em`   |                  |
+<p class="ls1em">letter-spacing: 1em;</p>           | `ls1em`     |                  |
+<p class="ls1_1em">letter-spacing: 1.1em;</p>       | `ls1_1em`   |                  |
+<p class="ls1_2em">letter-spacing: 1.2em;</p>       | `ls1_2em`   |                  |
+<p class="ls1_3em">letter-spacing: 1.3em;</p>       | `ls1_3em`   |                  |
+<p class="ls1_4em">letter-spacing: 1.4em;</p>       | `ls1_4em`   |                  |
+<p class="ls1_5em">letter-spacing: 1.5em;</p>       | `ls1_5em`   |                  |
+<p class="ls1_6em">letter-spacing: 1.6em;</p>       | `ls1_6em`   |                  |
+<p class="ls1_7em">letter-spacing: 1.7em;</p>       | `ls1_7em`   |                  |
+<p class="ls1_8em">letter-spacing: 1.8em;</p>       | `ls1_8em`   |                  |
+<p class="ls1_9em">letter-spacing: 1.9em;</p>       | `ls1_9em`   |                  |
+<p class="ls2em">letter-spacing: 2em;</p>           | `ls2em`     |                  |
+*/
+
+
+// letter-spacing
+.ls-0_1em{letter-spacing: -.1em;}
+.ls-0_2em{letter-spacing: -.2em;}
+.ls-0_3em{letter-spacing: -.3em;}
+.ls-0_4em{letter-spacing: -.4em;}
+.ls-0_5em{letter-spacing: -.5em;}
+.ls-0_6em{letter-spacing: -.6em;}
+.ls-0_7em{letter-spacing: -.7em;}
+.ls-0_8em{letter-spacing: -.8em;}
+.ls-0_9em{letter-spacing: -.9em;}
+
+.ls0_1em{letter-spacing: .1em;}
+.ls0_2em{letter-spacing: .2em;}
+.ls0_3em{letter-spacing: .3em;}
+.ls0_4em{letter-spacing: .4em;}
+.ls0_5em{letter-spacing: .5em;}
+.ls0_6em{letter-spacing: .6em;}
+.ls0_7em{letter-spacing: .7em;}
+.ls0_8em{letter-spacing: .8em;}
+.ls0_9em{letter-spacing: .9em;}
+.ls1em  {letter-spacing: 1em;}
+.ls1_1em{letter-spacing: 1.1em;}
+.ls1_2em{letter-spacing: 1.2em;}
+.ls1_3em{letter-spacing: 1.3em;}
+.ls1_4em{letter-spacing: 1.4em;}
+.ls1_5em{letter-spacing: 1.5em;}
+.ls1_6em{letter-spacing: 1.6em;}
+.ls1_7em{letter-spacing: 1.7em;}
+.ls1_8em{letter-spacing: 1.8em;}
+.ls1_9em{letter-spacing: 1.9em;}
+.ls2em  {letter-spacing: 2em;}

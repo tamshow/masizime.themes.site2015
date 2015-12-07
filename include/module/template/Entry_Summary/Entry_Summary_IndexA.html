@@ -1,0 +1,17 @@
+<!-- BEGIN_MODULE Entry_Summary -->
+<div class="unit-group">
+ <h1 class="heading-a entryTitle">%{CATEGORY_NAME}</h1>
+ <ul class="headline-list headline-list--index">
+  <!-- BEGIN entry:loop -->
+  <li class="headline-list__item">
+   <a href="{url}">
+    <span class="headline-list__date">{date#Y}.{date#m}.{date#d}</span>
+    <span class="headline-list__text">{title}[trim(80, '...')]</span>
+   </a>
+  </li>
+  <!-- END entry:loop -->
+ </ul>
+ <!--#include file="/include/parts/index_pagination.html"-->
+</div>
+<!-- END_MODULE Entry_Summary -->
+

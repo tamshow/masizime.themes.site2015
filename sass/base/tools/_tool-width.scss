@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* @ width
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: 幅
+name: tool-width
+category: tool-width
+---
+
+ミドルスクリーンは`--md`<br>
+スモールスクリーンは`--sm`
+
+<div class="styleguide-table"></div>
+View     | Class     |  Description |
+---------| ----------| ---------- |
+       | `w10p`    |  幅10%     |
+       | `w20p`    |  幅20%     |
+       | `w30p`    |  幅30%     |
+       | `w40p`    |  幅40%     |
+       | `w50p`    |  幅50%     |
+       | `w60p`    |  幅60%     |
+       | `w70p`    |  幅70%     |
+       | `w80p`    |  幅80%     |
+       | `w90p`    |  幅90%     |
+       | `w100p`   |  幅100%    |
+
+*/
+
+.w10p{ width: 10%!important;}
+.w20p{ width: 20%!important;}
+.w30p{ width: 30%!important;}
+.w40p{ width: 40%!important;}
+.w50p{ width: 50%!important;}
+.w60p{ width: 60%!important;}
+.w70p{ width: 70%!important;}
+.w80p{ width: 80%!important;}
+.w90p{ width: 90%!important;}
+.w100p{ width: 100%!important;}
+
+@include max-media($screen-md-max){
+.w10p--md{ width: 10%!important;}
+.w20p--md{ width: 20%!important;}
+.w30p--md{ width: 30%!important;}
+.w40p--md{ width: 40%!important;}
+.w50p--md{ width: 50%!important;}
+.w60p--md{ width: 60%!important;}
+.w70p--md{ width: 70%!important;}
+.w80p--md{ width: 80%!important;}
+.w90p--md{ width: 90%!important;}
+.w100p--md{ width: 100%!important;}
+}
+
+@include max-media($screen-sm-max){
+.w10p--sm{ width: 10%!important;}
+.w20p--sm{ width: 20%!important;}
+.w30p--sm{ width: 30%!important;}
+.w40p--sm{ width: 40%!important;}
+.w50p--sm{ width: 50%!important;}
+.w60p--sm{ width: 60%!important;}
+.w70p--sm{ width: 70%!important;}
+.w80p--sm{ width: 80%!important;}
+.w90p--sm{ width: 90%!important;}
+.w100p--sm{ width: 100%!important;}
+
+}

@@ -1,0 +1,1172 @@
+@charset "utf-8";
+/*
+ * acms-admin.css Ver.1.1.3 (http://www.a-blogcms.jp)
+ * Copyright a-blog cms | MIT License
+ *
+ * 使用するテーマに関係なく必要なa-blog cmsのシステムに関わるスタイルの設定です。
+ * このCSSファイルを適用しない場合、表示に問題が発生しますのでご注意ください。
+ */
+/* ---------------
+ 管理画面の専用
+--------------- */
+body {
+		margin: 0;
+		font-size: 13px;
+		font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W6', Meiryo, 'メイリオ', 'ＭＳ Ｐゴシック', 'MS PGothic', Verdana, sans-serif;
+}
+a {
+		color: #006DEC;
+		text-decoration: none;
+}
+a:hover {
+		color: #8EBEF7;
+}
+a:active {
+		color: #8EBEF7;
+}
+/* IE8以下 */
+.lt-ie9 #acms-admin-main {
+		padding-left: 170px;
+}
+.lt-ie9 #nav {
+		position: fixed;
+		width: 160px;
+}
+.lt-ie9 #outer-wrap {
+		overflow: visible;
+}
+.acms-admin-bg-black {
+		background-color: #101013;
+}
+.acms-admin-bg-gray {
+		background-color: #25242c;
+}
+.acms-admin-bg-black a,
+.acms-admin-bg-gray a {
+		color: #cccccc;
+}
+#acms-admin-main {
+		padding-right: 20px;
+		padding-left: 20px;
+}
+#main {
+		padding-top: 90px;
+		padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+		#acms-admin-main {
+				padding: 36px 30px 0 190px;
+		}
+		#main {
+				padding-top: 20px;
+		}
+}
+#outer-wrap #top {
+		position: absolute;
+		width: 100%;
+}
+@media screen and (min-width: 768px) {
+		#outer-wrap #top {
+				position: fixed;
+		}
+}
+.acms-admin-navbar-system .acms-admin-navbar-admin-nav,
+.acms-admin-navbar-system .acms-admin-navbar-admin-right,
+.acms-admin-list-blog {
+		display: none;
+}
+.acms-admin-list-blog {
+		float: left;
+		margin: 0;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		font-size: 13px;
+}
+.acms-admin-title-blog {
+		margin: 0;
+		font-size: 13px;
+}
+.acms-admin-list-blog .acms-admin-icon-logo {
+		font-size: 16px;
+		color: #CCCCCC;
+		line-height: 1;
+		vertical-align: middle;
+}
+.acms-admin-navbar-system .acms-admin-list-blog-sp {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		width: auto;
+		margin: 0;
+		font-size: 30px;
+		color: #FFFFFF;
+}
+.acms-admin-navbar-admin .logo {
+		float: left;
+		margin: 0;
+		line-height: 1;
+}
+.acms-admin-title-blog {
+		font-weight: normal;
+}
+.acms-admin-navbar-admin-nav > li > a:hover,
+.acms-admin-title-blog a:hover {
+		opacity: 0.5;
+}
+.acms-admin-navbar-system {
+		position: relative;
+		height: 64px;
+		padding-top: 2px;
+		border-top: 4px solid #c40f32;
+}
+.acms-admin-list-blog .acms-admin-icon-logo,
+.acms-admin-blog-color {
+		color: #c40f32;
+}
+.js-acms-color-picker-target {
+		background-color: #c40f32;
+}
+.acms-admin-list-scroll {
+		max-height: 400px;
+		overflow: auto;
+}
+.acms-admin-navbar-system .acms-admin-list-blog-sp {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		width: auto;
+		margin: 0;
+		font-size: 30px;
+		color: #FFFFFF;
+}
+.acms-admin-sidebar-sp li {
+		border: none;
+}
+@media screen and (min-width: 768px) {
+		.acms-admin-navbar-system .acms-admin-navbar-admin-nav,
+		.acms-admin-navbar-system .acms-admin-navbar-admin-right,
+		.acms-admin-list-blog {
+				display: block;
+		}
+		.acms-admin-navbar-system {
+				position: static;
+				height: auto;
+		}
+		.acms-admin-sidebar-sp li {
+				border: none;
+		}
+}
+#sidebar {
+		height: 100%;
+		overflow: hidden;
+}
+#outer-wrap #nav {
+		position: absolute;
+}
+.js-nav #outer-wrap #nav {
+		position: relative;
+}
+.csstransforms3d.csstransitions.js-nav #outer-wrap #nav {
+		position: static;
+}
+.js-nav #acms-admin-main {
+		position: absolute;
+		top: 0;
+		width: 100%;
+}
+.acms-admin-icon-admin-blog-children {
+		color: #999999;
+}
+.acms-admin-sidebar {
+		padding-bottom: 0;
+}
+.acms-admin-sidebar-link a {
+		padding: 20px 10px 20px 20px;
+		font-size: 14px;
+		font-weight: bold;
+}
+#nav-open-btn {
+		top: 15px !important;
+		left: 15px !important;
+		padding: 0;
+		background: 0;
+		border: none;
+		color: #ffffff;
+		font-size: 30px;
+}
+@media screen and (min-width: 768px) {
+		#nav-open-btn {
+				display: none;
+				padding: 15px 12px;
+				background-color: #EEEEEE;
+				border: solid 1px #CCCCCC;
+				color: #0085CC;
+				font-size: 15px;
+		}
+}
+#nav-open-btn:active {
+		box-shadow: none;
+}
+#nav-open-btn .acms-admin-icon:focus {
+		outline: 0;
+}
+.acms-admin-header-btn {
+		color: #ffffff;
+		font-size: 30px;
+}
+@media screen and (min-width: 768px) {
+		#sidebar {
+				position: fixed;
+				top: 36px;
+				left: 0;
+				width: 160px;
+		}
+		.acms-admin-list-blog-sp {
+				display: none;
+		}
+		#outer-wrap #nav {
+				position: static;
+		}
+		/* サイドバー */
+		.acms-admin-sidebar-link a {
+				padding: 11px 10px 11px 20px;
+				font-weight: normal;
+				font-size: 13px;
+		}
+		.acms-admin-sidebar {
+				padding-bottom: 40px;
+		}
+}
+@media only screen and (min-device-width: 767px) and (max-device-width: 1023px) and (orientation: portrait) {
+		#sidebar .acms-admin-btn-login {
+				width: 75%;
+		}
+}
+.fixed {
+		position: static;
+		top: inherit;
+		left: inherit;
+}
+@media screen and (min-width: 768px) {
+		.fixed {
+				position: fixed;
+				top: 47px;
+				z-index: 11;
+		}
+}
+.fixed.acms-admin-position-right {
+		right: 20px;
+}
+.fixed.acms_fix_bg {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		z-index: 10;
+}
+.acms_fix_bg_index:before,
+.acms_fix_bg_index:after {
+		content: " ";
+		display: table;
+}
+.acms_fix_bg_index:after {
+		clear: both;
+}
+/* 固定ボタン */
+.js-acms_fix_target {
+		margin-bottom: 10px;
+}
+.js-acms_fix_target.fixed {
+		margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+		.fixed.acms_fix_bg {
+				padding: 0 20px 0 180px;
+				top: 36px;
+				left: 0;
+		}
+}
+.fixed .acms_fix_bg_index {
+		height: 32px;
+		margin-right: 0;
+		padding: 10px 0;
+		box-shadow: 0 0 0 #FFFFFF;
+		background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+		.fixed .acms_fix_bg_index {
+				height: 32px;
+				padding: 10px 0;
+				box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+		}
+}
+.fixed .acms_fix_bg_index .acms-admin-btn-admin {
+		z-index: 600;
+}
+.js-acms_fix_target {
+		margin-bottom: 10px;
+}
+.js-acms_fix_target .acms-admin-btn-admin {
+		margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+		.fixed + .acms-admin-admin-title2 {
+				margin-top: 55px;
+		}
+		.fixed + .acms-admin-table-responsive {
+				margin-top: 70px;
+		}
+		.js-acms_fix_target .acms-admin-btn-admin {
+				margin-bottom: 0;
+		}
+}
+#js-admin_action_box {
+		display: none;
+}
+@media screen and (min-width: 768px) {
+		#js-admin_action_box {
+				display: block;
+		}
+}
+.acms-admin-tab-text {
+		display: block;
+		max-width: 300px;
+		font-size: 12px;
+}
+.fixed .acms-admin-tab-text {
+		display: none;
+}
+.argRefLeft strong,
+.argRefCenter strong,
+.argRefRight strong {
+		display: block;
+		margin-bottom: 5px;
+}
+.argRefLeft {
+		float: left;
+		width: 40%;
+		height: 100%;
+}
+.argRefLeft .js-acms_tabs {
+		height: 90%;
+		list-style: none;
+		overflow-y: auto;
+		padding: 0;
+}
+.argRefLeft .js-acms_tabs li a {
+		border: 1px solid silver;
+		display: block;
+		border-right: none;
+		padding: 3px;
+		margin-bottom: 2px;
+}
+.argRefLeft .js-acms_tab-active {
+		background-color: #fff;
+}
+.argRefCenter {
+		width: 360px;
+		margin: 0 auto;
+		height: 100%;
+}
+.argRefRight {
+		float: left;
+		text-align: left;
+		width: 60%;
+		height: 100%;
+}
+.argRefCenter ul,
+.argRefRight ul {
+		padding: 0;
+		border: 1px solid silver;
+		border-left: none;
+		background-color: #fff;
+		height: 90%;
+		overflow-y: auto;
+}
+.argRefCenter ul {
+		border-left: 1px solid silver;
+}
+.argRefCenter ul li,
+.argRefRight ul li {
+		list-style: none;
+		margin-bottom: 3px;
+}
+.argRefCenter ul li a,
+.argRefRight ul li a {
+		display: block;
+		width: 98%;
+		padding: 3px 0 3px 2%;
+}
+.argRefCenter ul li a:hover,
+.argRefRight ul li a:hover {
+		background-color: #FFFFFF;
+		color: white;
+}
+.argRefRight:not(:target) {
+		width: 260px\9;
+		/* IE9・IE10 */
+}
+.acms-admin-admin-title2 {
+		margin: 10px 0 0 0;
+		padding: 4px 10px;
+		font-size: 13px;
+}
+.acms-admin-admin-title2 + ul {
+		margin-top: 10px;
+}
+.acms-admin-config-name {
+		font-size: 16px;
+}
+.acms-admin-config-name a {
+		display: block;
+		position: relative;
+}
+.acms-admin-config-name .acms-admin-icon {
+		display: inline-block;
+		color: #333333;
+		vertical-align: middle;
+}
+.acms-admin-config-name .acms-admin-config-module-name {
+		display: inline-block;
+		vertical-align: middle;
+}
+.acms-admin-config-name .acms-admin-config-module-name-en {
+		display: block;
+		color: #777777;
+		font-size: 11px;
+}
+.acms-admin-config-code {
+		display: none;
+		width: 140px;
+		text-align: right;
+}
+.acms-admin-config-code a {
+		margin-left: 10px;
+		font-size: 11px;
+		color: #888888;
+		vertical-align: middle;
+}
+.acms-admin-config-code .acms-admin-icon {
+		display: none;
+}
+@media screen and (min-width: 768px) {
+		.acms-admin-config-code {
+				display: table-cell;
+		}
+}
+.acms-admin-module-title-wrapper {
+		position: relative;
+}
+.acms-admin-module-title-wrapper .acms-admin-icon {
+		position: absolute;
+		left: 0;
+		top: 2px;
+}
+.acms-admin-module-title-wrapper .acms-admin-module-title {
+		padding-left: 35px;
+}
+.acms-admin-module-title-wrapper strong {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 13px;
+}
+.acms-admin-module-title-wrapper h1 {
+		margin: 0;
+		font-size: 20px;
+}
+.acms-admin-module-title-wrapper .acms-admin-module-en {
+		display: block;
+		margin-top: 5px;
+		color: #666666;
+		font-size: 12px;
+}
+.js-acms-tab-select {
+		margin-bottom: 10px;
+}
+.js-acms-tab-select-value {
+		margin-right: 5px;
+}
+.acms-admin-form input.sort-number {
+		padding: 4px 5px;
+}
+.acms-admin-entryTitle,
+.categoryTitle {
+		display: inline-block;
+		font-weight: bold;
+		font-size: 13px;
+}
+.categoryTitle {
+		margin: 0 20px 0 10px;
+}
+.acms-admin-entryTitle {
+		margin: 0 20px 10px 10px;
+}
+.acms-admin-list-inline {
+		padding-left: 0;
+		margin: 0;
+}
+#tagList li {
+		display: inline-block;
+		padding: 14px 10px;
+		border: 1px solid #a7a7aa;
+		border-radius: 3px;
+		background-color: #cccccc;
+		text-decoration: none;
+		text-align: center;
+		font-size: 14px;
+		line-height: 1;
+		background-color: #e1e1e1;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#ffe1e1e1', GradientType=0);
+		background-image: -moz-linear-gradient(top, #f9f9f9, #e1e1e1);
+		background-image: -ms-linear-gradient(top, #f9f9f9, #e1e1e1);
+		background-image: -o-linear-gradient(top, #f9f9f9, #e1e1e1);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#f9f9f9), to(#e1e1e1));
+		background-image: -webkit-linear-gradient(top, #f9f9f9, #e1e1e1);
+		background-image: linear-gradient(top, #f9f9f9, #e1e1e1);
+		color: #333333;
+		margin-right: 5px;
+		margin-bottom: 10px;
+}
+#tagList li a {
+		color: #333;
+}
+#tagList li .acms-admin-label {
+		margin-left: 5px;
+		padding: 3px 5px;
+		border-radius: 5px;
+}
+#tagList li:hover {
+		border: 1px solid #A5A5A5;
+		background-color: #e1e1e1;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcfcfc', endColorstr='#ffe1e1e1', GradientType=0);
+		background-image: -moz-linear-gradient(top, #fcfcfc, #e1e1e1);
+		background-image: -ms-linear-gradient(top, #fcfcfc, #e1e1e1);
+		background-image: -o-linear-gradient(top, #fcfcfc, #e1e1e1);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#e1e1e1));
+		background-image: -webkit-linear-gradient(top, #fcfcfc, #e1e1e1);
+		background-image: linear-gradient(top, #fcfcfc, #e1e1e1);
+		color: #333333;
+		text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+		#tagList li {
+				padding: 7px 10px;
+				font-size: 11px;
+		}
+}
+.admin-entry-index-val {
+		color: #666666;
+}
+.acms-admin-title-sp {
+		margin: 0;
+}
+.acms-admin-blog-index-url {
+		margin: 8px 0 0;
+}
+.acms-admin-pager-container {
+		margin-top: 10px;
+}
+.acms-admin-itemsAmount-container {
+		margin-top: 10px;
+		text-align: right;
+}
+.acms-admin-table-admin-edit-bordered td p,
+.acms-admin-table-admin-edit td p,
+.acms-admin-table-admin-edit-bordered th p,
+.acms-admin-table-admin-edit th p {
+		margin: 0;
+}
+@media screen and (max-width: 767px) {
+		.acms-admin-table-heading {
+				background-color: #F2F2F4;
+		}
+		.acms-admin-table-heading td {
+				display: inline-block;
+		}
+		.acms-admin-table-heading .acms-admin-td-status,
+		.acms-admin-table-heading .acms-admin-td-edit {
+				display: block;
+				width: 100%;
+		}
+		#main .acms-admin-table-admin td {
+				padding-top: 5px;
+				padding-bottom: 5px;
+		}
+		.acms-admin-table-admin td .acms-admin-list-inline {
+				margin-top: 5px;
+		}
+		.acms-admin-table-admin td .acms-admin-list-inline li {
+				line-height: 1.5;
+		}
+		.acms-admin-td-title {
+				display: block;
+		}
+		.acms-admin-td-title .acms-admin-entryTitle {
+				font-size: 16px;
+		}
+		.acms-admin-table-admin td,
+		#main .acms-admin-table-heading th,
+		.acms-admin-table-heading td {
+				border-top: none;
+				border-bottom: none;
+		}
+		.acms-admin-table-heading .acms-admin-td-edit {
+				border-bottom: 1px solid #CCCCCC;
+		}
+		.acms-admin-table-admin .acms-admin-th-checkbox {
+				text-align: left;
+		}
+		.acms-admin-table-heading .acms-admin-th-number,
+		.acms-admin-table-heading .acms-admin-th-id {
+				display: none;
+		}
+		.acms-admin-table-hover tr:hover td {
+				background-color: #F2F2F4;
+		}
+}
+.acms-admin-table-admin-edit .tooltipIcon,
+.acms-admin-table-admin .tooltipIcon {
+		margin-left: 10px;
+}
+.acms-admin-admin-mini-table .acms-admin-icon {
+		font-size: 28px;
+}
+.acms-admin-admin-mini-table td {
+		padding: 12px 10px\9;
+		border-bottom: solid 1px #CCCCCC\9;
+}
+.acms-admin-admin-mini-table td.caution {
+		background-color: #E1BCC4 !important;
+}
+.acms-admin-admin-table-scroll {
+		overflow-y: scroll;
+		max-height: 320px;
+}
+.acms-admin-admin-config-table tbody th {
+		width: 50px;
+}
+.acms-admin-admin-icon-table img {
+		vertical-align: middle;
+		margin-right: 10px;
+}
+.acms-admin-table-admin-edit .acms-admin-admin-config-table-item-handle {
+		width: 30px;
+}
+.acms-admin-table-admin-edit .acms-admin-admin-config-table-sort {
+		width: 92px;
+}
+.acms-admin-table-admin-edit .acms-admin-admin-config-table-publish {
+		width: 77px;
+}
+.acms-admin-table-admin-edit .acms-admin-admin-config-table-target {
+		width: 50px;
+}
+.acms-admin-table-admin-edit .acms-admin-admin-config-table-parent {
+		width: 50px;
+}
+.acms-admin-table-admin-edit .acms-admin-admin-config-table-action {
+		width: 50px;
+}
+.acms-admin-table-admin-edit .acms-admin-admin-config-table-criterion {
+		width: 50px;
+}
+.acms-admin-table-admin-edit .day {
+		width: 100px;
+}
+@media only screen and (min-device-width: 767px) and (max-device-width: 1023px) and (orientation: portrait) {
+		.acms-admin-table-admin-edit th,
+		.acms-admin-table-admin-edit td {
+				display: block;
+				text-align: left;
+		}
+}
+@media screen and (max-width: 767px) {
+		.acms-admin-table-admin-edit img {
+				width: auto;
+				max-width: 260px !important;
+				height: auto;
+		}
+		.acms-admin-table-admin-edit select {
+				display: block;
+				width: 100%;
+				margin-bottom: 10px;
+		}
+}
+.acms-admin-admin-icon {
+		margin-right: 10px;
+}
+.acms-admin-admin-icon-center {
+		margin-right: 10px;
+		vertical-align: middle;
+}
+.acms-admin-shortcut-btn {
+		padding: 7px 10px 6px 10px;
+}
+.acms-admin-btn-group-entry {
+		min-width: 90px;
+}
+.acms-admin-dropdown-menu > li > a {
+		color: #333333;
+}
+.acms-admin-btn-admin + .acms-admin-dropdown-toggle {
+		margin-left: -1px;
+		height: 31px;
+}
+.acms-admin-td-edit .js-acms-dropdown-menu {
+		min-width: 120px;
+}
+.acms-admin-unitbox {
+		margin: 0 0 20px 0;
+		padding: 10px;
+		border: 1px solid #CCCCCC;
+		background: #F2F2F4;
+}
+.acms-admin-table-container {
+		margin: 0 0 10px 0;
+		background: #E5E5E9;
+		border: 1px solid #CCCCCC;
+}
+.acms-admin-table-container .acms-admin-table {
+		border: none;
+}
+.acms-admin-table-container .acms-admin-table th {
+		vertical-align: inherit;
+}
+.acms-admin-unitbox .acms-admin-table-container tr,
+.acms-admin-unitbox .acms-admin-table-container th,
+.acms-admin-unitbox .acms-admin-table-container td {
+		border: none;
+}
+.acms-admin-unitbox i.acms-admin-icon-sort {
+		margin-right: 4px;
+}
+@media screen and (max-width: 767px) {
+		.acms-admin-unitbox th,
+		.acms-admin-unitbox td {
+				display: block;
+		}
+		.acms-admin-unitbox .acms-admin-table td.acms-admin-table-action {
+				width: auto;
+				text-align: right;
+		}
+}
+#loginBg {
+		background-color: #E5E5E9;
+}
+.acms-admin-loginBox-container {
+		max-width: 480px;
+		margin: 0 auto;
+}
+.acms-admin-titleBox {
+		margin: 100px auto 0;
+		max-height: 140px;
+		overflow: hidden;
+}
+.acms-admin-login-text {
+		color: #333;
+		font-size: 13px;
+		line-height: 1.7;
+}
+.acms-admin-loginBox {
+		max-width: 480px;
+		margin: 0 auto 0;
+		padding: 20px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background-color: #FFF;
+}
+.acms-admin-siteImage {
+		float: left;
+		margin: 0 20px 0 0;
+		border: 1px solid #CCCCCC;
+}
+.acms-admin-siteImageText {
+		display: block;
+		text-align: center;
+}
+.acms-admin-siteImageText span {
+		margin-right: 5px;
+}
+.acms-admin-titleBox {
+		text-align: center;
+}
+.acms-admin-loginHeaderImage {
+		width: 480px;
+		height: auto;
+		vertical-align: top;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+}
+.acms-admin-loginLogo {
+		border: none;
+}
+.acms-admin-loginBox .acms-admin-form {
+		margin-top: 25px;
+}
+.acms-admin-loginBox .acms-admin-form input {
+		margin-bottom: 10px;
+}
+.acms-admin-loginBox .acms-admin-form label {
+		font-size: 13px !important;
+		margin-top: 10px;
+}
+.acms-admin-loginBox .acms-admin-form-block {
+		width: 100%;
+}
+label.acms-admin-form-block a {
+		margin-left: 15px;
+}
+.acms-admin-loginBox-bottom {
+		margin-top: -10px;
+		padding: 20px;
+		border-top: 1px solid #E5E5E9;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background: #FFFFFF;
+}
+.acms-admin-loginBox-bottom p {
+		margin: 0;
+}
+.acms-admin-loginBox input.validator-result-,
+.acms-admin-loginBox input.validator-result- {
+		display: block;
+}
+.acms-admin-loginBox input.validator-result-0,
+.acms-admin-loginBox input.validator-result-0:focus {
+		border: 1px solid #BD3F5E;
+		box-shadow: none;
+		background: #FFF;
+}
+.loginLogo {
+		float: right;
+		margin-top: 10px;
+}
+.acms-admin-border {
+		position: relative;
+		width: 100%;
+		margin: 20px 0 18px 0;
+		text-align: center;
+}
+.acms-admin-border:before {
+		border-top: 1px solid #E5E5E9;
+		content: "";
+		padding: 0 0 0 100%;
+		position: absolute;
+		left: 0;
+		margin: 10px 0 0 0;
+}
+.acms-admin-borderText {
+		position: relative;
+		padding: 0 10px;
+		background: #FFF;
+}
+.acms-admin-btn-snsloginContainer {
+		position: relative;
+		float: left;
+		width: 50%;
+		margin: 0 0 20px 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+}
+.acms-admin-btn-snsimage {
+		position: absolute;
+		width: 44px;
+		height: 100%;
+		padding: 0;
+		border-right: 1px solid #CCC;
+		font-size: 22px;
+		color: #FFF;
+		text-align: center;
+		border-radius: 6px 0 0 6px;
+}
+.acms-admin-btn-snsimage-facebook {
+		background-color: #39579A;
+}
+.acms-admin-btn-snsimage-twitter {
+		background-color: #55ACEE;
+}
+.acms-admin-btn-snsimage .acms-admin-icon-facebook {
+		position: absolute;
+		bottom: 0;
+		right: 0px;
+		padding: 0;
+		font-size: 30px;
+}
+.acms-admin-btn-snsimage .acms-admin-icon-facebook:before {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		vertical-align: bottom;
+}
+.acms-admin-btn-snsimage .acms-admin-icon-twitter {
+		position: static;
+		padding: 0;
+}
+.acms-admin-btn-snsimage .acms-admin-icon-twitter:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -11px 0 0 -11px;
+}
+.acms-admin-btn-snslogin {
+		padding-left: 44px;
+}
+.acms-admin-login-facebook {
+		padding: 0 10px 0 0;
+}
+.acms-admin-btn-facebooklogin {
+		border: 1px solid #2D4694;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		background-color: #2d4694;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3754b3', endColorstr='#ff2d4694', GradientType=0);
+		background-image: -moz-linear-gradient(top, #3754b3, #2d4694);
+		background-image: -ms-linear-gradient(top, #3754b3, #2d4694);
+		background-image: -o-linear-gradient(top, #3754b3, #2d4694);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#3754b3), to(#2d4694));
+		background-image: -webkit-linear-gradient(top, #3754b3, #2d4694);
+		background-image: linear-gradient(top, #3754b3, #2d4694);
+		color: #ffffff;
+}
+.acms-admin-btn-facebooklogin:hover,
+.acms-admin-btn-facebooklogin.hover {
+		border: 1px solid #192752;
+		background-color: #3551a3;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4765c6', endColorstr='#ff3551a3', GradientType=0);
+		background-image: -moz-linear-gradient(top, #4765c6, #3551a3);
+		background-image: -ms-linear-gradient(top, #4765c6, #3551a3);
+		background-image: -o-linear-gradient(top, #4765c6, #3551a3);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#4765c6), to(#3551a3));
+		background-image: -webkit-linear-gradient(top, #4765c6, #3551a3);
+		background-image: linear-gradient(top, #4765c6, #3551a3);
+		color: #ffffff;
+		text-decoration: none;
+}
+.acms-admin-btn-facebooklogin:link,
+.acms-admin-btn-facebooklogin:hover,
+.acms-admin-btn-facebooklogin:active,
+.acms-admin-btn-facebooklogin:visited {
+		color: #FFFFFF;
+}
+.acms-admin-btn-facebooklogin.active,
+.acms-admin-btn-facebooklogin:active {
+		border: 1px solid #192752;
+		background-color: #2d4694;
+		box-shadow: inset 0 1px 2px #192752;
+		color: #ffffff;
+		text-decoration: none;
+}
+.acms-admin-btn-facebooklogin:focus {
+		outline: none;
+		border-color: #192752;
+}
+.acms-admin-btn-twitterlogin {
+		border: 1px solid #299AF1;
+		background-color: #299af1;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff55aff4', endColorstr='#ff299af1', GradientType=0);
+		background-image: -moz-linear-gradient(top, #55aff4, #299af1);
+		background-image: -ms-linear-gradient(top, #55aff4, #299af1);
+		background-image: -o-linear-gradient(top, #55aff4, #299af1);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#55aff4), to(#299af1));
+		background-image: -webkit-linear-gradient(top, #55aff4, #299af1);
+		background-image: linear-gradient(top, #55aff4, #299af1);
+		color: #ffffff;
+}
+.acms-admin-btn-twitterlogin:hover,
+.acms-admin-btn-twitterlogin.hover {
+		border: 1px solid #005896;
+		background-color: #4baaf4;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6cb9f5', endColorstr='#ff4baaf4', GradientType=0);
+		background-image: -moz-linear-gradient(top, #6cb9f5, #4baaf4);
+		background-image: -ms-linear-gradient(top, #6cb9f5, #4baaf4);
+		background-image: -o-linear-gradient(top, #6cb9f5, #4baaf4);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#6cb9f5), to(#4baaf4));
+		background-image: -webkit-linear-gradient(top, #6cb9f5, #4baaf4);
+		background-image: linear-gradient(top, #6cb9f5, #4baaf4);
+		color: #ffffff;
+		text-decoration: none;
+}
+.acms-admin-btn-twitterlogin:link,
+.acms-admin-btn-twitterlogin:hover,
+.acms-admin-btn-twitterlogin:active,
+.acms-admin-btn-twitterlogin:visited {
+		color: #FFFFFF;
+}
+.acms-admin-btn-twitterlogin.active,
+.acms-admin-btn-twitterlogin:active {
+		border: 1px solid #005896;
+		background-color: #299af1;
+		box-shadow: inset 0 1px 2px #005896;
+		color: #ffffff;
+		text-decoration: none;
+}
+.acms-admin-btn-twitterlogin:focus {
+		outline: none;
+		border-color: #005896;
+}
+.acms-admin-login-twitter {
+		padding: 0 0 0 10px;
+}
+@media (max-width: 479px) {
+		.acms-admin-titleBox {
+				margin: 0 auto;
+		}
+		.acms-admin-loginLogo {
+				border: none;
+				width: 133px;
+				height: 23px;
+		}
+		.acms-admin-loginHeaderImage {
+				width: 100%;
+				height: auto;
+				border-radius: 0;
+		}
+		#loginBg {
+				background-color: #FFF;
+		}
+		.acms-admin-loginBox {
+				margin: 0;
+				padding: 10px;
+		}
+		.acms-admin-loginBox .acms-admin-form {
+				margin-top: 18px;
+		}
+		.acms-admin-loginTitle {
+				margin: 0 auto;
+		}
+		.acms-admin-sp-btn-admin {
+				margin: 0 5px 5px 0;
+				display: inline-block;
+				padding: 14px 10px;
+				border: 1px solid #a7a7aa;
+				border-radius: 3px;
+				background-color: #cccccc;
+				font-size: 14px;
+				line-height: 1;
+				background-color: #e1e1e1;
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#ffe1e1e1', GradientType=0);
+				background-image: -moz-linear-gradient(top, #f9f9f9, #e1e1e1);
+				background-image: -ms-linear-gradient(top, #f9f9f9, #e1e1e1);
+				background-image: -o-linear-gradient(top, #f9f9f9, #e1e1e1);
+				background-image: -webkit-gradient(linear, center top, center bottom, from(#f9f9f9), to(#e1e1e1));
+				background-image: -webkit-linear-gradient(top, #f9f9f9, #e1e1e1);
+				background-image: linear-gradient(top, #f9f9f9, #e1e1e1);
+				color: #333333;
+				text-decoration: none;
+				-webkit-transition: all 0.1s linear;
+				-moz-transition: all 0.1s linear;
+				-o-transition: all 0.1s linear;
+				transition: all 0.1s linear;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				text-align: center;
+		}
+		.acms-admin-sp-btn-admin:hover {
+				border-top: 1px solid rgba(0, 0, 0, 0.3);
+				background-color: #e1e1e1;
+				text-decoration: none;
+		}
+		.acms-admin-sp-btn-admin.active,
+		.acms-admin-sp-btn-admin:link,
+		.acms-admin-sp-btn-admin:hover,
+		.acms-admin-sp-btn-admin:active,
+		.acms-admin-sp-btn-admin:visited {
+				color: #0085CC;
+		}
+		.acms-admin-sp-btn-admin:active {
+				border-top: 1px solid rgba(0, 0, 0, 0.3) !important;
+				box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+				text-decoration: none;
+				background-color: #d5d5d5;
+		}
+		.acms-admin-loginBox,
+		.acms-admin-loginBox-bottom {
+				background: transparent;
+				border: none;
+		}
+		.acms-admin-loginBox-bottom {
+				margin: 0 0 20px 0;
+				padding: 0 10px;
+		}
+		.loginLogo {
+				float: none;
+				margin-bottom: 20px;
+				text-align: center;
+		}
+		.acms-admin-btn-snsimage {
+				padding: 0;
+		}
+}
+.validator-result-,
+.validator-result-1,
+.transaction-notice-,
+#tooltip,
+#js-processing-notice-,
+#js-processing-notice-show {
+		display: none;
+}
+.validator-result-error,
+.validator-result-0 {
+		display: block;
+}
+#adminBox > #loginUserStatus {
+		display: none;
+}
+#adminBox {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding: 12px 20px 10px;
+		border: none;
+		border-bottom: 1px solid #CCCCCC;
+		margin-bottom:0!important;
+}
+.acms-admin-action-box {
+		margin-bottom: 10px;
+}
+.acms-admin-admin-title2 {
+		clear: both;
+}
+.acms-admin-admin-title2.acms-admin-margin-top-medium {
+		margin-top: 10px;
+}
+.acms-admin-filter {
+		margin: 0 0 20px;
+		padding: 10px;
+		border: none;
+		border: 1px solid #CCC;
+}
+@media screen and (max-width: 767px) {
+		.acms-admin-filter select {
+				display: block;
+				width: 100%;
+				margin-bottom: 10px;
+		}
+		.acms-admin-table-admin input[type="text"],
+		.acms-admin-filter input[type="text"] {
+				width: 100%;
+		}
+}
+.acms-admin-box-group {
+		margin-top: 20px;
+		margin-bottom: 20px;
+}
+.acms-admin-tabs {
+		margin-bottom: 20px;
+}
+.acms-admin-admin-checklist-config-search {
+		margin: 10px 10px 20px;
+}
+.acms-admin-benchmark-contenar {
+		padding-left: 190px;
+}
+@media screen and (max-width: 767px) {
+		#main .ui-tabs {
+				margin-bottom: 20px;
+		}
+		#main .ui-tabs .ui-tabs-panel {
+				padding: 0;
+		}
+}

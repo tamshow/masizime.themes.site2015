@@ -1,0 +1,105 @@
+<!-- BEGIN layout#display -->
+<!-- BEGIN_MODULE Entry_Body id="" -->
+<!-- BEGIN notFound -->
+<article class="entry">
+ <section class="acms-entry entry">
+  <h2 class="notFoundTitle">Not found</h2>
+
+  <p>お探しの記事は見つかりませんでした。</p>
+ </section>
+</article>
+<!-- END notFound -->
+
+<!-- 1記事▼▼ -->
+<!-- BEGIN entry:loop -->
+<!-- BEGIN Touch_Login -->
+<div class="acms-form-group">
+ <!--#include file="/admin/entry/revision-info.html"-->
+</div><!-- END Touch_Login -->
+
+<article class="entry {entry:loop.class}">
+ <!--#include file="/admin/entry/title.html"-->
+
+ <!-- エントリーのタイトル 開始▼▼ -->
+ <!-- BEGIN title:veil -->
+ <header class="entry__head acms-page-header pageHeader">
+  <p class="entryInfo">
+   <!-- BEGIN date:veil -->
+   <time datetime="{date#Y}-{date#m}-{date#d}">{date#Y}年{date#m}月{date#d}日（{date#l}[weekEN2JP]）</time>
+   <!-- END date:veil -->
+   <!-- BEGIN category:veil -->
+   <!-- BEGIN category:loop -->
+   <span class="acms-label entryCategory"><a href="{url}">{name}</a></span>
+   <!-- BEGIN glue -->
+   &lt;
+   <!-- END glue -->
+   <!-- END category:loop -->
+   <!-- END category:veil --><!-- BEGIN new --><span class="acms-label acms-label-warning entryNew">NEW</span><!-- END new -->
+  </p>
+  <!-- BEGIN_MODULE Touch_Entry --><h1 class="heading-a entry__title entryTitle"><a href="{titleUrl}">{title}[raw]</a>
+ </h1><!-- END_MODULE Touch_Entry -->
+  <!-- BEGIN_MODULE Touch_NotEntry -->
+  <h2 class="heading-a entry__title entryTitle"><a href="{titleUrl}">{title}[raw]</a></h2><!-- END_MODULE Touch_NotEntry -->
+ </header>
+ <!-- END title:veil -->
+
+ <!-- BEGIN entry:veil -->
+ <div class="entry__body acms-entry entryColumn">
+  <div class="acms-grid-r">
+   <!-- BEGIN unit:veil -->
+   <!--#include file="/include/unit.html"-->
+   <hr class="clearHidden"/>
+   <!-- END unit:veil -->
+   <!-- 続きを読む -->
+   <!--#include file="/include/module/entry/continue.html"-->
+  </div>
+ </div>
+ <!-- END entry:veil -->
+
+ <!-- BEGIN formBody -->
+ <!--#include file="/include/form/unit.html"-->
+ <hr class="clearHidden"/>
+ <!-- END formBody -->
+
+ <!-- BEGIN adminEntryEdit -->
+ <div class="acms-box-medium">
+  <!--#include file="/admin/entry/edit.html"-->
+  <!--#include file="/admin/entry/add.html"-->
+ </div>
+ <!-- END adminEntryEdit -->
+
+ <!-- BEGIN adminFormEdit -->
+ <!--#include file="/admin/form2/edit.html"-->
+ <!-- END adminFormEdit -->
+
+ <!-- BEGIN_MODULE Touch_Entry -->
+ <footer class="entry__foot entryFooter">
+  <div class="clearfix">
+   <div class="entryTagWrapper acms-col-md-6">
+    <!-- BEGIN tag:veil -->
+    <dl class="entryTag">
+     <dt class="acms-inline-space entryTagIcon">
+      <span class="acms-icon-tag"></span><span class="acms-hide-visually">タグ</span></dt>
+     <!-- BEGIN tag:loop -->
+     <dd class="entryTagItem"><a href="/entry.html/tag/{name}">{name}</a></dd>
+     <!-- END tag:loop -->
+    </dl>
+    <!-- END tag:veil -->
+   </div>
+
+  </div>
+ </footer>
+ <!-- END_MODULE Touch_Entry -->
+
+ <div class="acms-box-medium">
+  <!--#include file="/admin/entry/action.html"-->
+ </div>
+
+</article>
+<!-- END entry:loop -->
+<!-- 1記事▲▲ -->
+
+<!-- ページャー -->
+<!-- #include file="/include/parts/entry_pagination.html" -->
+<!-- END_MODULE Entry_Body -->
+<!-- END layout#display -->

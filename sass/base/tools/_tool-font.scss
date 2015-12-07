@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* @ font
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: フォントサイズ
+name: tool-fontsize
+category: tool-fontsize
+---
+
+ミドルスクリーンは`--md`<br>
+スモールスクリーンは`--sm`
+
+<div class="styleguide-table"></div>
+View                            | Class  |   Description
+------------------------------- | ------ | ------------|
+<span class="f8">8px</span>     | `f8`   |             |
+<span class="f9">9px</span>     | `f9`   |             |
+<span class="f10">10px</span>   | `f10`  |             |
+<span class="f11">11px</span>   | `f11`  |             |
+<span class="f12">12px</span>   | `f12`  |             |
+<span class="f13">13px</span>   | `f13`  |             |
+<span class="f14">14px</span>   | `f14`  |             |
+<span class="f15">15px</span>   | `f15`  |             |
+<span class="f16">16px</span>   | `f16`  |             |
+<span class="f17">17px</span>   | `f17`  |             |
+<span class="f18">18px</span>   | `f18`  |             |
+<span class="f19">19px</span>   | `f19`  |             |
+<span class="f20">20px</span>   | `f20`  |             |
+<span class="f21">21px</span>   | `f21`  |             |
+<span class="f22">22px</span>   | `f22`  |             |
+<span class="f23">23px</span>   | `f23`  |             |
+<span class="f24">24px</span>   | `f24`  |             |
+<span class="f25">25px</span>   | `f25`  |             |
+<span class="f26">26px</span>   | `f26`  |             |
+<span class="f27">27px</span>   | `f27`  |             |
+<span class="f28">28px</span>   | `f28`  |             |
+<span class="f29">29px</span>   | `f29`  |             |
+<span class="f30">30px</span>   | `f30`  |             |
+<span class="f31">31px</span>   | `f31`  |             |
+<span class="f32">32px</span>   | `f32`  |             |
+<span class="f33">33px</span>   | `f33`  |             |
+<span class="f34">34px</span>   | `f34`  |             |
+<span class="f35">35px</span>   | `f35`  |             |
+<span class="f36">36px</span>   | `f36`  |             |
+<span class="f37">37px</span>   | `f37`  |             |
+<span class="f38">38px</span>   | `f38`  |             |
+<span class="f39">39px</span>   | `f39`  |             |
+<span class="f40">40px</span>   | `f40`  |             |
+*/
+
+
+.f8 { @include fsize(8px);}
+.f9 { @include fsize(9px);}
+.f10{ @include fsize(10px);}
+.f11{ @include fsize(11px);}
+.f12{ @include fsize(12px);}
+.f13{ @include fsize(13px);}
+.f14{ @include fsize(14px);}
+.f15{ @include fsize(15px);}
+.f16{ @include fsize(16px);}
+.f17{ @include fsize(17px);}
+.f18{ @include fsize(18px);}
+.f19{ @include fsize(19px);}
+.f20{ @include fsize(20px);}
+.f21{ @include fsize(21px);}
+.f22{ @include fsize(22px);}
+.f23{ @include fsize(23px);}
+.f24{ @include fsize(24px);}
+.f25{ @include fsize(25px);}
+.f26{ @include fsize(26px);}
+.f27{ @include fsize(27px);}
+.f28{ @include fsize(28px);}
+.f29{ @include fsize(29px);}
+.f30{ @include fsize(30px);}
+.f31{ @include fsize(31px);}
+.f32{ @include fsize(32px);}
+.f33{ @include fsize(33px);}
+.f34{ @include fsize(34px);}
+.f35{ @include fsize(35px);}
+.f36{ @include fsize(36px);}
+.f37{ @include fsize(37px);}
+.f38{ @include fsize(38px);}
+.f39{ @include fsize(39px);}
+.f40{ @include fsize(40px);}
+
+.f8--md { @include fsize(false, 8px);}
+.f9--md { @include fsize(false, 9px);}
+.f10--md{ @include fsize(false, 10px);}
+.f11--md{ @include fsize(false, 11px);}
+.f12--md{ @include fsize(false, 12px);}
+.f13--md{ @include fsize(false, 13px);}
+.f14--md{ @include fsize(false, 14px);}
+.f15--md{ @include fsize(false, 15px);}
+.f16--md{ @include fsize(false, 16px);}
+.f17--md{ @include fsize(false, 17px);}
+.f18--md{ @include fsize(false, 18px);}
+.f19--md{ @include fsize(false, 19px);}
+.f20--md{ @include fsize(false, 20px);}
+.f21--md{ @include fsize(false, 21px);}
+.f22--md{ @include fsize(false, 22px);}
+.f23--md{ @include fsize(false, 23px);}
+.f24--md{ @include fsize(false, 24px);}
+.f25--md{ @include fsize(false, 25px);}
+.f26--md{ @include fsize(false, 26px);}
+.f27--md{ @include fsize(false, 27px);}
+.f28--md{ @include fsize(false, 28px);}
+.f29--md{ @include fsize(false, 29px);}
+.f30--md{ @include fsize(false, 30px);}
+.f31--md{ @include fsize(false, 31px);}
+.f32--md{ @include fsize(false, 32px);}
+.f33--md{ @include fsize(false, 33px);}
+.f34--md{ @include fsize(false, 34px);}
+.f35--md{ @include fsize(false, 35px);}
+.f36--md{ @include fsize(false, 36px);}
+.f37--md{ @include fsize(false, 37px);}
+.f38--md{ @include fsize(false, 38px);}
+.f39--md{ @include fsize(false, 39px);}
+.f40--md{ @include fsize(false, 40px);}
+
+.f8--sm { @include fsize(false, false, 8px);}
+.f9--sm { @include fsize(false, false, 9px);}
+.f10--sm{ @include fsize(false, false, 10px);}
+.f11--sm{ @include fsize(false, false, 11px);}
+.f12--sm{ @include fsize(false, false, 12px);}
+.f13--sm{ @include fsize(false, false, 13px);}
+.f14--sm{ @include fsize(false, false, 14px);}
+.f15--sm{ @include fsize(false, false, 15px);}
+.f16--sm{ @include fsize(false, false, 16px);}
+.f17--sm{ @include fsize(false, false, 17px);}
+.f18--sm{ @include fsize(false, false, 18px);}
+.f19--sm{ @include fsize(false, false, 19px);}
+.f20--sm{ @include fsize(false, false, 20px);}
+.f21--sm{ @include fsize(false, false, 21px);}
+.f22--sm{ @include fsize(false, false, 22px);}
+.f23--sm{ @include fsize(false, false, 23px);}
+.f24--sm{ @include fsize(false, false, 24px);}
+.f25--sm{ @include fsize(false, false, 25px);}
+.f26--sm{ @include fsize(false, false, 26px);}
+.f27--sm{ @include fsize(false, false, 27px);}
+.f28--sm{ @include fsize(false, false, 28px);}
+.f29--sm{ @include fsize(false, false, 29px);}
+.f30--sm{ @include fsize(false, false, 30px);}
+.f31--sm{ @include fsize(false, false, 31px);}
+.f32--sm{ @include fsize(false, false, 32px);}
+.f33--sm{ @include fsize(false, false, 33px);}
+.f34--sm{ @include fsize(false, false, 34px);}
+.f35--sm{ @include fsize(false, false, 35px);}
+.f36--sm{ @include fsize(false, false, 36px);}
+.f37--sm{ @include fsize(false, false, 37px);}
+.f38--sm{ @include fsize(false, false, 38px);}
+.f39--sm{ @include fsize(false, false, 39px);}
+.f40--sm{ @include fsize(false, false, 40px);}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if (IE 7)&!(IEMobile)]>
+<html class="ie7 lt-ie8 lt-ie9 oldie" lang="ja"> <![endif]-->
+<!--[if (IE 8)&!(IEMobile)]>
+<html class="ie8 lt-ie9 oldie" lang="ja"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9" lang="ja"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ja">
+<!--<![endif]-->
+<head>
+ <!--#include file="/include/head/meta.html" -->
+ <!--#include file="/include/head/link.html" -->
+ <!--#include file="/include/head/js.html" -->
+</head>
+<body>
+<!--#include file="/include/parts/skiplink.html" -->
+<p id="pagetop" class="sr-only">ページの先頭です</p>
+<!--#include file="/include/header.html" -->
+<!--#include file="/include/parts/breadcrumb.html" -->
+<div class="content" role="main">
+ <p id="main-anc" class="sr-only">本文の始まりです</p>
+ <!-- レイアウトモジュール -->
+ <!--#include file="/include/entry_layout.html" -->
+ <!-- SEOチェック -->
+ <div class="acms-container">
+  <!--#include file="/include/%{VIEW}_check.html" -->
+ </div>
+ <p id="end-anc" class="sr-only">本文の終わりです</p>
+ <!--#include file="/include/parts/to_top.html" -->
+</div>
+<!--#include file="/include/footer.html" -->
+</body>
+</html>
+

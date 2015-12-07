@@ -1,0 +1,91 @@
+/*
+ *    @ widget-list
+ *    @ widget-entry-list
+ *    @ widget bnr
+*/
+/* @  widget list
+ * ------------------------------------------------------------ */
+.widget-list {
+  margin-bottom: 20px; }
+
+.widget-list__title {
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #ccc;
+  padding: 6px 11px;
+  text-indent: -13px;
+  padding-left: 35px; }
+
+.widget-list__body {
+  border: 1px solid #ccc;
+  border-top: none; }
+
+.widget-list__item {
+  border-top: 1px dotted #CCC; }
+  .widget-list__item:first-child {
+    border: none; }
+  .widget-list__item a {
+    line-height: 1.7;
+    display: block;
+    padding: 7px 11px 6px; }
+    .widget-list__item a:active {
+      box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.1); }
+    .widget-list__item a:hover, .widget-list__item a.current {
+      background-color: #FAFAFA;
+      text-decoration: none; }
+
+/* @  widget entry list
+ * ------------------------------------------------------------ */
+.widget-entry-list {
+  margin-bottom: 20px; }
+
+.widget-entry-list__title {
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 4px; }
+  @media only screen and (max-width: 37.4375em) {
+    .widget-entry-list__title {
+      font-size: 18px; } }
+  @media only screen and (max-width: 37.4375em) {
+    .widget-entry-list__title {
+      text-align: center; } }
+
+.widget-entry-list__body {
+  margin-bottom: 10px; }
+
+.widget-entry-list__item {
+  border-bottom: 1px solid #CCC; }
+  .widget-entry-list__item a {
+    line-height: 1.7;
+    display: block;
+    padding: 7px 7px 6px; }
+    .widget-entry-list__item a:active {
+      box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.1); }
+    .widget-entry-list__item a:hover, .widget-entry-list__item a.current {
+      background-color: #FAFAFA;
+      text-decoration: none; }
+
+.widget-entry-list__more a {
+  line-height: 1;
+  padding: 9px 10px 8px;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  background-color: #ccc; }
+  .widget-entry-list__more a:active {
+    box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 74.9375em) {
+    .widget-entry-list__more a {
+      font-size: fale; } }
+  @media only screen and (max-width: 37.4375em) {
+    .widget-entry-list__more a {
+      font-size: 16px; } }
+  .widget-entry-list__more a:hover {
+    background-color: #ccc;
+    text-decoration: none; }
+
+/* @  widget bnr
+ * ------------------------------------------------------------ */
+.widget-bnr__item {
+  margin-bottom: 20px;
+  text-align: center; }

@@ -1,0 +1,44 @@
+<h2 class="heading-c">ブログのモジュール</h2>
+<div class="entry-container">
+ <div class="table-a">
+
+  <!-- BEGIN_MODULE Admin_Module_Index -->
+  <!-- BEGIN index:touch#result -->
+  <table>
+   <thead>
+   <tr>
+    <th>mid</th>
+    <th>id</th>
+    <th>ステータス/名前</th>
+    <th>適用モジュール</th>
+    <th>グローバル</th>
+   </tr>
+   </thead>
+   <tbody><!-- BEGIN module:loop -->
+   <tr>
+    <td><span class="acms-admin-label">{mid}</span></td>
+    <td>
+     <strong>{identifier}</strong>
+    </td>
+    <td>
+     <!-- BEGIN status#open -->
+     <span class="acms-admin-label acms-admin-label-info admin-status-label">有効</span><!-- END status#open --><!-- BEGIN status#close -->
+     <span class="acms-admin-label acms-admin-label-danger admin-status-label">無効</span><!-- END status#close -->
+     {label}
+    </td>
+    <td>{name}</td>
+    <td>
+     <!-- BEGIN scope:touch#global --><span class="acms-admin-label acms-admin-label-info admin-status-label">有効</span><!-- END scope:touch#global -->
+     <!-- BEGIN scope:touch#local --> - <!-- END scope:touch#local -->
+     <!-- BEGIN scope:touch#parental --> - <!-- END scope:touch#parental -->
+    </td>
+
+   </tr>
+   </tbody>
+   <!-- END module:loop -->
+  </table>
+  <!-- END index:touch#result -->
+  <!-- END_MODULE Admin_Module_Index -->
+ </div>
+</div>
+

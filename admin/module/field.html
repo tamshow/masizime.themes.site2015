@@ -1,0 +1,42 @@
+<h3 class="acms-admin-admin-title2">モジュールの設定</h3>
+<table class="adminTable acms-admin-table-admin-edit">
+ <tr>
+  <th>見出し</th>
+  <td>
+   <input type="text" name="module_heading" value="{module_heading}" class="acms-admin-form-width-3quarters"/>
+   <input type="hidden" name="field[]" value="module_heading"/>
+  </td>
+ </tr>
+ <tr>
+  <th>小見出し</th>
+  <td>
+   <input type="text" name="module_sub_heading" value="{module_sub_heading}" class="acms-admin-form-width-3quarters"/>
+   <input type="hidden" name="field[]" value="module_sub_heading"/>
+  </td>
+ </tr>
+ <tr>
+  <th>リード文</th>
+  <td>
+   <textarea name="module_lead" cols="60" rows="5">{module_lead}</textarea>
+   <input type="hidden" name="field[]" value="module_lead"/>
+  </td>
+ </tr>
+ <tr>
+  <th>属性1</th>
+  <td>
+   <input type="text" name="module_attr1" value="{module_attr1}" class="acms-admin-form-width-3quarters"/>
+   <input type="hidden" name="field[]" value="module_attr1"/>
+  </td>
+ </tr>
+ <tr>
+  <th>属性2</th>
+  <td>
+   <input type="text" name="module_attr2" value="{module_attr2}" class="acms-admin-form-width-3quarters"/>
+   <input type="hidden" name="field[]" value="module_attr2"/>
+  </td>
+ </tr>
+</table>
+<!-- BEGIN moduleField -->
+<!-- BEGIN_IF [{module_heading}/nem] -->
+<!-- END_IF -->
+<!-- END moduleField -->

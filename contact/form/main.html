@@ -1,0 +1,129 @@
+<div class="entry">
+ <!-- BEGIN_MODULE Form --><!-- BEGIN step --><!-- フォームステップ：初期 -->
+ <div class="entry__head">
+  <h2 class="entry__title entryTitle">お問い合わせ</h2>
+
+  <div class="entry__lead mb20">
+   <p>必要項目をご記入・ご選択後「入力内容を確認する」ボタンをクリックして入力内容をご確認ください。<br>
+    <span class="req">必須</span>がついた項目は必ず入力してください。</p>
+  </div>
+ </div>
+ <div class="entry__body acms-entry">
+  <form action="" method="post" enctype="multipart/form-data">
+   <!--#include file="input.html"-->
+   <div class="form-btn-box">
+    <div class="btn-a">
+     <input type="hidden" name="step" value="confirm"/>
+     <input type="hidden" name="error" value="reapply"/>
+     <input type="hidden" name="id" value="contactForm"/>
+     <button type="submit" name="ACMS_POST_Form_Confirm" id="btnConfirm">送信内容の確認へ</button>
+    </div>
+   </div>
+  </form>
+ </div>
+ <!-- END step -->
+ <!-- =============================== -->
+
+ <!-- BEGIN step#reapply --><!-- フォームステップ：修正・エラー -->
+ <div class="entry__head">
+  <h2 class="entry__title entryTitle">お問合せ</h2>
+
+  <div class="entry__lead mb20">
+   <p>必要項目をご記入・ご選択後「入力内容を確認する」ボタンをクリックして入力内容をご確認ください。<br>
+    <span class="req text-bold">必須</span>がついた項目は必ず入力してください。</p></div>
+  <div class="form-err">【入力エラーです】<br>入力内容を確認して再度送信してください。</div>
+ </div>
+ <div class="entry__body acms-entry">
+  <form action="" method="post" enctype="multipart/form-data">
+   <!--#include file="/contact/form/input.html"-->
+   <div class="form-btn-box">
+    <div class="btn-a">
+     <input type="hidden" name="step" value="confirm"/>
+     <input type="hidden" name="error" value="reapply"/>
+     <input type="hidden" name="id" value="contactForm"/>
+     <button type="submit" name="ACMS_POST_Form_Confirm" id="btnConfirm">送信内容の確認へ</button>
+    </div>
+   </div>
+  </form>
+ </div>
+ <!-- END step#reapply -->
+ <!-- =============================== -->
+
+
+ <!-- BEGIN step#confirm --><!-- フォームステップ：確認画面 -->
+ <div class="entry__head">
+  <h2 class="entry__title entryTitle">お問合せ内容の確認</h2>
+
+  <div class="entry__lead mb20">
+   <h3>下記の内容で送信します。</h3>
+  </div>
+ </div>
+ <div class="entry__body acms-entry">
+  <!--#include file="confirm.html"-->
+  <div class="form-btn-box">
+   <div class="btn-a">
+    <form action="" method="post" class="formBtn formBtnReturn">
+     <input type="hidden" name="step" value="reapply"/>
+     <input type="hidden" name="takeover" value="{takeover}"/>
+     <button type="submit" name="ACMS_POST_Form_Chain" id="btnToInput">戻って編集する</button>
+    </form>
+   </div>
+   <div class="btn-a">
+    <form action="thanks.html" method="post" class="formBtn formBtnSend" enctype="multipart/form-data">
+     <input type="hidden" name="To[]" value="{email}"/>
+     <input type="hidden" name="AdminReply-To[]" value="<{email}>"/>
+     <input type="hidden" name="AdminFrom[]" value="<{email}>"/>
+     <input type="hidden" name="step" value="result"/>
+     <input type="hidden" name="takeover" value="{takeover}"/>
+     <input type="hidden" name="id" value="contactForm"/>
+     <button type="submit" name="ACMS_POST_Form_Submit" id="btnSubmit">入力内容を送信する</button>
+    </form>
+   </div>
+  </div>
+
+ </div>
+ <!-- END step#confirm -->
+
+
+ <!-- BEGIN step#result -->
+ <!-- フォームステップ：完了画面 -->
+ <div class="entry__head">
+  <h2 class="entry__title entryTitle">お問い合わせ</h2>
+
+  <div class="entry__lead mb20">
+   <p>お問い合わせありがとうございました。以下の内容で送信しました。</p>
+  </div>
+ </div>
+ <div class="entry__body acms-entry">
+ </div>
+
+ <!--#include file="/contact/form/confirm.html"-->
+ <!-- END step#result -->
+ <!-- BEGIN step#forbidden -->
+ <div class="entry__head">
+  <h2 class="entry__title entryTitle">お問い合わせ</h2>
+
+  <div class="entry__lead mb20">
+   <p>不正なアクセスです。お手数ですが、はじめからやり直して下さい。</p>
+  </div>
+ </div>
+ <div class="entry__body acms-entry">
+ </div>
+ <!-- END step#forbidden -->
+ <!-- BEGIN step#repeated -->
+ <div class="entry__head">
+  <h2 class="entry__title entryTitle">お問い合わせ</h2>
+
+  <div class="entry__lead mb20">
+   <p>連続投稿は禁止されています。お手数ですが、はじめからやり直して下さい。</p>
+  </div>
+ </div>
+ <div class="entry__body acms-entry">
+ </div>
+ <!-- END step#repeated -->
+ <!-- BEGIN error -->
+ <!-- フォームID : {formID} / エラー項目 : {errorKey} -->
+ <!-- END error -->
+ <!-- END_MODULE Form -->
+
+</div>

@@ -1,0 +1,30 @@
+<!-- BEGIN_MODULE Topicpath -->
+<div class="breadcrumb is-hidden--sm">
+ <div class="breadcrumb__inner" xmlns:v="http://rdf.data-vocabulary.org/#">
+  <!-- BEGIN blog:loop -->
+  <span typeof="v:Breadcrumb">
+   <!-- BEGIN glue -->
+   <span class="breadcrumb__arrow"> ＞</span>
+   <!-- END glue -->
+   <a href="{url}" rel="v:url" property="v:title">{name}</a></span>
+  <!-- END blog:loop -->
+  <!-- BEGIN category:loop -->
+  <span typeof="v:Breadcrumb">
+   <!-- BEGIN glue -->
+   <!-- END glue -->
+   <span class="breadcrumb__arrow"> ＞</span>
+   <a href="{url}" rel="v:url" property="v:title">{name}</a></span>
+  <!-- END category:loop -->
+  <!-- BEGIN entry -->
+  <span typeof="v:Breadcrumb">
+   <!-- BEGIN glue -->
+   <!-- END glue -->
+   <span class="breadcrumb__arrow"> ＞</span>
+   <a href="{url}" rel="v:url" property="v:title">{title}[trim(30, '...')]</a></span>
+  <!-- END entry -->
+  <!-- 404.htmlは別ソース -->
+  <!-- search.htmlは別ソース -->
+  <!-- #breadcrumb -->
+ </div>
+</div>
+<!-- END_MODULE Topicpath -->

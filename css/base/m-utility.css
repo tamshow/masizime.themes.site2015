@@ -1,0 +1,595 @@
+@charset "UTF-8";
+/*
+ *    @ margin-bottom
+ *    @ icon
+ *    @ heading
+ *    @ table
+ *    @ list
+ *    @ video
+ *    @ btn
+ *    @ blockquote
+*/
+/* @ margin-bottom
+   --------------------------------*/
+.heading-a {
+  margin-bottom: 10px; }
+
+.heading-b {
+  margin-bottom: 10px; }
+
+.heading-c {
+  margin-bottom: 10px; }
+
+.heading-d {
+  margin-bottom: 10px; }
+
+.heading-e {
+  margin-bottom: 10px; }
+
+.catchcopy {
+  margin-bottom: 10px; }
+
+.table-a {
+  margin-bottom: 30px; }
+
+.table-headline {
+  margin-bottom: 30px; }
+
+.dl-a {
+  margin-bottom: 30px; }
+
+.list-a {
+  margin-bottom: 30px; }
+
+.list-inline {
+  margin-bottom: 30px; }
+
+.list-level--2 {
+  margin-bottom: 30px; }
+
+.blockquote-a {
+  margin-bottom: 30px; }
+
+.btn-a {
+  margin-bottom: 30px; }
+
+.video-container {
+  margin-bottom: 30px; }
+
+/* @ icon
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: アイコン
+name: icon
+category: icon
+---
+
+```html_example
+```
+*/
+.icon-home:before {
+  position: relative;
+  top: .3em;
+  content: '';
+  display: inline-block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -9999px; }
+
+/* @ heading
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: 見出し1
+name: heading-a
+category: heading
+---
+
+
+```html_example
+  <h1 class="heading-a">ダミーテキストです。ご了承ください。</h1>
+```
+*/
+.heading-a {
+  font-size: 20px;
+  font-weight: bold; }
+  @media only screen and (max-width: 74.9375em) {
+    .heading-a {
+      font-size: 20px; } }
+  @media only screen and (max-width: 37.4375em) {
+    .heading-a {
+      font-size: 16px; } }
+
+/*doc
+---
+title: 見出し1 type1
+name: heading-a--type1
+category: heading
+parent: heading-a
+---
+
+
+
+```html_example
+  <h1 class="heading-a heading-a--type1">ダミーテキストです。ご了承ください。</h1>
+```
+
+*/
+.heading-a--type1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #E6B400; }
+  @media only screen and (max-width: 74.9375em) {
+    .heading-a--type1 {
+      font-size: 20px; } }
+  @media only screen and (max-width: 37.4375em) {
+    .heading-a--type1 {
+      font-size: 16px; } }
+
+/*doc
+---
+title: 見出し2
+name: heading-b
+category: heading
+---
+
+
+```html_example
+  <h2 class="heading-b">ダミーテキストです。ご了承ください。</h2>
+```
+*/
+.heading-b {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc; }
+  @media only screen and (max-width: 74.9375em) {
+    .heading-b {
+      font-size: 20px; } }
+  @media only screen and (max-width: 37.4375em) {
+    .heading-b {
+      font-size: 16px; } }
+
+/*doc
+---
+title: 見出し3
+name: heading-c
+category: heading
+---
+
+
+```html_example
+  <h3 class="heading-c">ダミーテキストです。ご了承ください。</h3>
+```
+*/
+.heading-c {
+  font-size: 16px;
+  border-left: 5px solid #ccc;
+  font-weight: bold;
+  padding-left: 5px; }
+
+.acms-entry .heading-c {
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+/*doc
+---
+title: 見出し4
+name: heading-d
+category: heading
+---
+
+
+```html_example
+  <h4 class="heading-d">ダミーテキストです。ご了承ください。</h4>
+```
+*/
+.heading-d {
+  font-size: 16px;
+  font-weight: bold; }
+
+/*doc
+---
+title: キャッチコピー
+name: catchcopy
+category: heading
+---
+
+
+```html_example
+  <p class="catchcopy">ダミーテキストです。ご了承ください。</p>
+```
+*/
+.catchcopy {
+  font-weight: bold; }
+
+/* @ table
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: テーブルのベース
+name: table-a
+category: table
+---
+
+
+```html_example
+<div class="table-a">
+  <table>
+    <tr>
+      <th>ダミータイトル</th>
+      <td>ダミーテキストです。ご了承ください。</td>
+    </tr>
+    <tr>
+      <th>ダミータイトル</th>
+      <td>ダミーテキストです。ご了承ください。</td>
+    </tr>
+  </table>
+</div>
+
+```
+*/
+.table-a {
+  width: auto; }
+  .table-a table {
+    width: 100%;
+    border-top: solid 1px #999999;
+    border-left: solid 1px #999999; }
+  .table-a th,
+  .table-a td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px; }
+  .table-a th {
+    border-right: solid 1px #999999;
+    border-bottom: solid 1px #999999;
+    background-color: #CCC; }
+  .table-a .bg-blue {
+    background-color: #c7e8fa; }
+  .table-a .bg-grange {
+    background-color: #fdeddb; }
+  .table-a td {
+    border-right: solid 1px #999999;
+    border-bottom: solid 1px #999999;
+    background-color: #FFF; }
+
+/*doc
+---
+title: バリエーション block
+name: table--block
+category: table
+parent: table-a
+---
+
+
+
+```html_example
+<div class="table-a table--block">
+  <table>
+    <tr>
+      <th>ダミータイトル</th>
+      <td>ダミーテキストです。ご了承ください。</td>
+    </tr>
+    <tr>
+      <th>ダミータイトル</th>
+      <td>ダミーテキストです。ご了承ください。</td>
+    </tr>
+  </table>
+</div>
+```
+*/
+@media only screen and (max-width: 37.4375em) {
+  .table--block th, .table--block td {
+    float: left;
+    width: 100%;
+    display: block; } }
+
+/*doc
+---
+title: バリエーション responsive
+name: table--responsive
+category: table
+parent: table-a
+---
+
+
+```html_example
+<div class="table-a table--responsive">
+  <table>
+    <tr>
+      <th>ダミータイトル</th>
+      <td>ダミーテキストです。ご了承ください。</td>
+    </tr>
+    <tr>
+      <th>ダミータイトル</th>
+      <td>ダミーテキストです。ご了承ください。</td>
+    </tr>
+  </table>
+</div>
+```
+*/
+@media only screen and (max-width: 37.4375em) {
+  .table--responsive {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-bottom: 5px;
+    position: relative; }
+    .table--responsive td, .table--responsive th {
+      white-space: nowrap; }
+    .table--responsive:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      display: block;
+      font-size: 12px;
+      content: "　この表は左右に動かせます。";
+      padding-bottom: 5px; } }
+
+/* @ list
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: リストのベース
+name: list-a
+category: list
+---
+
+
+```html_example
+<ul class="list-a">
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+</ul>
+
+```
+*/
+.list-a {
+  list-style-position: inside; }
+  .list-a li {
+    text-indent: -1em;
+    padding-left: 1em; }
+
+.acms-entry .list-a {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+/*doc
+---
+title: バリエーション disc
+name: list-a--disc
+category: list
+parent: list-a
+---
+
+
+```html_example
+<ul class="list-a list-a--disc">
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+</ul>
+```
+*/
+.list-a--disc {
+  list-style-type: disc; }
+
+/*doc
+---
+title: バリエーション decimal
+name: list-a--decimal
+category: list
+parent: list-a
+---
+
+
+```html_example
+<ul class="list-a list-a--decimal">
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+</ul>
+```
+*/
+.list-a--decimal {
+  list-style-type: decimal; }
+
+/*doc
+---
+title: 入れ子のリスト
+name: list-level--2
+category: list
+---
+
+
+```html_example
+<ul>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>
+    <ul class="list-a list-a--decimal list-level--2">
+     <li>ダミーテキストです。ご了承ください。</li>
+     <li>ダミーテキストです。ご了承ください。</li>
+     <li>ダミーテキストです。ご了承ください。</li>
+     <li>ダミーテキストです。ご了承ください。</li>
+    </ul>
+  </li>
+</ul>
+```
+*/
+.list-level--2 li {
+  padding-left: 1em; }
+
+/*doc
+---
+title: インラインリスト
+name: list-inline
+category: list
+---
+
+
+```html_example
+<ul class="list-inline">
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+  <li>ダミーテキストです。ご了承ください。</li>
+</ul>
+```
+*/
+.list-inline li {
+  display: inline;
+  margin-right: 8px; }
+
+/*doc
+---
+title: 定義リスト
+name: dl-a
+category: list
+---
+
+
+```html_example
+<dl class="dl-a">
+  <dt>ダミータイトル</dt>
+  <dd>ダミーテキストです。ご了承ください。</dd>
+  <dd>ダミーテキストです。ご了承ください。</dd>
+</dl>
+```
+*/
+.dl-a dd {
+  padding-left: 1em;
+  margin-bottom: 0; }
+
+/* @ video
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: iframe動画
+name: video-container
+category: video
+---
+
+
+```html_example
+<div class="video-container">
+  <iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/7RqMMBk-Au0" width="560"></iframe>
+</div>
+```
+*/
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 25px;
+  padding-bottom: 30.25%;
+  height: 0; }
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.gmap {
+  padding-top: 20px;
+  margin-bottom: 14px;
+  text-align: center; }
+
+/* @ btn
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: ボタン
+name: btn-a
+category: btn
+---
+
+
+
+```html_example
+<div class="btn-a"> <a href="">続きを読む</a></div>
+
+```
+*/
+.btn-a {
+  margin-bottom: 15px; }
+  .btn-a a,
+  .btn-a button {
+    color: #fff;
+    border: none;
+    padding: 20px 60px;
+    display: block;
+    background-color: #a2a2a2;
+    border-radius: 5px;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100%; }
+    .btn-a a:before,
+    .btn-a button:before {
+      content: '';
+      display: inline-block;
+      margin-right: 5px;
+      padding-top: 4px;
+      position: relative; }
+    @media only screen and (max-width: 37.4375em) {
+      .btn-a a,
+      .btn-a button {
+        padding: 20px 20px; } }
+  .btn-a a:hover,
+  .btn-a button:hover {
+    background-color: #6f6f6f; }
+  .btn-a a:active,
+  .btn-a a.sp-hover {
+    box-shadow: none;
+    transform: translate3d(0, 2px, 0);
+    -webkit-transform: translate3d(0, 2px, 0); }
+
+/*doc
+---
+title: バリエーション input
+name: btn-a--input
+category: btn
+parent: btn-a
+---
+
+
+```html_example
+<div class="btn-a">
+<button type="submit">送信内容の確認へ</button>
+</div>
+```
+*/
+/* @ blockquote
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: 引用
+name: blockquote
+category: blockquote
+---
+
+
+```html_example
+
+<blockquote class="blockquote-a">
+ ダミーテキストです。ご了承ください。ダミーテキストです。ご了承ください。ダミーテキストです。ご了承ください。
+</blockquote>
+
+```
+*/

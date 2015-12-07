@@ -1,0 +1,217 @@
+@charset "utf-8";
+@import "../variables";
+
+/*
+ *    @ Footer Layout
+ *    @ footer-sm
+ *    @ footer-md
+ *    @ include
+
+
+*/
+
+/* @  Footer Layout
+ * ------------------------------------------------------------ */
+
+@mixin footer-sm {
+}
+
+@mixin footer-md {
+}
+
+@mixin footer-sm-md-only {
+}
+
+@mixin footer-md-only {
+}
+
+@mixin footer {
+}
+
+/* @  footer-sm
+ * ------------------------------------------------------------ */
+
+@mixin footer-sm {
+  .footer {
+    border-top: 1px solid $border-color;
+    &__inner {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .f-nav {
+    margin-left: -10px;
+    margin-right: -10px;
+    &__body {
+      border-top: 1px solid $border-color;
+    }
+    &__item {
+      border-bottom: 1px solid $border-color;
+      text-align: left;
+      background: none;
+      &:hover {
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+        line-height: 1;
+        display: block;
+        padding: 15px;
+        &:after {
+          float: right;
+          @include fa-icon_custom($fa-var-angle-right);
+        }
+      }
+    }
+  }
+
+  .f-copy {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+
+  }
+  .f-address {
+    margin-top: 20px;
+  }
+
+  //<!-- @if screenM -->
+  //<h3 class="f-dropdown__toggle is-visible--md"><span class="f-menu">メニュー</span></h3>
+  //<!-- @end if -->
+  //<nav class=" f-dropdown__body is-toggle--hidden">
+  //<ul>
+  //<li></li>
+  //</ul>
+  //</nav>
+  .f-menu {
+    text-align: center;
+    font-size: 10px;
+    &:before {
+      @include fa-icon_custom($fa-var-bars);
+      display: block;
+      font-size: 3em;
+    }
+
+  }
+  .f-dropdown__toggle {
+    line-height: 1;
+    padding: 8px 10px;
+    //	border-bottom: 1px solid #999;
+    text-align: center;
+    cursor: pointer;
+  }
+  .f-dropdown__body {
+    height: auto;
+    overflow: hidden;
+  }
+  //js
+  //.f-dropdown__toggle.is-toggle--on{ border-bottom: none;}
+  .f-dropdown__body.is-toggle--hidden {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+/* @  footer-md
+ * ------------------------------------------------------------ */
+
+@mixin footer-md {
+  //footer固定
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: table;
+    width: 100%;
+  }
+  .content {
+    display: table-row;
+    height: 1px;
+    height: 100%;
+  }
+  .footer-bottom {
+    display: table-row;
+    height: 1px;
+  }
+  //footer固定
+
+  .footer {
+    border-top: solid 1px $border-color;
+    padding: .5em;
+
+  }
+  .footer {
+    &__inner {
+      @include outer-container($screen + px);
+      padding: 7px 10px 10px;
+    }
+  }
+  .f-nav {
+    text-align: center;
+    &__item {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.8;
+      display: inline-block;
+
+      &:before {
+        content: " | ";
+        width: 1em;
+        padding-left: 5px;
+      }
+      &:first-child:before {
+        display: none;
+        padding-left: 0;
+      }
+    }
+    &__item--omega {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .f-logo {
+    text-align: center;
+    margin: 15px auto 10px;
+  }
+
+  .f-copy {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .f-address {
+    margin-top: 20px;
+  }
+
+}
+
+/* @  include
+ * ------------------------------------------------------------ */
+
+@include max-media($screen-sm-max) {
+  @include footer-sm {
+  }
+}
+
+@include min-media($screen-md-min) {
+  @include footer-md;
+}
+
+@include max-media($screen-md-max) {
+  @include footer-sm-md-only;
+}
+
+@include min-max-media($screen-md-min, $screen-md-max) {
+  @include footer-md-only;
+}
+
+@include min-media($screen) {
+  @include footer;
+}
+
+.ie8 {
+  @include footer-md;
+  @include footer;
+}

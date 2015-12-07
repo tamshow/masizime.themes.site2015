@@ -1,0 +1,27 @@
+<h3 class="acms-admin-admin-title2">ページタイトル設定</h3>
+<table class="adminTable acms-admin-table-admin-edit">
+ <tr>
+  <th>メインイメージ<i data-acms-tooltip="カテゴリーの メインイメージを設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <td>
+   <!-- BEGIN pageImage@path:veil -->
+   <img src="%{ARCHIVES_DIR}{pageImage@path}" width="600" class="acms-admin-img-responsive"><br>
+   <input type="hidden" name="pageImage@old" value="{pageImage@path}">
+   <label>
+    <input type="checkbox" name="pageImage@edit" value="delete">削除
+   </label>
+   <!-- END pageImage@path:veil -->
+   <input type="file" name="pageImage" size="20">
+   <input type="hidden" name="field[]" value="pageImage">
+   <input type="hidden" name="pageImage:extension" value="image">
+   <input type="hidden" name="pageImage@size" value="1400">
+   <input type="hidden" name="pageImage@filename" value="">
+  </td>
+ </tr>
+ <tr>
+  <th>説明文<i data-acms-tooltip="カテゴリーの 説明文を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <td>
+   <textarea name="pageDescription" rows="5" style="width:80%;">{pageDescription}</textarea>
+   <input type="hidden" name="field[]" value="pageDescription"/>
+  </td>
+ </tr>
+</table>

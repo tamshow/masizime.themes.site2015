@@ -1,0 +1,56 @@
+<h3 class="fieldTitle">
+ <a href="#fadeIndexInfo" class="js-fader fieldTitleFader">一覧の表示設定<span class="acms-admin-icon-arrow-small-down"></span></a>
+</h3>
+<div id="fadeIndexInfo">
+ <table class="adminTable acms-admin-table-admin-edit">
+  <tr>
+   <th>一覧で表示する画像
+    <i data-acms-tooltip="一覧で表示する画像を設定します。" class="acms-icon-tooltip js-acms-tooltip"></i>
+   </th>
+   <td>
+    <!-- BEGIN entryIndexImage@path:veil -->
+    <img src="%{ARCHIVES_DIR}{entryIndexImage@path}" width="300" class="acms-admin-img-responsive">
+    <br>
+    <input type="hidden" name="entryIndexImage@old" value="{entryIndexImage@path}">
+    <label>
+     <input type="checkbox" name="entryIndexImage@edit" value="delete">削除
+    </label>
+    <!-- END entryIndexImage@path:veil -->
+    <input type="file" name="entryIndexImage" size="20">
+    <input type="hidden" name="field[]" value="entryIndexImage">
+    <input type="hidden" name="entryIndexImage:extension" value="image">
+    <input type="hidden" name="entryIndexImage@size" value="1400">
+    <input type="hidden" name="entryIndexImage@squareSize" value="160"/>
+    <input type="hidden" name="entryIndexImage@tinyHeight" value="184"/>
+    <input type="hidden" name="entryIndexImage@filename" value="">
+   </td>
+  </tr>
+  <tr>
+   <th>一覧で表示する説明文
+    <i data-acms-tooltip="一覧で表示する説明文を設定します。" class="acms-icon-tooltip js-acms-tooltip"></i>
+   </th>
+   <td>
+    <textarea name="entryIndexTxt" cols="60" rows="5">{entryIndexTxt}</textarea>
+    <input type="hidden" name="field[]" value="entryIndexTxt"/>
+   </td>
+  </tr>
+ </table>
+</div>
+
+<h3 class="fieldTitle">
+ <a href="#fadeEntryInfo" class="js-fader fieldTitleFader">エントリーの表示設定<span class="acms-admin-icon-arrow-small-down"></span></a>
+</h3>
+<div id="fadeEntryInfo">
+ <table class="adminTable acms-admin-table-admin-edit">
+  <tr>
+   <th>ページネイション</th>
+   <td>
+    <label class="acms-admin-form-checkbox">
+     <input type="checkbox" name="pagerState[]" value="disabled" {pagerState:checked#disabled}/>
+     <i class="acms-admin-ico-checkbox"></i>ページネイションを隠す
+    </label>
+    <input type="hidden" name="field[]" value="pagerState"/>
+   </td>
+  </tr>
+ </table>
+</div>

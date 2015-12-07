@@ -1,0 +1,25 @@
+<!-- BEGIN pager:veil -->
+<div class="pagination">
+ {pageCurAttr}
+ <p class="pagination__lead">全 {itemsAmount} 件中 {itemsFrom} 〜 {itemsTo} 件目を表示</p>
+ <ul class="pagination__body">
+  <!-- BEGIN backLink -->
+  <li class="prev"><a href="{url}">&laquo;</a></li>
+  <!-- END backLink -->
+  <!-- BEGIN firstPage:veil -->
+  <li {pageCurAttr}[raw]><a href="{firstPageUrl}">{firstPage} ...</a></li>
+  <!-- END firstPage:veil -->
+  <!-- BEGIN page:loop -->
+  <li {pageCurAttr}[raw]>
+   <a <!-- BEGIN link#front -->href="{url}"<!-- END link#front --><!-- BEGIN link#rear --><!-- END link#rear -->>{page}</a><!-- BEGIN glue --><!-- END glue -->
+  </li>
+  <!-- END page:loop -->
+  <!-- BEGIN lastPage:veil -->
+  <li {pageCurAttr}[raw]><a href="{lastPageUrl}">... {lastPage}</a></li>
+  <!-- END lastPage:veil -->
+  <!-- BEGIN forwardLink -->
+  <li class="next"><a href="{url}">&raquo;</a></li>
+  <!-- END forwardLink -->
+ </ul>
+</div><!-- END pager:veil -->
+

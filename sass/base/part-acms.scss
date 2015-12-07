@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import "../variables";
+
+.acms-container{
+  @include clearfix;
+}
+
+// ユニットグループを使用したときユニット幅をユニットグループの幅に合わせる記述
+.acms-entry-unit-full {
+  [class*='column-image-'],[class*='column-media-'],[class*='column-map-'],[class*='column-eximage-'],[class*='column-youtube-'],[class*='column-video-'] {
+    //width: 100%!important;
+    width: auto!important;
+  }
+}
+
+
+
+.acms-entry {
+
+
+  //配置右を修正
+  .column-image-right,
+  .column-media-right {
+    text-align: right;
+  }
+  //配置の場合に画像を小さく
+  .column-image-left,
+  .column-image-right {
+    @include max-media($screen-sm-max) {
+    //  width: 40%!important;
+    }
+  }
+
+  //タイトルの回り込み回避
+  h1, h2, h3, h4, h5, h6 {
+    overflow: hidden;
+  }
+
+  //拡張カラム
+  @for $i from 1 through 12 {
+    .m-col#{$i} {
+      @include col-width(12, $alpha-width, 10, auto, $i);
+    }
+  }
+  [class^="m-col"],
+  [class*=" m-col"] {
+    @include col-margin(12, $alpha-width, 10, auto);
+    margin-bottom: 20px;
+    @media only screen and (max-width: ($screen-sm-max/16) + em) {
+      width: auto;
+      float: none;
+      @include clearfix;
+      clear: both;
+      //デフォルトのユニットがPX指定の為上書き
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  //@end 拡張カラム
+
+
+
+  //デフォルトカラムスマフォ段落解除
+  .add-unit-clear,
+  [class^="acms-col"],
+  [class*=" acms-col"]{
+    > *:last-child {
+      margin-bottom: 0;
+    }
+    margin-bottom: 20px;
+    @media only screen and (max-width: ($screen-sm-max/16) + em) {
+      // width: 100%!important;
+      width: auto!important;
+      float: none;
+      @include clearfix;
+    }
+  }
+
+
+
+
+
+
+  .clearHidden {
+    /*標準のクリアにマージン設定*/
+    // margin-bottom: 20px;
+  }
+  [class^="acms-col"],
+  [class*=" acms-col"],
+  [class^="m-col"],
+  [class*=" m-col"] {
+    .clearHidden {
+      /*標準のクリアにマージン設定するが、ユニットの入れ子は無し*/
+      //margin: 0 !important;
+    }
+  }
+
+}
+
+
+
+
+
+
+

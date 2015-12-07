@@ -1,0 +1,16 @@
+@charset "utf-8";
+@mixin t($size: 0, $size-md: false, $size-sm: false) {
+  @include media-property(top, $size, $size-md, $size-sm);
+}
+
+@mixin r($size: 0, $size-md: false, $size-sm: false) {
+  @include media-property(right, $size, $size-md, $size-sm);
+}
+
+@mixin b($size: 0, $size-md: false, $size-sm: false) {
+  @include media-property(bottom, $size, $size-md, $size-sm);
+}
+
+@mixin l($size: 0, $size-md: false, $size-sm: false) {
+  @include media-property(left, $size, $size-md, $size-sm);
+}

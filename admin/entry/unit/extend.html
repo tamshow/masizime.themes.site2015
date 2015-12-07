@@ -1,0 +1,31 @@
+<!-- BEGIN custom_btn -->
+<table class="entryFormColumnSettingTable entryFormColumnTable ">
+ <tbody>
+ <tr>
+  <th>ボタン色</th>
+  <td>
+   <label class="acms-admin-form-radio">
+    <input type="radio" name="custom_btn_class{id}" value="btn-a--gray" {custom_btn_class:checked#btn-a--gray}/>
+    <i class="acms-admin-ico-radio"></i>1</label>
+   <label class="acms-admin-form-radio">
+    <input type="radio" name="custom_btn_class{id}" value="btn-a--gray" {custom_btn_class:checked#btn-a--gray}/>
+    <i class="acms-admin-ico-radio"></i>2</label>
+  </td>
+ </tr>
+ <tr>
+  <th>ボタンURL</th>
+  <td>
+   <input type="text" name="custom_btn_url{id}" value="{custom_btn_url}" class="entryFormInputText acms-form-width-full" style="width: 100%;"/>
+   <input type="hidden" name="unit{id}[]" value="custom_btn_url{id}"/>
+  </td>
+ </tr>
+ <tr>
+  <th>ボタンテキスト</th>
+  <td>
+   <input type="text" name="custom_btn_text{id}" value="{custom_btn_text}" class="entryFormInputText acms-form-width-full" style="width: 100%;"/>
+   <input type="hidden" name="unit{id}[]" value="custom_btn_text{id}"/>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<!-- END custom_btn -->

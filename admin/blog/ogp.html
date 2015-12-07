@@ -1,0 +1,26 @@
+<h3 class="acms-admin-admin-title2">OGP設定</h3>
+<table class="adminTable acms-admin-table-admin-edit">
+ <tr>
+  <th>Facebook admins<i data-acms-tooltip="FacebookのIDを設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <td>
+   <input type="text" name="fbAdmins" value="{fbAdmins}" size="20"/>
+   <input type="hidden" name="field[]" value="fbAdmins"/>
+  </td>
+ </tr>
+ <tr>
+  <th>OGP画像<i data-acms-tooltip="Facebook等で利用するOGP画像を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <td>
+   <!-- BEGIN ogpImage@path:veil -->
+   <img src="%{ARCHIVES_DIR}{ogpImage@path}" style="max-width:100%;"/>
+   <input type="hidden" name="ogpImage@old" value="{ogpImage@path}"/><br/>
+   <label>
+    <input type="checkbox" name="ogpImage@edit" value="delete"/>削除
+   </label>
+   <!-- END ogpImage@path:veil -->
+   <input type="file" name="ogpImage" size="20"/>
+   <input type="hidden" name="field[]" value="ogpImage"/>
+   <input type="hidden" name="ogpImage:extension" value="image"/>
+   <input type="hidden" name="ogpImage@size" value="1200"/>
+  </td>
+ </tr>
+</table>

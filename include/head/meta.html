@@ -1,0 +1,31 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- BEGIN_MODULE Touch_Entry -->
+<link rel="canonical" href="%{PERMALINK}" /><!-- END_MODULE Touch_Entry -->
+<title><!--#include file="/include/head/title.txt"--></title>
+<meta name="viewport" content="width=device-width,  user-scalable=no, initial-scale=1.0">
+<!--#include file="/include/head/robots.html"-->
+<meta property="og:url" content="%{PERMALINK}" />
+<meta property="og:site_name" content="%{ROOT_BLOG_NAME}" />
+<meta property="og:title" content="<!--#include file="/include/head/title.txt"-->" /><!-- BEGIN_MODULE Blog_Field id="global" --><!-- BEGIN fbAdmins:veil -->
+<meta property="fb:admins" content="{fbAdmins}" /><!-- END fbAdmins:veil --><!-- END_MODULE Blog_Field --><!-- BEGIN_MODULE Touch_Top --><!-- BEGIN_MODULE Blog_Field --><!-- BEGIN_IF [%{BID}/eq/1] -->
+<meta property="og:type" content="website" /><!-- ELSE -->
+<meta property="og:type" content="article" /><!-- END_IF --><!-- BEGIN blog_meta_description:veil -->
+<meta property="og:description" content="{blog_meta_description}" /><!-- END blog_meta_description:veil--><!-- BEGIN ogpImage:veil -->
+<meta property="og:image" content="%{HTTP_ARCHIVES_DIR}{ogpImage@path}" /><!-- END ogpImage:veil --><!-- BEGIN blog_meta_description:veil -->
+<meta name="description" content="{blog_meta_description}" /><!-- END blog_meta_description:veil --><!-- BEGIN blog_meta_keywords:veil -->
+<meta name="keywords" content="{blog_meta_keywords}" /><!-- END blog_meta_keywords:veil --><!-- END_MODULE Blog_Field --><!-- END_MODULE Touch_Top --><!-- BEGIN_MODULE Touch_Index --><!-- BEGIN_MODULE Blog_Field --><!-- BEGIN ogpImage:veil -->
+<meta property="og:image" content="%{HTTP_ARCHIVES_DIR}{ogpImage@path}" /><!-- END ogpImage:veil --><!-- END_MODULE Blog_Field -->
+<meta property="og:type" content="article" /><!-- BEGIN_MODULE Touch_Category --><!-- BEGIN_MODULE Category_Field --><!-- BEGIN category_meta_description:veil -->
+<meta property="og:description" content="{category_meta_description}" />
+<meta name="description" content="{category_meta_description}" /><!-- END category_meta_description:veil --><!-- BEGIN category_meta_keywords:veil -->
+<meta name="keywords" content="{category_meta_keywords}" /><!-- END category_meta_keywords:veil --><!-- END_MODULE Category_Field --><!-- END_MODULE Touch_Category --><!-- BEGIN_MODULE Touch_NotCategory --><!-- BEGIN_MODULE Blog_Field -->
+<meta property="og:description" content="{blog_meta_description}" />
+<meta name="description" content="{blog_meta_description}" />
+<meta name="keywords" content="{blog_meta_keywords}" /><!-- END_MODULE Blog_Field --><!-- END_MODULE Touch_NotCategory --><!-- END_MODULE Touch_Index --><!-- BEGIN_MODULE Touch_Entry -->
+<meta property="og:type" content="article" /><!-- BEGIN_MODULE Entry_Summary id="ogpSummary" --><!-- BEGIN unit:loop --><!-- BEGIN entry:loop --><!-- BEGIN image:veil -->
+<meta property="og:image" content="%{HTTP_ROOT}{path}" /><!-- END image:veil --><!-- BEGIN_IF [{entry_meta_description}/nem/] -->
+<meta property="og:description" content="{entry_meta_description}" />
+<meta name="description" content="{entry_meta_description}" /><!-- ELSE -->
+<meta property="og:description" content="{summary}[trim(200, '...')]" />
+<meta name="description" content="{summary}[trim(200, '...')]" /><!-- END_IF --><!-- BEGIN entry_meta_keywords:veil -->
+<meta name="keywords" content="{entry_meta_keywords}" /><!-- END entry_meta_keywords:veil --><!-- END entry:loop --><!-- END unit:loop --><!-- END_MODULE Entry_Summary --><!-- END_MODULE Touch_Entry -->

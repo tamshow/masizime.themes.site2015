@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* @ float
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: フロート
+name: tool-float
+category: tool-float
+---
+
+<div class="styleguide-table"></div>
+View           | Class         |  Description
+---------------|---------------| ---------------- |
+               |  `pull-right` |  フロートレフト    |
+               |  `pull-left`  |  フロートライト    |
+               |  `clearfix`   |  クリアフィックス  |
+               |  `clear-both` |  クリアボス       |
+
+*/
+
+.pull-right { float: right!important;}
+.pull-left { float: left!important;}
+
+.pull-right-none { float: right!important;
+  @include max-media($screen-sm-max) {
+    float: none !important;
+  }
+}
+.pull-left-none { float: left!important;
+  @include max-media($screen-sm-max) {
+    float: none!important;
+  }
+}
+
+
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after { clear: both;}
+}
+.clear-both{ clear: both;}
+

@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* @ img
+ * ------------------------------------------------------------ */
+
+
+/*doc
+---
+title: 画像装飾
+name: tool-img
+category: tool-img
+---
+
+<div class="l-row mb30">
+    <div class="l-col3">
+       <div class="img-frame mb10"><img src="static/img/img.png" alt=""></div>
+      <code>img-frame</code>
+    </div>
+    <div class="l-col3">
+       <div class="img-round mb10"><img src="static/img/img.png" alt=""></div>
+      <code>img-round</code>
+    </div>
+    <div class="l-col3">
+       <div class="img-border mb10"><img src="static/img/img.png" alt=""></div>
+      <code>img-border</code>
+    </div>
+    <div class="l-col3">
+       <div class="img-frame mb10"><img src="static/img/img.png" alt=""></div>
+      <code>img-frame</code>
+    </div>
+</div>
+
+<div class="styleguide-table"></div>
+View                                                                                             | Class              |  Description
+------------------------------------------------------------------------------------------------ | -------------      | --------------------- |
+<p><span class="img-icon--vam"><img src="static/img/icon.png" alt=""></span> アイコン画像</p>      | `img-icon--vam`    |    画像縦中心へ        |
+
+
+
+
+*/
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.ie8 .img-responsive {
+  width: auto;
+}
+
+
+.img-center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.img-frame{
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  @include p(3px);
+  height: auto;
+}
+
+.img-round { border-radius: 15px; }
+
+.img-border {
+  border: 1px solid #fff;
+  outline:1px solid #DBDBDB;
+  }
+
+.img-circle { border-radius: 50%; }
+
+//画像縦中
+.img-icon--vam {
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+}
+
+.caption{
+  //@include fsize(.8em);
+}
