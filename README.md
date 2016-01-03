@@ -1,3 +1,23 @@
+###a-blog cmsプレーンテーマ
+
+####主な機能
+ - site2015のカスタムフィールド値を引き継ぐ
+ - レイアウト機能
+ - スタイルガイド
+ - コンフィグ設定有り
+ - インポートデータ有り
+
+###主なカスタマイズ
+ - ユニット ： tableをdivで囲む追加
+ - ユニット ： iframe追加
+ - ユニット ： GoogleMapのスタッティックマップを非表示
+ - ユニット ： jsの画像幅指定解除
+ - ユニット ： 配置右が連続した場合のclearHiddenを消す(common.js)
+ - カスタムユニット ： ボタンを追加
+ - ユニットグループ ： 背景有りを追加（.m-col12.box-aなど）
+ - レイアウト ： ベースレイアウト（右にコンテンツ、左にサイドナビ
+ - レイアウト ： 共通サイドエリア
+
 ###初めてこのソースを見る方へ
  - css、jsの追加はcustom.css,custom.jsに記入してください。
  - スタイルガイドをdocsフォルダへまとめています。必要に応じて使用してください。
@@ -7,6 +27,9 @@
  - ソースの圧縮をしたい場合はGruntを使用してください。
  - Guidelines http://www.masizime.com/guideline/
  - sass Mixins https://github.com/tamshow/masizime.sass.mixins
+ - テーマダウンロード https://github.com/tamshow/masizime.themes.site2015」
+ - スタイルガイドライン http://www.masizime.com/guideline/
+
 
 ####Grunt build後
   - 複数のcssをbase.min.cssにまとめます。
