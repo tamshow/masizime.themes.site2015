@@ -2,20 +2,16 @@
  <footer class="footer" role="contentinfo">
   <div class="footer__inner">
    <p id="footer-anc" class="sr-only">フッターの始まりです</p>
-   <h3 class="f-dropdown__toggle is-visible--sm">
-    <span class="f-menu">メニュー</span>
-   </h3>
-   <div class="f-nav f-dropdown__body is-toggle--hidden">
-    <nav class="f-nav__body">
-     <ul>
-      <li class="f-nav__item"><a href="%{BASE_URL}docs">スタイルガイド</a></li>
-      <li class="f-nav__item"><a href="%{BASE_URL}docs/sample1.html">ユニットグループ</a></li>
-      <li class="f-nav__item"><a href="%{BASE_URL}docs/sample2.html">ユニットグループ内で配置</a></li>
-      <li class="f-nav__item"><a href="%{BASE_URL}docs/sample3.html">画像の配置とUG段組みの処理</a></li>
-      <li class="f-nav__item"><a href="%{BASE_URL}contact">お問い合わせ</a></li>
-     </ul>
-    </nav>
-   </div>
+   <nav class="f-nav">
+    <ul class="f-nav__body">
+     <li class="f-nav__item"><a href="%{BASE_URL}docs">スタイルガイド</a></li>
+     <li class="f-nav__item"><a href="%{BASE_URL}docs/sample1.html">ユニットグループ</a></li>
+     <li class="f-nav__item"><a href="%{BASE_URL}docs/sample2.html">ユニットグループ内で配置</a></li>
+     <li class="f-nav__item"><a href="%{BASE_URL}docs/sample3.html">画像の配置とUG段組みの処理</a></li>
+     <li class="f-nav__item"><a href="%{BASE_URL}docs/sample4.html">ユニットのパーツ一覧</a></li>
+     <li class="f-nav__item"><a href="%{BASE_URL}contact">お問い合わせ</a></li>
+    </ul>
+   </nav>
    <!-- BEGIN_MODULE Blog_Field id="global" -->
    <dl class="f-address">
     <!-- BEGIN companyName -->
@@ -34,7 +30,27 @@
     <!-- END tel -->
    </dl>
    <p class="f-copy"><!-- BEGIN_MODULE Blog_Field -->{siteFooter}[raw]<!-- END_MODULE Blog_Field --></p>
+   </p>
    <!-- END_MODULE Blog_Field -->
   </div>
  </footer>
 </div>
+
+<!-- BEGIN_MODULE Touch_SessionWithAdministration -->
+<!-- BEGIN_MODULE Touch_NotEdit -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
+<script> HTMLInspector.inspect(
+    {
+     useRules: null, //(Array) 解析のルールの指定
+     domRoot: "body", //(selector | element) 解析を開始するルート
+     exclude: "svg", //(selector | element | Array) 解析の対象としない要素を指定
+     excludeSubTree: ["svg", "iframe"], //(selector | element | Array) 解析の対象としないサブツリー要素を指定
+     onComplete: function(errors) {//(Function) 解析完了時のコールバック
+      errors.forEach(function(error) {
+       console.warn(error.message, error.context)
+      })
+     }
+    })
+</script>
+<!-- END_MODULE Touch_NotEdit -->
+<!-- END_MODULE Touch_SessionWithAdministration -->

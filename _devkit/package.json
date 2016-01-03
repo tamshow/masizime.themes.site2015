@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
@@ -28,6 +28,8 @@
     "grunt-concurrent": "~0.4.0",
     "grunt-prettify": "^0.4.0",
     "grunt-simple-ejs": "~0.4.0",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-csslint": "~0.5.0",
+    "grunt-contrib-jshint": "~0.11.3"
   }
 }

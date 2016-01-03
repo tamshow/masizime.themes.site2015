@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* @ Tool Setting
+ * ------------------------------------------------------------ */
+
+
+/*doc
+---
+title: tool-状態
+name: tool-main
+category: tool-main
+---
+
+<div class="styleguide-table"></div>
+View     | Class              |  Description
+---------| -------------------| ----------------- |
+         | `sr-only`          |  音声ブラウザ用     |
+         | `ie-prompt`        |  古いIEへ警告      |
+         | `is-visible`       |  表示             |
+         | `is-hidden`        |  非表示            |
+         | `is-visible--sm`   |  sm表示            |
+         | `is-visible--md`   |  md表示            |
+         | `is-hidden--sm`    |  sm非表示          |
+         | `is-hidden--md`    |  md非表示          |
+         | `is-visible--print`|  プリント表示       |
+         | `is-hidden--print` |  プリント非表示     |
+         | `is-ctr--sm`       |  smセンター寄せ     |
+         | `is-ctr--md`       |  mdセンター寄せ     |
+         | `is-br--sm`        |  sm改行            |
+         | `is-br--md`        |  md改行            |
+         | `is-br--md-only`   |  mdのみ改行         |
+         | `is-over-scroll--sm`   |  smはみ出したコンテンツをスクロール         |
+         | `is-hidden--mobile`   |  モバイル非表示         |
+         | `is-hidden--tablet`   |  タブレット非表示        |
+         | `is-hidden--desktop`   |  デスクトップ非表示         |
+
+*/
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+
+  //古いIEへ警告
+  .ie-prompt{
+    text-align: center;
+    margin: 0px auto 0px;
+    padding: 10px;
+    background-color:$brand-red;
+    color: #FFF;
+  }
+
+
+	.is-visible{display: block!important;}
+	.is-hidden{display: none!important;}
+
+  // s,mの時は表示
+  .is-visible--sm,
+  .is-visible--md{
+    display: none!important;
+  }
+
+
+  @include max-media($screen-md-max){
+    .is-visible--md {
+      display: block!important;
+    }
+  }
+
+  @include max-media($screen-sm-max){
+    .is-visible--sm,
+    .is-visible--md{
+      display: block!important;
+    }
+  }
+
+  // s,mの時は非表示
+  @include max-media($screen-md-max){
+    .is-hidden--md {
+      display: none!important;
+    }
+  }
+  @include max-media($screen-sm-max){
+    .is-hidden--sm{
+      display: none!important;
+    }
+  }
+
+  // プリント表示非表示
+    @media print {
+      .is-hidden--print{
+        display: none;
+      }
+      .is-visible--print{
+        display: block;
+      }
+    }
+
+
+  // s,mの時はセンター寄せ
+  @include max-media($screen-md-max){
+    .is-ctr--md {
+      text-align: center;
+    }
+  }
+  @include max-media($screen-sm-max){
+    .is-ctr--sm,
+    .is-ctr--md{
+      text-align: center;
+    }
+  }
+
+  // s,mの時改行
+  @include max-media($screen-md-max){
+    .is-br--md:after {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+
+@include min-max-media( $screen-sm-max + 1, $screen-md-max + 1 ) {
+  .is-br--md-only:after{
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+  @include max-media($screen-sm-max){
+    .is-br--sm:after{
+      content: "\A";
+      white-space: pre;
+    }
+  }
+
+.is-over-scroll--sm{
+  @include max-media($screen-sm-max) {
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 100%;
+  }
+}
+
+.tablet .is-hidden--tablet{display: none!important;}
+.mobile .is-hidden--mobile{display: none!important;}
+.desktop .is-hidden--desktop{display: none!important;}
+
+
+
+
+.is-table{
+  display: table;
+  width: 100%;
+}
+.is-table__cell{
+  display: table-cell;
+}
+
+.is-inline{ display: inline;}
+
+.gm-style img{
+  max-width : none;
+}
+.gm-style label{
+  width : auto;
+  display : inline;
+}
+
+
+
+.no-touch a[href^="tel:"] {
+  pointer-events: none;
+}
+
+.touch a[href^="tel:"] {
+  &:after {
+    @include fa-icon_custom($fa-var-external-link);
+    margin-left: 15px;
+  }
+}
+
+.icon-none{
+  &:after {
+   display: none!important;
+  }
+}

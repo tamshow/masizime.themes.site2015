@@ -18,6 +18,8 @@
 <!--#include file="/include/parts/skiplink.html" -->
 <p id="pagetop" class="sr-only">ページの先頭です</p>
 <!--#include file="/include/header.html" -->
+<!--#include file="/include/parts/main-visual.html" -->
+<!--#include file="/include/parts/breadcrumb.html" -->
 <div class="content" role="main">
  <p id="main-anc" class="sr-only">本文の始まりです</p>
 
@@ -29,11 +31,84 @@
     </div>
     <div class="entry__body">
 
-<!--#include file="/include/docs/docs-custom.html" -->
+<h3>初めてこのソースを見る方へ</h3>
+<ul class="styleguide"><li>css、jsの追加はcustom.css,custom.jsに記入してください。</li>
+<li>スタイルガイドをdocsフォルダへまとめています。必要に応じて使用してください。</li>
+<li>アンダースコアではじまるフォルダ開発用フォルダです、実際にサーバーへアップロードする必要ありません。</li>
+<li>Sassファイルは各環境でコンパイルしてください。</li>
+<li>Grunt(build)を使用しなくても動作に問題はありません。圧縮したい場合に使用してください。</li>
+<li>ソースの圧縮をしたい場合はGruntを使用してください。</li>
+<li>Guidelines http://www.masizime.com/guideline/</li>
+<li>sass Mixins https://github.com/tamshow/masizime.sass.mixins</li>
+</ul>
+<h4>Grunt build後</h4>
+<ul class="styleguide"><li>複数のcssをbase.min.cssにまとめます。</li>
+<li>htmlのcssファイルのリンクをbase.min.cssへ変更してください。</li>
+<li>複数のjsファイルbase.min.jsにまとめます。</li>
+<li>htmlのjsファイルのリンクをbase.min.jsへ変更してください。</li>
+</ul>
+<h4>対応ブラウザ</h4>
+<ul class="styleguide"><li>windows mobile</li>
+<li>android 4.4</li>
+<li>ie8〜</li>
+</ul>
+<h4>使用ツール</h4>
+<ul class="styleguide"><li>favicons http://realfavicongenerator.net/</li>
+<li>PageSpeed Insights https://developers.google.com/speed/pagespeed/insights/</li>
+<li>モバイル フレンドリー テスト https://www.google.com/webmasters/tools/mobile-friendly/</li>
+</ul>
+<h4>IE8</h4>
+<ul class="styleguide"><li>svgをpngへ変更</li>
+<li>新しいブラウザインストールを促す警告表示</li>
+<li>レスポンシブしない</li>
+</ul>
+<h4>タッチ端末</h4>
+<ul class="styleguide"><li>電話番号をspan.js-tel-linkくくるとTELリンク</li>
+<li>.js-sp-hoverで疑似的ホバー処理(.sp-hoverが付く)</li>
+</ul>
+<h4>デスクトップ</h4>
+<ul class="styleguide"><li>画像リンク半透明</li>
+</ul>
+<h3>npm sample</h3>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>$ npm install --save -dev</pre>
+  </div>
+</div>
+<h3>Grunt sample</h3>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>$ grunt build</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ grunt sprite</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ grunt imgmin</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ grunt screenshots</pre>
+  </div>
+</div>
+<h3>hologram sample</h3>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>$ bundle install</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ bundle exec hologram _hologram/config.yml</pre>
+  </div>
+</div>
+
 </div>
 </div>
 </div>
 <div class="beta-block">
+ <div class="section">
  <div class="widget-list">
   <h3 class="widget-list__title"></h3>
   <ul class="widget-list__body">
@@ -41,34 +116,38 @@
   </ul>
  </div>
  <div class="widget-list">
-  <h3 class="widget-list__title">スタイルガイド</h3>
-  <ul class="js-doc-nav widget-list__body">
-   <li class="widget-list__item"><a href="acms-module.html">モジュール</a></li>
-   <li class="widget-list__item"><a href="acms-customfield.html">カスタムフィールド</a></li>
-   <li class="widget-list__item"><a href="heading.html">見出し</a></li>
-   <li class="widget-list__item"><a href="table.html">テーブル</a></li>
-   <li class="widget-list__item"><a href="list.html">リスト</a></li>
-   <li class="widget-list__item"><a href="blockquote.html">引用</a></li>
-   <li class="widget-list__item"><a href="btn.html">ボタン</a></li>
-   <li class="widget-list__item"><a href="video.html">動画</a></li>
-   <li class="widget-list__item"><a href="unit.html">ユニット</a></li>
-   <li class="widget-list__item"><a href="tool-main.html">tool-状態(is-)</a></li>
-   <li class="widget-list__item"><a href="tool-color.html">tool-色</a></li>
-   <li class="widget-list__item"><a href="tool-float.html">tool-フロート</a></li>
-   <li class="widget-list__item"><a href="tool-fontsize.html">tool-フォントサイズ</a></li>
-   <li class="widget-list__item"><a href="tool-img.html">tool-画像</a></li>
-   <li class="widget-list__item"><a href="tool-clearance.html">tool-マージン</a></li>
-   <li class="widget-list__item"><a href="tool-text.html">tool-テキスト</a></li>
-   <li class="widget-list__item"><a href="tool-width.html">tool-幅</a></li>
-  </ul>
+ <h3 class="widget-list__title">スタイルガイド</h3>
+ <ul class="js-doc-nav widget-list__body">
+  <li class="widget-list__item"><a href="/docs/acms-customfield.html">カスタムフィールド</a></li>
+  <li class="widget-list__item"><a href="/docs/heading.html">見出し</a></li>
+  <li class="widget-list__item"><a href="/docs/table.html">テーブル</a></li>
+  <li class="widget-list__item"><a href="/docs/list.html">リスト</a></li>
+  <li class="widget-list__item"><a href="/docs/blockquote.html">引用</a></li>
+  <li class="widget-list__item"><a href="/docs/btn.html">ボタン</a></li>
+  <li class="widget-list__item"><a href="/docs/video.html">動画</a></li>
+  <li class="widget-list__item"><a href="/docs/unit.html">ユニット</a></li>
+  <li class="widget-list__item"><a href="/docs/part.html">パーツ</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-main.html">tool-状態(is-)</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-color.html">tool-色</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-float.html">tool-フロート</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-fontsize.html">tool-フォントサイズ</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-img.html">tool-画像</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-clearance.html">tool-マージン</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-text.html">tool-テキスト</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-width.html">tool-幅</a></li>
+ </ul>
+</div>
+
+  <!--#include file="/include/parts/widget.html" -->
  </div>
- <!--#include file="/include/parts/widget.html" -->
 </div>
-</div>
+
 <p id="end-anc" class="sr-only">本文の終わりです</p>
 <!--#include file="/include/parts/to_top.html" -->
 </div>
+</div>
 <!--#include file="/include/footer.html" -->
+
 <script>
  $(document).ready(function () {
   // set the active tab

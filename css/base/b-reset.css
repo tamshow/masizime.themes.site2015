@@ -6,9 +6,6 @@
  *    @ Font Reset
  *    @ Link Reset
 */
-/*!
- *  normalize.css v3.0.2 | MIT License | git.io/normalize
- */
 /* @  Vendor
  * ------------------------------------------------------------ */
 /* @  Reset
@@ -384,25 +381,37 @@ code {
   font-size: 90%;
   color: #c7254e;
   background-color: #f9f2f4;
-  white-space: nowrap;
-  border-radius: 6px; }
+  border-radius: 10; }
+
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 5;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  kbd kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+    box-shadow: none; }
 
 pre {
   display: block;
-  padding: 0.3px;
-  margin: 0 0 0.8px;
-  font-size: 13px;
-  line-height: 1.6;
+  padding: 0.35;
+  margin: 0 0 0.85;
+  font-size: 13;
+  line-height: 1.7;
   word-break: break-all;
   word-wrap: break-word;
   color: #222222;
   background-color: #f5f5f5;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  border-radius: 10; }
   pre code {
     padding: 0;
     font-size: inherit;
     color: inherit;
-    color: #c7254e;
     white-space: pre-wrap;
     background-color: transparent;
     border-radius: 0; }
@@ -417,7 +426,25 @@ pre {
 fieldset {
   padding: 0;
   margin: 0;
-  border: 0; }
+  border: 0;
+  min-width: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.7;
+  font-size: 21;
+  line-height: inherit;
+  color: #222222;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5; }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold; }
 
 input[type="search"] {
   box-sizing: border-box; }
@@ -426,20 +453,18 @@ input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9;
-  /* IE8-9 */
   line-height: normal; }
 
 input[type="file"] {
   display: block; }
 
+input[type="range"] {
+  display: block;
+  width: 100%; }
+
 select[multiple],
 select[size] {
   height: auto; }
-
-select optgroup {
-  font-size: inherit;
-  font-style: inherit;
-  font-family: inherit; }
 
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -448,18 +473,18 @@ input[type="checkbox"]:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
-  height: auto; }
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14;
+  line-height: 1.7;
+  color: black; }
 
-input[type="radio"][disabled], fieldset[disabled] input[type="radio"],
-input[type="checkbox"][disabled], fieldset[disabled]
-input[type="checkbox"] {
-  cursor: not-allowed; }
-
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
- /* @  Print Layout
-* ------------------------------------------------------------ */
-  * {
+  *,
+  *:before,
+  *:after {
     background: transparent !important;
     color: #000 !important;
     box-shadow: none !important;
@@ -469,9 +494,14 @@ input[type="checkbox"] {
   a:visited {
     text-decoration: underline; }
 
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: ""; }
 
   pre,
@@ -489,8 +519,6 @@ input[type="checkbox"] {
   img {
     max-width: 100% !important; }
 
-  @page {
-    margin: 0.5cm; }
   p,
   h2,
   h3 {
@@ -501,8 +529,25 @@ input[type="checkbox"] {
   h3 {
     page-break-after: avoid; }
 
-  body {
-    -webkit-print-color-adjust: exact; } }
+  .navbar {
+    display: none; }
+
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000 !important; }
+
+  .label {
+    border: 1px solid #000; }
+
+  .table {
+    border-collapse: collapse !important; }
+    .table td,
+    .table th {
+      background-color: #fff !important; }
+
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd !important; } }
 /* @  Reset +
  * ------------------------------------------------------------ */
 * {
@@ -578,29 +623,31 @@ img {
 /* @  Font Reset
 * ------------------------------------------------------------ */
 html {
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "ヒラギノ角ゴシック", Hiragino Sans, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   color: #000;
   font-size: 87.5%;
-  line-height: 1.6; }
+  line-height: 1.7; }
   @media only screen and (max-width: 74.9375em) {
     html {
       font-size: 87.5%; } }
   @media only screen and (max-width: 37.4375em) {
     html {
-      font-size: 87.5%; } }
+      font-size: 100%; } }
   @media only screen and (max-width: 74.9375em) {
     html {
-      line-height: 1.6; } }
+      line-height: 1.7; } }
   @media only screen and (max-width: 37.4375em) {
     html {
-      line-height: 1.6; } }
+      line-height: 1.7; } }
 
 body {
-  transition: all .2s linear; }
+  transition: all .2s linear;
+  word-wrap: break-word;
+  overflow-wrap: break-word; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 14px;

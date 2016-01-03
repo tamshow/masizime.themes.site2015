@@ -7,49 +7,32 @@
    <a href="https://www.google.co.jp/search?q=site:%{INHERLINK}" target="_brank">googleで確認</a> |
    <a href="http://search.yahoo.co.jp/search?p=site:%{INHERLINK}" target="_brank">yahooで確認</a>
   </p>
-
-  <h3 class="acms-admin-edit-info-heading">情報設定<!-- BEGIN_MODULE Touch_SessionWithCompilation -->
-   <span class="editLink">[<a href="%{BLOG_URL}bid/%{BID}/admin/blog_edit/">編集</a>]</span><!-- END_MODULE Touch_SessionWithCompilation -->
-  </h3>
+  <h3 class="acms-admin-edit-info-heading">情報設定<!-- BEGIN_MODULE Touch_SessionWithCompilation --> <span class="editLink">[<a href="%{BLOG_URL}bid/%{BID}/admin/blog_edit/">編集</a>]</span><!-- END_MODULE Touch_SessionWithCompilation --></h3>
   <table class="acms-admin-table acms-edit-info-table">
    <tr>
-    <th>タイトル -
-     <small>title</small>
-    </th>
+    <th>タイトル - <small>title</small></th>
     <td><!--#include file="/include/head/title.txt"--></td>
    </tr>
-   <!-- BEGIN blog_meta_keywords:veil -->
+   <!-- BEGIN blog_meta_keywords:veil --><tr>
+   <th>キーワード - <small>keywords</small></th>
+   <td>{blog_meta_keywords}</td>
+  </tr><!-- END blog_meta_keywords:veil -->
    <tr>
-    <th>キーワード -
-     <small>keywords</small>
-    </th>
-    <td>{blog_meta_keywords}</td>
-   </tr>
-   <!-- END blog_meta_keywords:veil -->
-   <tr>
-    <th>概要文 -
-     <small>description</small>
-    </th>
+    <th>概要文 - <small>description</small></th>
     <td>
      <!-- BEGIN_MODULE Touch_Top --><!-- BEGIN_MODULE Blog_Field -->{blog_meta_description}<!-- END_MODULE Blog_Field --><!-- END_MODULE Touch_Top -->
     </td>
    </tr>
-   <!-- BEGIN blog_meta_info:veil -->
-   <tr>
-    <th>出力設定</th>
-    <td><!-- BEGIN_IF [{blog_meta_robots}/eq/noindex] -->
-     <span class="acms-admin-label acms-label-danger acms-inline-space">検索エンジンに表示しない</span><!-- END_IF --><!-- BEGIN_IF [{blog_meta_sitemap}/eq/disabled] -->
-     <span class="acms-admin-label acms-label-danger acms-inline-space">sitemapに出力しない</span><!-- END_IF --><!-- BEGIN_IF [{blog_meta_rss}/eq/disabled] -->
-     <span class="acms-admin-label acms-label-danger acms-inline-space">RSSに出力しない</span><!-- END_IF --></td>
-   </tr>
-   <!-- END blog_meta_info:veil --><!-- BEGIN_MODULE Blog_Field --><!-- BEGIN ogpImage:veil -->
-   <tr>
-    <th>OGP画像 -
-     <small>og:image</small>
-    </th>
-    <td><img src="%{HTTP_ARCHIVES_DIR}{ogpImage@path}" alt="OGP画像" class="acms-admin-edit-info-ogpimage"></td>
-   </tr>
-   <!-- END ogpImage:veil --><!-- END_MODULE Blog_Field -->
+   <!-- BEGIN blog_meta_info:veil --><tr>
+   <th>出力設定</th>
+   <td><!-- BEGIN_IF [{blog_meta_robots}/eq/noindex] -->
+    <span class="acms-admin-label acms-label-danger acms-inline-space">検索エンジンに表示しない</span><!-- END_IF --><!-- BEGIN_IF [{blog_meta_sitemap}/eq/disabled] -->
+    <span class="acms-admin-label acms-label-danger acms-inline-space">sitemapに出力しない</span><!-- END_IF --><!-- BEGIN_IF [{blog_meta_rss}/eq/disabled] -->
+    <span class="acms-admin-label acms-label-danger acms-inline-space">RSSに出力しない</span><!-- END_IF --></td>
+  </tr><!-- END blog_meta_info:veil --><!-- BEGIN_MODULE Blog_Field --><!-- BEGIN ogpImage:veil --><tr>
+   <th>OGP画像 - <small>og:image</small></th>
+   <td><img src="%{HTTP_ARCHIVES_DIR}{ogpImage@path}" alt="OGP画像" class="acms-admin-edit-info-ogpimage"></td>
+  </tr><!-- END ogpImage:veil --><!-- END_MODULE Blog_Field -->
   </table>
  </div>
 </section>

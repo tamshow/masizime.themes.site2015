@@ -1,0 +1,167 @@
+@charset "utf-8";
+@import "../variables";
+
+
+/*
+ *    @ Footer Layout
+ *    @ footer-sm
+ *    @ footer-md
+ *    @ include
+
+
+*/
+
+/* @  Footer Layout
+ * ------------------------------------------------------------ */
+
+@mixin footer-sm {  }
+
+@mixin footer-md {  }
+
+@mixin footer-sm-md-only {  }
+
+@mixin footer-md-only {  }
+
+@mixin footer {  }
+
+
+//footer固定
+//html,
+//body {
+//  height: 100%;
+//}
+//body {
+//  display: table;
+//  width: 100%;
+//}
+//.content {
+//  display: table-row;
+//  height: 1px;
+//  height: 100%;
+//}
+//.footer-bottom {
+//  display: table-row;
+//  height: 1px;
+//}
+//footer固定
+
+
+/* @  footer-sm
+ * ------------------------------------------------------------ */
+
+@mixin footer-sm {
+  .footer {
+    background-color: $main-color;
+  }
+  .f-nav {
+    background-color: $main-color;
+  }
+  .f-nav__item {
+    border-bottom: $border-color solid 1px;
+  }
+  .f-nav__item a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    @include mouse-effect();
+    &:after {
+      @include fa-icon_custom($fa-var-angle-right);
+      float: right;
+      top: .1em;
+      position: relative;
+      font-size: 18px;
+    }
+  }
+
+  .f-logo {
+    text-align: center;
+    margin: 15px auto 10px;
+  }
+
+  .f-copy {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+
+/* @  footer-md
+ * ------------------------------------------------------------ */
+
+
+@mixin footer-md {
+
+  .footer {
+    background-color: $main-color;
+    text-align: center;
+    padding: .5em;
+    @include max-media($screen-sm-max) {
+      font-size: 10px;
+    }
+
+  }
+  .footer {
+    &__inner {
+      @include outer-container($screen + px);
+      padding: 7px 10px 10px;
+    }
+  }
+  .f-nav {
+    text-align: center;
+    &__item {
+      font-size: 13px;
+      line-height: 1.8;
+      display: inline-block;
+
+      &:before {
+        content: " | ";
+        width: 1em;
+        padding-left: 5px;
+      }
+      &:first-child:before {
+        display: none;
+        padding-left: 0;
+      }
+    }
+  }
+  .f-logo {
+    text-align: center;
+    margin: 15px auto 10px;
+  }
+
+  .f-copy {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+
+/* @  include
+ * ------------------------------------------------------------ */
+
+@include max-media($screen-sm-max) {
+  @include footer-sm {
+  }
+}
+
+@include min-media($screen-md-min) {
+  @include footer-md;
+}
+
+@include max-media($screen-md-max) {
+  @include footer-sm-md-only;
+}
+
+@include min-max-media($screen-md-min, $screen-md-max) {
+  @include footer-md-only;
+}
+
+@include min-media($screen) {
+  @include footer;
+}
+
+.ie8 {
+  @include footer-md;
+  @include footer;
+}

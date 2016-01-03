@@ -18,6 +18,8 @@
 <!--#include file="/include/parts/skiplink.html" -->
 <p id="pagetop" class="sr-only">ページの先頭です</p>
 <!--#include file="/include/header.html" -->
+<!--#include file="/include/parts/main-visual.html" -->
+<!--#include file="/include/parts/breadcrumb.html" -->
 <div class="content" role="main">
  <p id="main-anc" class="sr-only">本文の始まりです</p>
 
@@ -77,22 +79,22 @@
 <h2 id="list-a--decimal" class="styleguide">バリエーション decimal</h2>
 <div class="codeExample">
   <div class="exampleOutput">
-    <ul class="list-a list-a--decimal">
+    <ol class="list-a list-a--decimal">
   <li>ダミーテキストです。ご了承ください。</li>
   <li>ダミーテキストです。ご了承ください。</li>
   <li>ダミーテキストです。ご了承ください。</li>
   <li>ダミーテキストです。ご了承ください。</li>
-</ul>
+</ol>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-a list-a--decimal"</span><span class="nt">&gt;</span>
+      <pre><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"list-a list-a--decimal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li&gt;</span>ダミーテキストです。ご了承ください。<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;</span>ダミーテキストです。ご了承ください。<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;</span>ダミーテキストです。ご了承ください。<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;</span>ダミーテキストです。ご了承ください。<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></pre>
+<span class="nt">&lt;/ol&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -179,10 +181,13 @@
     </div>
   </div>
 </div>
+
+
 </div>
 </div>
 </div>
 <div class="beta-block">
+ <div class="section">
  <div class="widget-list">
   <h3 class="widget-list__title">list</h3>
   <ul class="widget-list__body">
@@ -202,34 +207,38 @@
   </ul>
  </div>
  <div class="widget-list">
-  <h3 class="widget-list__title">スタイルガイド</h3>
-  <ul class="js-doc-nav widget-list__body">
-   <li class="widget-list__item"><a href="acms-module.html">モジュール</a></li>
-   <li class="widget-list__item"><a href="acms-customfield.html">カスタムフィールド</a></li>
-   <li class="widget-list__item"><a href="heading.html">見出し</a></li>
-   <li class="widget-list__item"><a href="table.html">テーブル</a></li>
-   <li class="widget-list__item"><a href="list.html">リスト</a></li>
-   <li class="widget-list__item"><a href="blockquote.html">引用</a></li>
-   <li class="widget-list__item"><a href="btn.html">ボタン</a></li>
-   <li class="widget-list__item"><a href="video.html">動画</a></li>
-   <li class="widget-list__item"><a href="unit.html">ユニット</a></li>
-   <li class="widget-list__item"><a href="tool-main.html">tool-状態(is-)</a></li>
-   <li class="widget-list__item"><a href="tool-color.html">tool-色</a></li>
-   <li class="widget-list__item"><a href="tool-float.html">tool-フロート</a></li>
-   <li class="widget-list__item"><a href="tool-fontsize.html">tool-フォントサイズ</a></li>
-   <li class="widget-list__item"><a href="tool-img.html">tool-画像</a></li>
-   <li class="widget-list__item"><a href="tool-clearance.html">tool-マージン</a></li>
-   <li class="widget-list__item"><a href="tool-text.html">tool-テキスト</a></li>
-   <li class="widget-list__item"><a href="tool-width.html">tool-幅</a></li>
-  </ul>
+ <h3 class="widget-list__title">スタイルガイド</h3>
+ <ul class="js-doc-nav widget-list__body">
+  <li class="widget-list__item"><a href="/docs/acms-customfield.html">カスタムフィールド</a></li>
+  <li class="widget-list__item"><a href="/docs/heading.html">見出し</a></li>
+  <li class="widget-list__item"><a href="/docs/table.html">テーブル</a></li>
+  <li class="widget-list__item"><a href="/docs/list.html">リスト</a></li>
+  <li class="widget-list__item"><a href="/docs/blockquote.html">引用</a></li>
+  <li class="widget-list__item"><a href="/docs/btn.html">ボタン</a></li>
+  <li class="widget-list__item"><a href="/docs/video.html">動画</a></li>
+  <li class="widget-list__item"><a href="/docs/unit.html">ユニット</a></li>
+  <li class="widget-list__item"><a href="/docs/part.html">パーツ</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-main.html">tool-状態(is-)</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-color.html">tool-色</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-float.html">tool-フロート</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-fontsize.html">tool-フォントサイズ</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-img.html">tool-画像</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-clearance.html">tool-マージン</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-text.html">tool-テキスト</a></li>
+  <li class="widget-list__item"><a href="/docs/tool-width.html">tool-幅</a></li>
+ </ul>
+</div>
+
+  <!--#include file="/include/parts/widget.html" -->
  </div>
- <!--#include file="/include/parts/widget.html" -->
 </div>
-</div>
+
 <p id="end-anc" class="sr-only">本文の終わりです</p>
 <!--#include file="/include/parts/to_top.html" -->
 </div>
+</div>
 <!--#include file="/include/footer.html" -->
+
 <script>
  $(document).ready(function () {
   // set the active tab

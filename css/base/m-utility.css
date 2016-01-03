@@ -143,7 +143,7 @@ category: heading
 .heading-b {
   font-size: 20px;
   font-weight: bold;
-  border-bottom: 2px solid #ccc; }
+  border-bottom: 2px solid #000; }
   @media only screen and (max-width: 74.9375em) {
     .heading-b {
       font-size: 20px; } }
@@ -171,7 +171,7 @@ category: heading
 */
 .heading-c {
   font-size: 16px;
-  border-left: 5px solid #ccc;
+  border-left: 5px solid #000;
   font-weight: bold;
   padding-left: 5px; }
 
@@ -213,9 +213,48 @@ category: heading
 
 /* @ table
  * ------------------------------------------------------------ */
+.table-a {
+  width: auto; }
+  .table-a table {
+    width: 100%; }
+  .table-a th,
+  .table-a td {
+    text-align: left;
+    vertical-align: top; }
+  .table-a .cell-gray1 {
+    background-color: #aaa; }
+  .table-a .cell-gray2 {
+    background-color: #bbb; }
+  .table-a .cell-gray3 {
+    background-color: #ccc; }
+  @media only screen and (max-width: 37.4375em) {
+    .table-a .is-cell-hidden--sm {
+      display: none; } }
+  @media only screen and (max-width: 37.4375em) {
+    .table-a .is-cell-block--sm {
+      display: block;
+      width: auto; } }
+  @media only screen and (max-width: 37.4375em) {
+    .table-a .is-cell-th--sm {
+      float: left;
+      width: 25%; } }
+  @media only screen and (max-width: 37.4375em) {
+    .table-a .is-cell-td--sm {
+      overflow: hidden; } }
+  .table-a .cell-w170 {
+    width: 170px; }
+    @media only screen and (max-width: 37.4375em) {
+      .table-a .cell-w170 {
+        width: auto; } }
+  .table-a .cell-w100 {
+    width: 100px; }
+    @media only screen and (max-width: 37.4375em) {
+      .table-a .cell-w100 {
+        width: auto; } }
+
 /*doc
 ---
-title: テーブルのベース
+title: テーブル A
 name: table-a
 category: table
 ---
@@ -237,29 +276,24 @@ category: table
 
 ```
 */
-.table-a {
-  width: auto; }
-  .table-a table {
-    width: 100%;
-    border-top: solid 1px #999999;
-    border-left: solid 1px #999999; }
-  .table-a th,
-  .table-a td {
-    text-align: left;
-    vertical-align: middle;
-    padding: 10px; }
-  .table-a th {
-    border-right: solid 1px #999999;
-    border-bottom: solid 1px #999999;
-    background-color: #CCC; }
-  .table-a .bg-blue {
-    background-color: #c7e8fa; }
-  .table-a .bg-grange {
-    background-color: #fdeddb; }
-  .table-a td {
-    border-right: solid 1px #999999;
-    border-bottom: solid 1px #999999;
-    background-color: #FFF; }
+.table-a table {
+  border-top: solid 1px #000;
+  border-left: solid 1px #000; }
+.table-a thead th, .table-a thead td {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 10px; }
+.table-a th,
+.table-a td {
+  padding: 10px; }
+.table-a th {
+  border-right: solid 1px #000;
+  border-bottom: solid 1px #000;
+  background-color: #CCC; }
+.table-a td {
+  border-right: solid 1px #000;
+  border-bottom: solid 1px #000;
+  background-color: #FFF; }
 
 /*doc
 ---
@@ -290,6 +324,70 @@ parent: table-a
   .table--block th, .table--block td {
     float: left;
     width: 100%;
+    display: block; } }
+
+/*doc
+---
+title: バリエーション block2
+name: table--block2
+category: table
+parent: table-a
+---
+
+
+```html_example
+    <div class="table-a table--block2">
+     <table>
+      <thead class="is-cell-hidden--sm">
+      <tr>
+       <th colspan="2" class="cell-gray1 cell-w170">タイトル1</th>
+       <th class="cell-gray2 cell-w100">タイトル2</th>
+       <th>タイトル3</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+       <th colspan="2" rowspan="2" class="cell-gray1">タイトル</th>
+       <td class="cell-gray3 js-cell-th is-cell-th--sm">タイトル</td>
+       <td class="js-cell-td is-cell-td--sm">
+        ダミーテキストです。ご了承ください。
+       </td>
+      </tr>
+      <tr>
+       <td class="cell-gray3 js-cell-th is-cell-th--sm">タイトル</td>
+       <td class="js-cell-td is-cell-td--sm">
+        ダミーテキストです。ご了承ください。
+       </td>
+      </tr>
+
+      <tr>
+       <th colspan="2" class="cell-gray1">タイトル</th>
+       <td class="cell-gray3 js-cell-th is-cell-th--sm">タイトル</td>
+       <td class="js-cell-td is-cell-td--sm">
+        ダミーテキストです。ご了承ください。
+       </td>
+      </tr>
+      <tr>
+       <th rowspan="2" class="cell-gray1 cell-w100">タイトル1</th>
+       <td class="cell-gray2 cell-w100">タイトル2</td>
+       <td class="cell-gray3 js-cell-th is-cell-th--sm">タイトル3</td>
+       <td class="js-cell-td is-cell-td--sm">ダミーテキストです。ご了承ください。
+       </td>
+      </tr>
+      <tr>
+       <td class="cell-gray2">タイトル1</td>
+       <td class="cell-gray3 js-cell-th is-cell-th--sm">タイトル2</td>
+       <td class="js-cell-td is-cell-td--sm">ダミーテキストです。ご了承ください。
+       </td>
+      </tr>
+      </tbody>
+     </table>
+    </div>
+```
+*/
+@media only screen and (max-width: 37.4375em) {
+  .table--block2 th, .table--block2 td {
+    width: auto;
     display: block; } }
 
 /*doc
@@ -399,12 +497,12 @@ parent: list-a
 
 
 ```html_example
-<ul class="list-a list-a--decimal">
+<ol class="list-a list-a--decimal">
   <li>ダミーテキストです。ご了承ください。</li>
   <li>ダミーテキストです。ご了承ください。</li>
   <li>ダミーテキストです。ご了承ください。</li>
   <li>ダミーテキストです。ご了承ください。</li>
-</ul>
+</ol>
 ```
 */
 .list-a--decimal {

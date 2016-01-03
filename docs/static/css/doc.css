@@ -1,4 +1,19 @@
 
+@charset "utf-8";
+
+
+/* add */
+
+.alpha-block h1.styleguide{ font-size: 22px; font-weight: bold; margin-bottom: 10px;}
+.alpha-block h2.styleguide{ font-size: 20px; font-weight: bold; margin-bottom: 10px;}
+.alpha-block h3.styleguide{ font-size: 18px; font-weight: bold; margin-bottom: 10px;}
+.alpha-block h4.styleguide{ font-size: 16px; font-weight: bold; margin-bottom: 10px;}
+.alpha-block h5.styleguide{ font-size: 14px; font-weight: bold; margin-bottom: 10px;}
+.alpha-block ul.styleguide{ margin-bottom: 20px; list-style:disc;  padding-left: 1em;}
+
+/* add */
+
+
 .styleguide-table + table{
   width: 100%;
   border-top: solid 1px #ccc;

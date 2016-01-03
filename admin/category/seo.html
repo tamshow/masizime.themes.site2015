@@ -1,73 +1,59 @@
 <h3 class="acms-admin-admin-title2">SEO</h3>
 <table class="adminTable acms-admin-table-admin-edit">
  <tr>
-  <th>タイトル -
-   <small>title</small>
-   <i data-acms-tooltip="カテゴリーの METAタグ（Title）を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <th>タイトル - <small>title</small><i data-acms-tooltip="カテゴリーの METAタグ（Title）を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
-   <input type="text" name="category_meta_title" value="{category_meta_title}" class="js-countup acms-admin-form-width-medium" data-max="9999" data-label-target=".keyword_countup"/> | %{ROOT_BLOG_NAME}
-   <input type="hidden" name="field[]" value="category_meta_title"/>
-   <input type="hidden" name="category_meta_title:search" value="0"/>
+   <input type="text" name="category_meta_title" value="{category_meta_title}" class="js-countup acms-admin-form-width-medium" data-max="9999" data-label-target=".keyword_countup" /> | %{ROOT_BLOG_NAME}
+   <input type="hidden" name="field[]" value="category_meta_title" />
+   <input type="hidden" name="category_meta_title:search" value="0" />
    <span class="keyword_countup"></span> 文字
   </td>
  </tr>
  <tr>
-  <th>キーワード -
-   <small>keywords</small>
-   <i data-acms-tooltip="カテゴリーの METAタグ（Keywords）を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <th>キーワード - <small>keywords</small><i data-acms-tooltip="カテゴリーの METAタグ（Keywords）を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
-   <input type="text" name="category_meta_keywords" value="{category_meta_keywords}" class="acms-admin-form-width-full"/>
-   <input type="hidden" name="field[]" value="category_meta_keywords"/>
-   <input type="hidden" name="category_meta_keywords:search" value="0"/>
+   <input type="text" name="category_meta_keywords" value="{category_meta_keywords}" class="acms-admin-form-width-full" />
+   <input type="hidden" name="field[]" value="category_meta_keywords" />
+   <input type="hidden" name="category_meta_keywords:search" value="0" />
   </td>
  </tr>
  <tr>
-  <th>概要文 -
-   <small>description</small>
-   <i data-acms-tooltip="カテゴリーの METAタグ（Description）を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <th>概要文 - <small>description</small><i data-acms-tooltip="カテゴリーの METAタグ（Description）を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
    <textarea name="category_meta_description" rows="5" class="js-countup acms-admin-form-width-full" data-max="9999" data-label-target=".description_countup">{category_meta_description}</textarea>
-   <input type="hidden" name="field[]" value="category_meta_description"/>
-   <input type="hidden" name="category_meta_description:search" value="0"/>
-
+   <input type="hidden" name="field[]" value="category_meta_description" />
+   <input type="hidden" name="category_meta_description:search" value="0" />
    <p class="acms-admin-float-right"><span class="description_countup"></span> 文字</p>
   </td>
  </tr>
  <tr>
-  <th>検索エンジン -
-   <small>noindex</small>
-   <i data-acms-tooltip="チェックするとこのカテゴリーをインデックスされないようにします。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <th>検索エンジン - <small>noindex</small><i data-acms-tooltip="チェックするとこのカテゴリーをインデックスされないようにします。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
    <label class="acms-admin-form-checkbox">
-    <input type="checkbox" name="category_meta_robots[]" value="noindex" {category_meta_robots:checked#noindex}/>
+    <input type="checkbox" name="category_meta_robots[]" value="noindex"{category_meta_robots:checked#noindex} />
     <i class="acms-admin-ico-checkbox"></i>検索エンジンに表示しない
    </label>
-   <input type="hidden" name="field[]" value="category_meta_robots"/>
+   <input type="hidden" name="field[]" value="category_meta_robots" />
   </td>
  </tr>
  <tr>
-  <th>サイトマップ -
-   <small>sitemap</small>
-   <i data-acms-tooltip="チェックするとこのカテゴリーをサイトマップに出力しないようにします。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
+  <th>サイトマップ - <small>sitemap</small><i data-acms-tooltip="チェックするとこのカテゴリーをサイトマップに出力しないようにします。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
    <label class="acms-admin-form-checkbox">
-    <input type="checkbox" name="category_meta_sitemap[]" value="disabled" {category_meta_sitemap:checked#disabled}/>
+    <input type="checkbox" name="category_meta_sitemap[]" value="disabled"{category_meta_sitemap:checked#disabled} />
     <i class="acms-admin-ico-checkbox"></i>サイトマップに表示しない
    </label>
-   <input type="hidden" name="field[]" value="category_meta_sitemap"/>
+   <input type="hidden" name="field[]" value="category_meta_sitemap" />
   </td>
  </tr>
  <tr>
-  <th>RSS -
-   <small>rss</small>
-   <i data-acms-tooltip="チェックするとこのカテゴリーのエントリーをRSSに出力しないようにします。" class="acms-admin-icon-tooltip js-acms-tooltip"></i>
-  </th>
+  <th>RSS - <small>rss</small><i data-acms-tooltip="チェックするとこのカテゴリーのエントリーをRSSに出力しないようにします。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
    <label class="acms-admin-form-checkbox">
-    <input type="checkbox" name="category_meta_rss[]" value="disabled" {category_meta_rss:checked#disabled}/>
+    <input type="checkbox" name="category_meta_rss[]" value="disabled"{category_meta_rss:checked#disabled} />
     <i class="acms-admin-ico-checkbox"></i>RSSに表示しない
    </label>
-   <input type="hidden" name="field[]" value="category_meta_rss"/>
+   <input type="hidden" name="field[]" value="category_meta_rss" />
   </td>
  </tr>
 </table>

@@ -1,0 +1,240 @@
+@charset "utf-8";
+@import "../variables";
+
+/*
+ *    @ Header Layout
+ *    @ header
+ *    @ header-sm
+ *    @ header-md
+ *    @ include
+*/
+
+/* @  Header Layout
+ * ------------------------------------------------------------ */
+
+@mixin header-sm {
+}
+
+@mixin header-md {
+}
+
+@mixin header-sm-md-only {
+}
+
+@mixin header-md-only {
+}
+
+@mixin header {
+}
+
+/* @  header
+ * ------------------------------------------------------------ */
+
+.header {
+  background-color: #fff;
+}
+
+/* @  header-sm
+ * ------------------------------------------------------------ */
+@mixin header-sm {
+  .header {
+    position: relative;
+  }
+  .scroll-header-on {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+  }
+  .site-id {
+    padding: 10px;}
+
+
+  .h-dropdown__toggle {
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .h-dropdown__body {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+  }
+  .h-dropdown__body.is-toggle--hidden {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .h-nav{
+    background-color: #666;
+    position: fixed;
+    top: 62px;
+    width: 100%;
+  }
+  .h-nav__item {
+    //height: 2.66667em;
+    border-bottom: #999 solid 1px;
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+
+  .h-nav__item a {
+    display: block;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    color: #fff;
+    @include mouse-effect();
+    &:after {
+      @include fa-icon_custom($fa-var-angle-right);
+      float: right;
+      top: .1em;
+      position: relative;
+      font-size: 18px;
+    }
+    &.icon-nav-down:after {
+      @include fa-icon_custom($fa-var-angle-down);
+    }
+  }
+
+  //2階層目
+  .h-nav__item i:before {
+    position: relative;
+    top: 3px;
+  }
+  .h-nav__item .is-toggle--on i:before {
+    // content: "\f105" !important; //icon-up
+  }
+  .h-nav__body--level2 {
+    background-color: lighten(#666, 13.5%);
+
+  }
+  .h-nav__item--level2 {
+    border-top: #999 solid 1px;
+    a {
+      font-size: 14px;
+      padding: 10px 10px 10px 20px;
+    }
+  }
+
+  //メニューボタン
+  .h-menu-title {
+    position: fixed;
+    z-index: 200;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    //padding-top: 10px;
+    right: 0;
+    top: 0;
+    background-color: $sub-color;
+    border-radius: 0 0 0 8px;
+    i {
+      font-size: 22px;
+      padding-top: 10px;
+    }
+    span {
+      display: block;
+      padding-top: 3px;
+      font-size: 10px;
+    }
+    &.is-toggle--on{
+      i:before {
+        @include fa-icon_custom($fa-var-close);
+      }
+    }
+  }
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #7B7B7B;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+
+}
+
+/* @  header-md
+ * ------------------------------------------------------------ */
+@mixin header-md {
+
+  .header {
+    position: relative;
+    z-index: 999;
+  }
+  .header__inner {
+    @include outer-container($screen + px);
+    @include clearfix;
+    padding: 20px 10px;
+  }
+  .site-id {
+    float: left;
+  }
+
+  .h-nav__body {
+    float: right;
+    @include clearfix;
+    .h-nav__item {
+      float: left;
+      padding-left: 35px;
+      position: relative;
+      > a {
+        color: $text-color;
+        &:hover {
+          color: $main-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  //2階層目
+  .h-nav__body--level2 {
+    display: none;
+    width: 100%;
+   // height: 9px;
+  }
+  .h-nav__item:hover .h-nav__body--level2 {
+    display: block;
+    position: absolute;
+  }
+  .h-nav__item--level2 {
+    a {  }
+  }
+
+
+}
+
+/* @  include
+ * ------------------------------------------------------------ */
+
+@include max-media($screen-sm-max) {
+  @include header-sm {
+  }
+}
+
+@include min-media($screen-md-min) {
+  @include header-md;
+}
+
+@include max-media($screen-md-max) {
+  @include header-sm-md-only;
+}
+
+@include min-max-media($screen-md-min, $screen-md-max) {
+  @include header-md-only;
+}
+
+@include min-media($screen) {
+  @include header;
+}
+
+.ie8 {
+  @include header-md;
+  @include header;
+}

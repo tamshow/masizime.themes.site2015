@@ -5,6 +5,8 @@
  *    @ pagination
  *    @ sns-vertical
  *    @ to-top
+ *    @ media
+ *    @ grid
 */
 /* @  main visual
  * ------------------------------------------------------------ */
@@ -12,50 +14,111 @@
 ---
 title: main-visual
 name: main-visual
-category: unit
+category: part
 ---
 
 ```html_example
-
+<div class="main-visual">
+ <div class="main-visual__inner" style="background-image:url('/')">
+  <h1 class="main-visual__title">タイトル</h1>
+ </div>
+</div>
 ```
 */
+.main-visual {
+  background: #ccc center center no-repeat;
+  box-shadow: inset 0 0 10px rgba(70, 70, 70, 0.3); }
+  .main-visual__inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 6em;
+    position: relative;
+    margin: 0 auto;
+    text-align: right; }
+    .main-visual__inner:before, .main-visual__inner:after {
+      content: " ";
+      display: table; }
+    .main-visual__inner:after {
+      clear: both; }
+    @media only screen and (max-width: 37.4375em) {
+      .main-visual__inner {
+        background-image: none !important;
+        width: auto;
+        height: 3em;
+        text-align: center; } }
+
+.main-visual__title {
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+  left: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 31px;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 37.4375em) {
+    .main-visual__title {
+      font-size: 19px;
+      text-align: center;
+      position: static;
+      line-height: 2.5em;
+      top: 0;
+      margin-top: 0;
+      left: 0; } }
+
 /* @ breadcrumb
  * ------------------------------------------------------------ */
 /*doc
 ---
 title: breadcrumb
 name: breadcrumb
-category: unit
+category: part
 ---
 
 ```html_example
+<div class="breadcrumb">
+<div class="breadcrumb__inner" xmlns:v="http://rdf.data-vocabulary.org/#">
+ <span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">トップページ</a></span>
+ <span typeof="v:Breadcrumb">タイトル</span>
+</div>
+</div>
 
 ```
 */
 .breadcrumb {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-size: 12px; }
+  @media only screen and (max-width: 37.4375em) {
+    .breadcrumb {
+      margin-bottom: 15px; } }
+
+.breadcrumb__inner {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px; }
-  .breadcrumb:before, .breadcrumb:after {
+  padding-right: 10px;
+  padding-left: 10px; }
+  .breadcrumb__inner:before, .breadcrumb__inner:after {
     content: " ";
     display: table; }
-  .breadcrumb:after {
-    clear: both; }
-  .breadcrumb:before, .breadcrumb:after {
-    content: " ";
-    display: table; }
-  .breadcrumb:after {
+  .breadcrumb__inner:after {
     clear: both; }
 
-.breadcrumb__arrow {
-  vertical-align: middle;
-  position: relative;
-  top: -0.1em;
-  font-size: .8em;
-  padding-right: 7px;
-  padding-left: 7px; }
+.breadcrumb a {
+  margin-right: 5px; }
+  .breadcrumb a:after {
+    padding-left: 5px;
+    content: "";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
 
 /* @ pagination
  * ------------------------------------------------------------ */
@@ -63,7 +126,7 @@ category: unit
 ---
 title: pagination
 name: pagination
-category: unit
+category: part
 ---
 
 ```html_example
@@ -94,7 +157,7 @@ category: unit
 ---
 title: sns-vertical
 name: sns-vertical
-category: unit
+category: part
 ---
 
 ```html_example
@@ -125,11 +188,13 @@ category: unit
 ---
 title: to-top
 name: to-top
-category: unit
+category: part
 ---
 
 ```html_example
-
+<p class="to-top js-to-top">
+ <a href="#pagetop"><span>ページトップへ</span></a>
+</p>
 ```
 */
 .to-top {
@@ -138,7 +203,7 @@ category: unit
   right: 10px;
   z-index: 100;
   clear: both;
-  margin: 0 0 0 0; }
+  margin: 0; }
   .to-top a {
     display: block;
     bottom: 10px;
@@ -163,3 +228,202 @@ category: unit
       font-size: 2em; }
   .to-top span {
     display: none; }
+
+/* @ media
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: media
+name: media
+category: part
+---
+
+```html_example
+```
+*/
+.media:before, .media:after {
+  content: " ";
+  display: table; }
+.media:after {
+  clear: both; }
+
+.media__img {
+  margin-bottom: 20px; }
+  @media only screen and (max-width: 37.4375em) {
+    .media__img {
+      margin-bottom: 15px;
+      text-align: center; } }
+
+.media__img.pull-left {
+  margin-right: 40px; }
+  @media only screen and (max-width: 37.4375em) {
+    .media__img.pull-left {
+      margin-right: 20px; } }
+
+.media__img.pull-left-none {
+  margin-right: 40px; }
+  @media only screen and (max-width: 37.4375em) {
+    .media__img.pull-left-none {
+      margin-right: 0; } }
+
+.media__img.pull-right {
+  margin-left: 40px; }
+  @media only screen and (max-width: 37.4375em) {
+    .media__img.pull-right {
+      margin-left: 20px; } }
+
+.media__img.pull-right-none {
+  margin-left: 40px; }
+  @media only screen and (max-width: 37.4375em) {
+    .media__img.pull-right-none {
+      margin-left: 0; } }
+
+@media only screen and (max-width: 37.4375em) {
+  .media__img.pull-left-none,
+  .media__img.pull-right-none {
+    float: none !important; } }
+.media__img img > img {
+  display: block; }
+
+.media__body {
+  overflow: hidden;
+  position: relative;
+  top: -.4em; }
+
+.width--m-auto {
+  width: 300px; }
+  @media only screen and (max-width: 37.4375em) {
+    .width--m-auto {
+      width: auto; } }
+
+/* @ grid
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: コンテンツ用グリッド
+name: grid-col
+category: part
+---
+
+```html_example
+
+```
+<div class="styleguide-table"></div>
+View  | Class              |  Description
+----- | -------------      | --------------------- |
+      | `grid-group--2-1`  |                       |
+      | `grid-group--2`    |                       |
+
+
+*/
+.grid-group--3-2 {
+  display: flex; }
+  @media only screen and (max-width: 37.4375em) {
+    .grid-group--3-2 {
+      flex-direction: column; } }
+  .grid-group--3-2 .grid {
+    float: left;
+    min-height: 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 32.2222222222%;
+    display: flex;
+    flex-direction: column; }
+    .grid-group--3-2 .grid:nth-child(1n) {
+      margin-left: 1.6666666667%; }
+    .grid-group--3-2 .grid:nth-child(3n+1) {
+      margin-left: 0;
+      clear: both; }
+    .ie8 .grid-group--3-2 .grid {
+      margin-left: 1.6666666667%; }
+    .ie8 .grid-group--3-2 .grid.num1 {
+      margin-left: 0; }
+    .ie8 .grid-group--3-2 .grid.num4 {
+      margin-left: 0; }
+    .ie8 .grid-group--3-2 .grid.num7 {
+      margin-left: 0; }
+    .ie8 .grid-group--3-2 .grid.num10 {
+      margin-left: 0; }
+    .ie8 .grid-group--3-2 .grid.num13 {
+      margin-left: 0; }
+    .ie8 .grid-group--3-2 .grid.num16 {
+      margin-left: 0; }
+    .ie8 .grid-group--3-2 .grid.num19 {
+      margin-left: 0; }
+    @media only screen and (max-width: 37.4375em) {
+      .grid-group--3-2 .grid {
+        width: 48.3305509182%; }
+        .grid-group--3-2 .grid:nth-child(3n+1) {
+          clear: none; }
+        .grid-group--3-2 .grid:nth-child(1n) {
+          margin-left: 3.3388981636%; }
+        .grid-group--3-2 .grid:nth-child(2n+1) {
+          margin-left: 0;
+          clear: both; } }
+
+.ie8 .grid-group--3-2 .grid:first-child,
+.ie8 .grid-group--3-2 .grid:first-child + * + * + *,
+.ie8 .grid-group--3-2 .grid:first-child + * + * + * + * + * + * {
+  margin-left: 0 !important;
+  clear: both !important; }
+
+.grid-group--2 .grid {
+  float: left;
+  min-height: 1px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 49.875%; }
+  .grid-group--2 .grid:nth-child(1n) {
+    margin-left: 0.25%; }
+  .grid-group--2 .grid:nth-child(2n+1) {
+    margin-left: 0;
+    clear: both; }
+  .ie8 .grid-group--2 .grid {
+    margin-left: 0.25%; }
+  .ie8 .grid-group--2 .grid.num1 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num3 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num5 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num7 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num9 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num11 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num13 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num15 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num17 {
+    margin-left: 0; }
+  .ie8 .grid-group--2 .grid.num19 {
+    margin-left: 0; }
+  @media only screen and (max-width: 37.4375em) {
+    .grid-group--2 .grid {
+      width: 48.3305509182%; }
+      .grid-group--2 .grid:nth-child(1n) {
+        margin-left: 3.3388981636%; }
+      .grid-group--2 .grid:nth-child(2n+1) {
+        margin-left: 0;
+        clear: both; } }
+
+.ie8 .grid-group--2 .grid:first-child,
+.ie8 .grid-group--2 .grid:first-child + * + *,
+.ie8 .grid-group--2 .grid:first-child + * + * + * + * {
+  margin-left: 0 !important;
+  clear: both !important; }
+
+@media only screen and (max-width: 37.4375em) {
+  .sm-flex-wrap {
+    flex-wrap: wrap; }
+
+  .sm-flex-order1 {
+    order: 1; }
+
+  .sm-flex-order2 {
+    order: 2; }
+
+  .sm-flex-order3 {
+    order: 3; } }

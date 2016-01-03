@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import "mixins/mixins";
+@import "variables-fa";
+@import "sprite_positions_r";
+
+$img-path: '../../img';
+
+// 色設定
+// -------------------------
+
+$gray-darker:          lighten(#000, 13.5%) !default; // #222
+$gray-lighter:         darken(#000, 93.5%)  !default; // #eee
+
+$brand-red:            #E50012 !default;
+$brand-pink:           #F8B3B9 !default;
+
+$brand-brawn:          #611012 !default;
+$brand-orange:         #E6B400 !default;
+$brand-yellow:         #FEDA34 !default;
+
+$brand-blue:           #3CA1DB !default;
+$brand-green:          #17B6A5 !default;
+$brand-orange:         #EEA452 !default;
+$brand-purple:         #5558A3 !default;
+$brand-gray:           #666666 !default;
+
+// サイトカラー
+// -------------------------
+
+$main-color:            #ccc !default;
+$sub-color:             #ccc !default;
+
+$body-bg:               #fff !default;
+$text-color:            #000 !default;
+
+$border-color:          #000 !default;
+
+// リンクカラー
+// -------------------------
+
+$link-color:             #0071BC !default;
+$link-hover-color:       darken($link-color, 15%) !default;
+$hover-bg:               #ccc !default;
+
+// フォントファミリー
+// -------------------------
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-hiragino:    "ヒラギノ角ゴシック", Hiragino Sans, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$font-family-noto:        "Noto Sans Japanese", "ヒラギノ角ゴシック", Hiragino Sans, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$font-family-yugo:        "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$font-family-mincho:      "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+
+
+
+//masizime.mixinsnの値があるため !default削除
+// フォントサイズ
+// -------------------------
+$screen-fsize-sm:   16;
+$screen-fsize-md:   14;
+$screen-fsize:      14;
+
+// line-height
+// -------------------------
+$line-height-base:      1.7;
+$line-height-md:        1.7;
+$line-height-sm:        1.7;
+
+
+
+// line-$border-radius
+// -------------------------
+$border-radius:      10;
+
+
+// レスポンシブ幅設定
+// -------------------------
+$screen:            1200; //1180                  // Base screen
+$screen-md-max:     ($screen - 1);         // Medium screen Max
+$screen-md-min:     600;                   // Medium screen Min
+$screen-sm-max:     ($screen-md-min - 1);  // Small screen  Max
+$screen-sm-min:     320;                   // Small screen  Min
+
+$container-width:        $screen;
+$alpha-width:            860;
+$beta-width:             280;
+

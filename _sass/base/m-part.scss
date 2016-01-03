@@ -1,0 +1,433 @@
+@charset "utf-8";
+@import "../variables";
+
+/*
+ *    @ main-visual
+ *    @ breadcrumb
+ *    @ pagination
+ *    @ sns-vertical
+ *    @ to-top
+ *    @ media
+ *    @ grid
+*/
+
+
+
+/* @  main visual
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: main-visual
+name: main-visual
+category: part
+---
+
+```html_example
+<div class="main-visual">
+ <div class="main-visual__inner" style="background-image:url('/')">
+  <h1 class="main-visual__title">タイトル</h1>
+ </div>
+</div>
+```
+*/
+
+.main-visual {
+  //background: url() $main-color center center no-repeat;
+  background: $main-color center center no-repeat;
+  box-shadow: inset 0 0 10px rgba(70, 70, 70, .3);
+
+  &__inner {
+    @include outer-container($screen + px);
+    @include pr(10px);
+    @include pl(10px);
+    //height: 120px;
+    height: 6em;
+    position: relative;
+    margin: 0 auto;
+    text-align: right;
+    @include max-media($screen-sm-max) {
+      background-image: none!important;
+      width: auto;
+      height: 3em;
+      text-align: center;
+    }
+  }
+}
+
+.main-visual__title {
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+  left: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 31px;
+  text-shadow : 0px 0px 2px rgba(0, 0, 0, 0.3);
+  @include max-media($screen-sm-max) {
+    font-size: 19px;
+    text-align: center;
+    position: static;
+    line-height: 2.5em;
+    top: 0;
+    margin-top: 0;
+    left: 0;
+
+  }
+}
+
+
+
+/* @ breadcrumb
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: breadcrumb
+name: breadcrumb
+category: part
+---
+
+```html_example
+<div class="breadcrumb">
+<div class="breadcrumb__inner" xmlns:v="http://rdf.data-vocabulary.org/#">
+ <span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">トップページ</a></span>
+ <span typeof="v:Breadcrumb">タイトル</span>
+</div>
+</div>
+
+```
+*/
+
+.breadcrumb  {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  @include max-media($screen-sm-max) {
+    margin-bottom: 15px;
+  }
+}
+
+.breadcrumb__inner  {
+  @include outer-container($screen + px);
+  @include pr(10px);
+  @include pl(10px);
+
+}
+
+.breadcrumb  a {
+  margin-right: 5px;
+  &:after {
+    padding-left: 5px;
+    @include fa-icon_custom($fa-var-angle-right);
+  }
+}
+
+/* @ pagination
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: pagination
+name: pagination
+category: part
+---
+
+```html_example
+<div class="pagination">
+  <ul class="pagination__body">
+    <li class="prev">
+      <a href=""><i class="fa fa-angle-left"></i> 前へ</a>
+    </li>
+    <li class="to-archive"><a href="">一覧へ</a></li>
+    <li class="next">
+      <a href="">次へ <i class="fa fa-angle-right"></i></a>
+    </li>
+  </ul>
+</div>
+```
+*/
+.pagination {
+  text-align: center;
+}
+
+.pagination--entry {
+}
+
+.pagination__lead {
+}
+
+.pagination__body {
+  li {
+    display: inline-block;
+    @include pl(5px);
+    @include pr(5px);
+  }
+  .to-archive {
+  }
+  .prev {
+  }
+  .next {
+  }
+}
+
+.img-arrow--right {
+}
+
+.img-arrow--left {
+}
+
+/* @ sns-vertical
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: sns-vertical
+name: sns-vertical
+category: part
+---
+
+```html_example
+  <ul class="sns-vertical">
+    <li class="like-btn"></li>
+    <li class="tweet-btn"></li>
+    <li class="gplus-btn"></li>
+  </ul>
+```
+*/
+
+.sns-vertical {
+  @include clearfix;
+  @include mb(20px);
+  @include pl(0);
+  @include pt(40px);
+  li {
+    float: left;
+    @include mr(12px);
+    list-style: none;
+  }
+  .like-btn {
+  }
+  .gplus-btn {
+  }
+  .tweet-btn {
+  }
+  .hatebu-btn {
+  }
+  .line-btn img {
+  }
+}
+
+/* @ to-top
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: to-top
+name: to-top
+category: part
+---
+
+```html_example
+<p class="to-top js-to-top">
+ <a href="#pagetop"><span>ページトップへ</span></a>
+</p>
+```
+*/
+//ページトップ
+.to-top {
+  position: fixed;
+  bottom: 13px;
+  right: 10px;
+  z-index: 100;
+  clear: both;
+  margin: 0;
+  a {
+    display: block;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 8px;
+    border: 1px solid #999;
+    padding: 5px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    &:after {
+      margin: 2px auto 0;
+      vertical-align: middle;
+      @include fa-icon_custom($fa-var-angle-double-up);
+      color: #000;
+      font-size: 2em;
+    }
+  }
+  span {
+    display: none;
+  }
+}
+
+
+
+
+
+/* @ media
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: media
+name: media
+category: part
+---
+
+```html_example
+```
+*/
+
+
+//flex
+// .media {
+//   display: flex;
+//   align-items: flex-start;
+// }
+// .media__figure { margin-right: 1em; }
+// .media__body { flex: 1; }
+//
+// .media--reverse>.media__figure {
+//   -webkit-box-ordinal-group: 2;
+//   -webkit-order: 1;
+//   -ms-flex-order: 1;
+//   order: 1;
+//   margin: 0 0 0 1em;
+// }
+
+
+.media {
+  @include clearfix;
+}
+
+.media__img {
+  margin-bottom: 20px;
+  @include max-media($screen-sm-max) {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.media__img.pull-left {
+  @include mr(40px, false, 20px);
+}
+
+.media__img.pull-left-none {
+  @include mr(40px, false, 0);
+}
+
+.media__img.pull-right {
+  @include ml(40px, false, 20px);
+}
+
+.media__img.pull-right-none {
+  @include ml(40px, false, 0);
+}
+
+@include max-media($screen-sm-max) {
+  .media__img.pull-left-none,
+  .media__img.pull-right-none {
+    float: none !important;
+  }
+}
+
+.media__img img > img {
+  display: block;
+}
+
+.media__body {
+  overflow: hidden;
+  position: relative; // コンテンツが少し下がってるのを調整
+  top: -.4em; //コンテンツが少し下がってるのを調整
+}
+
+.width--m-auto {
+  width: 300px;
+  @include max-media($screen-sm-max) {
+    width: auto;
+  }
+}
+
+/* @ grid
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: コンテンツ用グリッド
+name: grid-col
+category: part
+---
+
+```html_example
+
+```
+<div class="styleguide-table"></div>
+View  | Class              |  Description
+----- | -------------      | --------------------- |
+      | `grid-group--2-1`  |                       |
+      | `grid-group--2`    |                       |
+
+
+*/
+
+//段組のブロック
+
+//段組のブロック
+.grid-group--3-2 {
+  display: flex;
+  @include max-media($screen-sm-max) {
+    flex-direction: column;
+  }
+  .grid {
+    @include grid-col-base;
+    @include grid-col(3, $screen, 20, $target: ie8);
+    @include max-media($screen-sm-max) {
+      &:nth-child(3n+1){clear: none;}
+      @include grid-col(2, $screen-sm-max, 20 );
+    }
+    display: flex;
+    flex-direction: column;
+  }
+}
+.ie8 .grid-group--3-2 .grid:first-child,
+.ie8 .grid-group--3-2 .grid:first-child + * + * + *,
+.ie8 .grid-group--3-2 .grid:first-child + * + * + * + * + * + *{
+  margin-left: 0!important;
+  clear:both!important;
+}
+
+.grid-group--2 {
+  .grid {
+    @include grid-col-base;
+    @include grid-col(2, $screen, 3, $target: ie8);
+    @include max-media($screen-sm-max) {
+      @include grid-col(2, $screen-sm-max, 20);
+    }
+  }
+}
+.ie8 .grid-group--2 .grid:first-child,
+.ie8 .grid-group--2 .grid:first-child + * + *,
+.ie8 .grid-group--2 .grid:first-child + * + * + * + *{
+  margin-left: 0!important;
+  clear:both!important;
+}
+
+
+
+@include max-media($screen-sm-max) {
+
+  .sm-flex-wrap {
+    flex-wrap: wrap;
+  }
+  .sm-flex-order1 {
+    order: 1;
+  }
+  .sm-flex-order2 {
+    order: 2;
+  }
+  .sm-flex-order3 {
+    order: 3;
+  }
+}
+

@@ -5,25 +5,32 @@
 
   <!-- BEGIN_IF [%{BID}/eq/1/and/%{VIEW}/eq/top] -->
   <h1 class="site-id"><!-- ELSE --><p class="site-id"><!-- END_IF --><a href="%{BASE_URL}">
-  <!-- BEGIN siteLogo:veil --><img src="%{ARCHIVES_DIR}{siteLogo@path}" alt="%{BLOG_NAME}" class="site-id__img"><!-- END siteLogo:veil -->
+   <!-- BEGIN siteLogo:veil --><img src="%{ARCHIVES_DIR}{siteLogo@path}" alt="%{BLOG_NAME}" class="site-id__img"><!-- END siteLogo:veil -->
    <!-- BEGIN siteName:veil --><span class="site-id__text is-hidden--sm">{siteName}</span><!-- END siteName:veil --></a>
    <!-- BEGIN_MODULE Touch_SessionWithCompilation -->
    <span class="editLink  is-hidden--sm">[<a href="%{SCRIPT_ROOT}bid/%{BID}/admin/blog_edit/#acms_custom" class="js-popup_setting">テキストを編集</a>]</span>
    <!-- END_MODULE Touch_SessionWithCompilation -->
-  <!-- BEGIN_IF [%{BID}/eq/1/and/%{VIEW}/eq/top] --></h1><!-- ELSE --></p><!-- END_IF -->
+   <!-- BEGIN_IF [%{BID}/eq/1/and/%{VIEW}/eq/top] --></h1><!-- ELSE --></p><!-- END_IF -->
 
-
-  <div class="is-visible--sm">
-   <div><a class="h-dropdown__toggle"><span class="h-menu">メニュー</span></a></div>
-  </div>
-  <nav class="h-nav h-dropdown__body is-toggle--hidden scroll-view">
-   <p id="nav-anc" class="sr-only">メニューの始まりです</p>
-   <ul class="h-nav__body scroll-view__body">
-    <li class="h-nav__item"><a href="%{BASE_URL}docs"><img class="h-nav__img" src="/img/common/nav01.png" alt=""><span class="h-nav__text">スタイルガイド</span></a></li>
-    <li class="h-nav__item"><a href="%{BASE_URL}docs/sample1.html"><img class="h-nav__img" src="/img/common/nav01.png" alt=""><span class="h-nav__text">ユニットグループ</span></a></li>
-    <li class="h-nav__item"><a href="%{BASE_URL}docs/sample2.html"><img class="h-nav__img" src="/img/common/nav01.png" alt=""><span class="h-nav__text">ユニットグループ内で配置</span></a></li>
-    <li class="h-nav__item"><a href="%{BASE_URL}docs/sample3.html"><img class="h-nav__img" src="/img/common/nav01.png" alt=""><span class="h-nav__text">画像の配置とUG段組みの処理</span></a></li>
-    <li class="h-nav__item"><a href="%{BASE_URL}contact"><img class="h-nav__img" src="/img/common/nav01.png" alt=""><span class="h-nav__text">お問い合わせ</span></a></li>
+  <p id="nav-anc" class="sr-only">メニューの始まりです</p>
+  <div class="menu-overlay"></div>
+  <p class="h-menu-title is-visible--sm h-dropdown__toggle"><i class="fa fa-bars"><span>メニュー</span></i></p>
+  <nav class="h-nav h-dropdown__body is-toggle--hidden">
+   <ul class="h-nav__body">
+    <li class="h-nav__item"><a href="%{BASE_URL}docs">スタイルガイド</a></li>
+    <li class="h-nav__item"><a href="%{BASE_URL}docs/sample1.html">ユニットグループ</a></li>
+    <li class="h-nav__item"><a href="%{BASE_URL}docs/sample2.html">ユニットグループ内で配置</a></li>
+    <li class="h-nav__item"><a href="%{BASE_URL}docs/sample3.html">画像の配置とUG段組みの処理</a></li>
+    <li class="h-nav__item"><a href="%{BASE_URL}docs/sample4.html">ユニットパーツ一覧</a></li>
+    <li class="h-nav__item"><a href="%{BASE_URL}contact">お問い合わせ</a></li>
+    <li class="h-nav__item">
+     <a class="js-sp-dropdown__title is-toggle--on icon-nav-down">ドロップダウンサンプル</a>
+     <ul class="h-nav__body--level2 js-sp-dropdown__body ">
+      <li class="h-nav__item--level2"><a href="%{BASE_URL}sub/index.html">メニュー2-1</a></li>
+      <li class="h-nav__item--level2"><a href="%{BASE_URL}sub/index.html">メニュー2-2</a></li>
+     </ul>
+    </li>
+    <li class="h-nav__item is-visible--sm"><a href="%{BASE_URL}">スマホのみ表示サンプル</a></li>
    </ul>
   </nav>
  </div>

@@ -1,0 +1,191 @@
+@charset "utf-8";
+@import "../variables";
+
+/*
+ *    @ pc-sp
+ *    @ section
+ *    @ entry
+ *    @ unit
+ *    @ box
+
+*/
+
+/* @ pc-sp-group
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: pc-sp-group
+name: pc-sp-group
+category: unit
+---
+
+###特定の状態のみ表示するブロック
+
+*/
+
+.sp-group {
+  display: none;
+  @include max-media($screen-sm-max) {
+    display: block;
+  }
+}
+
+.pc-group {
+  display: block;
+  @include max-media($screen-sm-max) {
+    display: none;
+  }
+}
+
+/* @ section
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: section
+name: section
+category: unit
+---
+
+###要素を囲むブロック
+
+*/
+
+.section {
+  margin-bottom: 40px;
+}
+
+
+
+/* @ entry-group
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: entry-group
+name: entry-group
+category: unit
+---
+
+```html_example
+
+```
+*/
+//要素のブロック ベース
+.entry-group{ @include clearfix; }
+
+
+
+/*doc
+---
+title: entry
+name: entry
+category: unit
+---
+
+```html_example
+
+```
+
+*/
+.entry {
+  &__title {
+  }
+  &__lead {
+  }
+  &__text {
+  }
+  &__text-small {
+  }
+  &__img {  }
+}
+
+
+
+/* @ unit-group
+ * ------------------------------------------------------------ */
+
+/*doc
+---
+title: unit-group
+name: unit-group
+category: unit
+---
+##要素のブロック ベース
+*/
+.unit-group {
+  @include clearfix;
+  margin-bottom: 30px;
+}
+
+
+/*doc
+---
+title: unit
+name: unit
+category: unit
+---
+```html_example
+
+```
+*/
+
+.unit {
+  &__title {
+    @include fsize(20px,20px,16px);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__lead {
+  }
+  &__text {
+  }
+  &__text-small {
+  }
+  &__img {  }
+}
+
+
+
+/* @ box
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: box-a
+name: box-a
+category: part
+---
+
+```html_example
+
+```
+*/
+
+.box-a {
+  @include p(10px);
+  background-color: #FAFAFA;
+  border: 1px solid #CCC;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  a{
+    color: #000;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  &__img{
+    margin-bottom: 5px;
+  }
+  &__caption{
+    color: #808080;
+    font-size: 10px;
+  }
+  &__title{
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  &__text{
+    font-size: 10px;
+  }
+}

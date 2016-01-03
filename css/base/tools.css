@@ -141,7 +141,7 @@ View     | Class              |  Description
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-left: 5px; }
+  margin-left: 15px; }
 
 .icon-none:after {
   display: none !important; }
@@ -168,31 +168,31 @@ View                                                       | Class         | Des
 <p class="color-purple text-bold">ダミーテキストです。</p>    | `color-purple`|               |
 */
 .color-red {
-  color: #E50012; }
+  color: #E50012 !important; }
 
 .color-brawn {
-  color: #611012; }
+  color: #611012 !important; }
 
 .color-yellow {
-  color: #FEDA34; }
+  color: #FEDA34 !important; }
 
 .color-pink {
-  color: #F8B3B9; }
+  color: #F8B3B9 !important; }
 
 .color-blue {
-  color: #3CA1DB; }
+  color: #3CA1DB !important; }
 
 .color-green {
-  color: #17B6A5; }
+  color: #17B6A5 !important; }
 
 .color-orange {
-  color: #E6B400; }
+  color: #E6B400 !important; }
 
 .color-purple {
-  color: #5558A3; }
+  color: #5558A3 !important; }
 
 .color-gray {
-  color: #666666; }
+  color: #666666 !important; }
 
 /*doc
 ---
@@ -731,8 +731,7 @@ View                                                                            
   border-radius: 15px; }
 
 .img-border {
-  border: 1px solid #fff;
-  outline: 1px solid #DBDBDB; }
+  border: 1px solid #000; }
 
 .img-circle {
   border-radius: 50%; }
@@ -5173,6 +5172,12 @@ View        | Class       |  Description
 .ml-0_9em {
   margin-left: -.9em; }
 
+.ml-1em {
+  margin-left: -1em; }
+
+.ml1em {
+  margin-left: 1em; }
+
 .ml0_1em {
   margin-left: .1em; }
 
@@ -5222,6 +5227,12 @@ View        | Class       |  Description
   .ml-0_9em--md {
     margin-left: -.9em; }
 
+  .ml-1em--md {
+    margin-left: -1em; }
+
+  .ml1em--md {
+    margin-left: 1em; }
+
   .ml0_1em--md {
     margin-left: .1em; }
 
@@ -5269,6 +5280,12 @@ View        | Class       |  Description
 
   .ml-0_9em--sm {
     margin-left: -.9em; }
+
+  .ml-1em--sm {
+    margin-left: -1em; }
+
+  .ml1em--sm {
+    margin-left: 1em; }
 
   .ml0_1em--sm {
     margin-left: .1em; }
@@ -5570,16 +5587,16 @@ View                                                  | Class    |  Description
   border-left: none !important; }
 
 .bdt {
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #000; }
 
 .bdr {
-  border-right: 1px solid #ccc; }
+  border-right: 1px solid #000; }
 
 .bdb {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #000; }
 
 .bdl {
-  border-left: 1px solid #ccc; }
+  border-left: 1px solid #000; }
 
 /*doc
 ---
@@ -5737,6 +5754,9 @@ View                                                 | Class       | Description
 <p class="ti-0_7em">text-indent: -0.7em;</p>         | `ti-0_7em`  |             |
 <p class="ti-0_8em">text-indent: -0.8em;</p>         | `ti-0_8em`  |             |
 <p class="ti-0_9em">text-indent: -0.9em;</p>         | `ti-0_9em`  |             |
+<p class="ti-0_9em">text-indent: -0.9em;</p>         | `ti-0_9em`  |             |
+<p class="ti-1em">text-indent: -0.9em;</p>         | `ti-1em`  |             |
+<p class="ti1em">text-indent: -0.9em;</p>         | `ti1em`  |             |
 */
 .ti-0_1em {
   text-indent: -.1em; }
@@ -5765,6 +5785,12 @@ View                                                 | Class       | Description
 .ti-0_9em {
   text-indent: -.9em; }
 
+.ti-1em {
+  text-indent: -1em; }
+
+.ti1em {
+  text-indent: 1em; }
+
 @media only screen and (max-width: 74.9375em) {
   .ti-0_1em--md {
     text-indent: -.1em; }
@@ -5791,7 +5817,13 @@ View                                                 | Class       | Description
     text-indent: -.8em; }
 
   .ti-0_9em--md {
-    text-indent: -.9em; } }
+    text-indent: -.9em; }
+
+  .ti-1em--md {
+    text-indent: -1em; }
+
+  .ti1em--md {
+    text-indent: 1em; } }
 @media only screen and (max-width: 37.4375em) {
   .ti-0_1em--sm {
     text-indent: -.1em; }
@@ -5818,7 +5850,13 @@ View                                                 | Class       | Description
     text-indent: -.8em; }
 
   .ti-0_9em--sm {
-    text-indent: -.9em; } }
+    text-indent: -.9em; }
+
+  .ti-1em--sm {
+    text-indent: -1em; }
+
+  .ti1em--sm {
+    text-indent: 1em; } }
 /*doc
 ---
 title: line-height

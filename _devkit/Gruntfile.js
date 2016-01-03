@@ -9,11 +9,12 @@ module.exports = function (grunt) {
 
    var config = {
       // Configurable paths
-      Version: '1.0.0',
+      Version: '1.1.0',
       appPath: '../..',
       distPath: '..',
       img: 'img',
-      css: 'css'
+      css: 'css',
+      js: 'js'
    };
 
    grunt.initConfig({
@@ -23,14 +24,15 @@ module.exports = function (grunt) {
       autoshot: {
          dist: {
             options: {
-               path: '<%= config.distPath %>/screenshots/',
+               path: '<%= config.distPath %>/_screenshots/',
                remote: {
                   files: [
-                     {src: "http://", dest: "entry-a.jpg", delay: 3000}
+                     {src: "http://masizime.com/", dest: "index.jpg", delay: 3000}
                   ]
                },
-               //viewport: ['320x480', '480x320', '320x568', '568x320', '375x667', '667x375', '414x736', '736x414', '768x1024', '1024x768', '1440x900', '2560x1600', '384x640', '640x384', '602x963', '963x602', '600x960', '960x600', '800x1280', '1280x800', '1280x850', '1020x600']
-               viewport: ['1280x800', '1280x850', '1020x600']
+
+               //viewport: ['320x480', '480x320', '568x320', '667x375', '768x1024','960x600', '1024x768', '1440x900', '2560x1600']
+               viewport: ['320x480', '667x375', '960x600','1024x768', '1440x900', ]
             }
          }
       },
@@ -63,7 +65,7 @@ module.exports = function (grunt) {
       //---------------------------
       autoprefixer: {
          options: {
-            browsers: ['last 2 version', 'android 2.3', 'ie 8', 'ie 9']
+            browsers: ['last 2 version', 'Firefox ESR','Opera 12.1', 'ie 8', 'ie 9']
          },
          dist: {
             files: [{
@@ -91,6 +93,16 @@ module.exports = function (grunt) {
          }
       },
 
+      //jsの圧縮
+      //---------------------------
+      uglify: {
+         dist: {
+            files: {
+               '<%= config.distPath %>/<%= config.js %>/base.min.js': '<%= config.distPath %>/<%= config.js %>/base.min.js'
+            }
+         }
+      },
+
       //ファイルをつなぎ合わせる
       //---------------------------
       concat: {
@@ -100,6 +112,14 @@ module.exports = function (grunt) {
                '<%= config.distPath %>/<%= config.css %>/base/**/*.css'
             ],
             dest: '<%= config.distPath %>/<%= config.css %>/base.min.css'
+         },
+         dist_js_base: {
+            src: [
+               '<%= config.distPath %>/<%= config.js %>/base/vendor/**/*.js',
+               '<%= config.distPath %>/<%= config.js %>/base/plugin.js',
+               '<%= config.distPath %>/<%= config.js %>/base/common.js'
+            ],
+            dest: '<%= config.distPath %>/<%= config.js %>/base.min.js'
          }
       },
 
@@ -166,7 +186,7 @@ module.exports = function (grunt) {
          'all': {
             'src': ['<%= config.distPath %>/<%= config.img %>/sprites/*.{gif,jpeg,jpg,png}'],
             'destImg': '<%= config.distPath %>/<%= config.img %>/sprite.png',
-            'destCSS': '<%= config.distPath %>/sass/_sprite_positions.scss',
+            'destCSS': '<%= config.distPath %>/_sass/_sprite_positions.scss',
             'imgPath': '<%= config.appPath %>/<%= config.img %>/sprite.png',
             //'algorithm': 'top-down',
             //'algorithm': 'left-right',
@@ -195,7 +215,7 @@ module.exports = function (grunt) {
          icons: {
             src: '<%= config.distPath %>/fonts/svg/*.svg', // svgファイル
             dest: '<%= config.distPath %>/fonts', // 書き出し先
-            destCss: '<%= config.distPath %>/sass/fonts', // スタイルの書き出し先
+            destCss: '<%= config.distPath %>/_sass/fonts', // スタイルの書き出し先
             options: {
                font: 'base-fonts', // ベース名 (ファイル名など)
                engine: 'node', // エンジン
@@ -208,7 +228,55 @@ module.exports = function (grunt) {
                }
             }
          }
+      },
+
+
+      //cssLint
+      //---------------------------
+      csslint: {
+         strict: {
+            options: {
+               "important": false,
+               "ids": false,                     //Selectors should not contain IDs.
+               "unique-headings": false,
+               "font-sizes": false,
+               "universal-selector": false,
+               "regex-selectors": false,
+               "vendor-prefix": false,
+               "adjoining-classes": false,
+               "compatible-vendor-prefixes": false,
+               "floats": false,
+               "unqualified-attributes": false,
+               "box-model": false,
+               "duplicate-background-images": false,
+               "star-property-hack": false,
+               "overqualified-elements": false,
+               "gradients": false,
+               "display-property-grouping": false,
+               "box-sizing": false,
+               "outline-none": false,
+               "duplicate-properties": false,
+               "qualified-headings": false,
+               "known-properties": false,
+               "text-indent": false
+            },
+            src: [
+               //css/base-reset.css','css/layout.css','css/module.css'
+               '<%= config.distPath %>/<%= config.css %>/base/**/*.css'
+
+            ]
+         }
+      },
+      // jsHint
+      //-----------------------------
+      jshint: {
+         all: [
+            '<%= config.distPath %>/<%= config.js %>/base/plugin.js',
+            '<%= config.distPath %>/<%= config.js %>/base/common.js',
+            'Gruntfile.js'
+         ]
       }
+
 
 
    });
@@ -222,13 +290,14 @@ module.exports = function (grunt) {
           'cmq:dist',
           'replace:dist',
           'cssmin:dist_base',
-          'replace:comment',
-          'prettify'
+          'uglify'//,
+          //'replace:comment',
+          //'prettify'
        ]);
 
 
    grunt.registerTask('imgmin', [
-      //'svgmin',
+      'svgmin',
       //'imagemin'
    ]);
 
@@ -242,6 +311,12 @@ module.exports = function (grunt) {
 
    grunt.registerTask('screenshots', [
       'autoshot'
+   ]);
+   grunt.registerTask('lint', [
+      'csslint'
+   ]);
+   grunt.registerTask('hint', [
+      'jshint'
    ]);
 
 };

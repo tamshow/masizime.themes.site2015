@@ -4,56 +4,56 @@
   <th>サイト ロゴ<i data-acms-tooltip="サイトのロゴ画像を設定します。（リサイズされません）" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
    <!-- BEGIN siteLogo@path:veil -->
-   <img src="%{ARCHIVES_DIR}{siteLogo@path}"/>
-   <input type="hidden" name="siteLogo@old" value="{siteLogo@path}"/><br/>
+   <img src="%{ARCHIVES_DIR}{siteLogo@path}" />
+   <input type="hidden" name="siteLogo@old" value="{siteLogo@path}" /><br />
    <label>
-    <input type="checkbox" name="siteLogo@edit" value="delete"/>削除
+    <input type="checkbox" name="siteLogo@edit" value="delete" />削除
    </label>
    <!-- END siteLogo@path:veil -->
-   <input type="file" name="siteLogo" size="20"/>
-   <input type="hidden" name="field[]" value="siteLogo"/>
-   <input type="hidden" name="siteLogo:extension" value="image"/>
-   <input type="hidden" name="siteLogo@size" value="{#size}"/>
-   <input type="hidden" name="siteLogo@filename" value=""/> ※リサイズされません
+   <input type="file" name="siteLogo" size="20" />
+   <input type="hidden" name="field[]" value="siteLogo" />
+   <input type="hidden" name="siteLogo:extension" value="image" />
+   <input type="hidden" name="siteLogo@size" value="{#size}" />
+   <input type="hidden" name="siteLogo@filename" value="" /> ※リサイズされません
   </td>
  </tr>
  <tr>
   <th>サイト タイトル<i data-acms-tooltip="サイトのタイトルを文字で表示させる際に設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
-   <input type="text" name="siteName" value="{siteName}" class="acms-admin-form-width-large"/>
-   <input type="hidden" name="field[]" value="siteName"/>
+   <input type="text" name="siteName" value="{siteName}" class="acms-admin-form-width-large" />
+   <input type="hidden" name="field[]" value="siteName" />
   </td>
  </tr>
  <tr>
   <th>サイト 説明<i data-acms-tooltip="ロゴの下に表示する説明文を設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
-   <input type="text" name="siteDescription" value="{siteDescription}" class="acms-admin-form-width-large"/>
-   <input type="hidden" name="field[]" value="siteDescription"/>
+   <input type="text" name="siteDescription" value="{siteDescription}" class="acms-admin-form-width-large" />
+   <input type="hidden" name="field[]" value="siteDescription" />
   </td>
  </tr>
  <tr>
   <th>フッターテキスト<i data-acms-tooltip="フッターのテキストを設定します。" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
-   <input type="text" name="siteFooter" value="{siteFooter}" class="acms-admin-form-width-large"/>
-   <input type="hidden" name="field[]" value="siteFooter"/>
+   <input type="text" name="siteFooter" value="{siteFooter}" class="acms-admin-form-width-large" />
+   <input type="hidden" name="field[]" value="siteFooter" />
   </td>
  </tr>
  <tr>
   <th>ログインヘッダー<i data-acms-tooltip="ログイン画面のヘッダーを設定します。幅：960px" class="acms-admin-icon-tooltip js-acms-tooltip"></i></th>
   <td>
    <!-- BEGIN loginHeaderImage@path:veil -->
-   <img src="%{ARCHIVES_DIR}{loginHeaderImage@path}" width="480"/>
-   <input type="hidden" name="loginHeaderImage@old" value="{loginHeaderImage@path}"/><br/>
+   <img src="%{ARCHIVES_DIR}{loginHeaderImage@path}" width="480" />
+   <input type="hidden" name="loginHeaderImage@old" value="{loginHeaderImage@path}" /><br />
    <label>
-    <input type="checkbox" name="loginHeaderImage@edit" value="delete"/>削除
+    <input type="checkbox" name="loginHeaderImage@edit" value="delete" />削除
    </label>
    <!-- END loginHeaderImage@path:veil -->
-   <input type="file" name="loginHeaderImage" size="20"/>
-   <input type="hidden" name="field[]" value="loginHeaderImage"/>
-   <input type="hidden" name="loginHeaderImage:extension" value="image"/>
-   <input type="hidden" name="loginHeaderImage@width" value="960"/>
-   <input type="hidden" name="loginHeaderImage@tinyWidth" value="480"/>
-   <input type="hidden" name="loginHeaderImage@filename" value=""/>
+   <input type="file" name="loginHeaderImage" size="20" />
+   <input type="hidden" name="field[]" value="loginHeaderImage" />
+   <input type="hidden" name="loginHeaderImage:extension" value="image" />
+   <input type="hidden" name="loginHeaderImage@width" value="960" />
+   <input type="hidden" name="loginHeaderImage@tinyWidth" value="480" />
+   <input type="hidden" name="loginHeaderImage@filename" value="" />
   </td>
  </tr>
 </table>

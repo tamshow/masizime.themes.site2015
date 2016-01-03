@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import "../variables";
+
+/*
+ *    @ Content Layout
+ *    @ content
+ *    @ alpha-block
+ *    @ beta-block
+
+*/
+
+/* @  Content Layout
+ * ------------------------------------------------------------ */
+
+.ie8 body {
+  min-width: $screen + px;
+}
+
+body, html {
+  @include min-media($screen-md-min) {
+    min-width: $screen + px;
+  }
+  @include max-media($screen-sm-max) {
+    overflow-x: hidden;
+    min-width: $screen-sm-min + px;
+  }
+}
+
+/* @ content
+ * ------------------------------------------------------------ */
+
+.content {  }
+
+//acms-container
+.content__inner {
+  @include outer-container($screen + px);
+  @include pr(10px);
+  @include pl(10px);
+  @include clearfix;
+  @include mb(40px);
+
+}
+/* @ alpha-block
+ * ------------------------------------------------------------ */
+//1カラム
+.alpha-block {
+  @include w($alpha-width + px,false,auto);
+  @include pt(20px, false, 10px);
+  @include mb(40px,false,20px);
+  @include media-property(float, right ,false, none);
+}
+
+/* @ beta-block
+ * ------------------------------------------------------------ */
+//2カラム左
+.beta-block {
+  @include media-property(left, right ,false, none);
+  @include w($beta-width + px,false,auto);
+  @include pt(20px,false,10px);
+  @include mb(40px,false,20px);
+}
+
+

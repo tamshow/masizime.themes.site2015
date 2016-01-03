@@ -1,0 +1,385 @@
+@charset "utf-8";
+@import "../variables";
+
+/*
+ *    @ form
+*/
+
+/* @ form
+ * ------------------------------------------------------------ */
+/*doc
+---
+title: form-control
+name: form-control
+category: part
+---
+
+```html_example
+<div class="table-a">
+  <div class="form-err">【入力エラーです】<br>入力内容を確認して再度送信してください。</div>
+<table>
+  <tbody>
+    <tr class="form-unit form-err">
+      <th class="form-head"><label for="form-name">お名前<span class="req">必須</span></label></th>
+      <td class="form-field"><input type="text" name="" value="" size="40" class="form-control w100p" placeholder="例）xxxxxxx">
+      <p class="form-err-text">エラーメッセージ</p>
+      </td>
+    </tr>
+    <tr class="form-unit">
+      <th class="form-head"><label for="form-mail">メールアドレス<span class="req">必須</span></label></th>
+      <td class="form-field"><input type="email" size="40" class="form-control w100p" placeholder="例）あなたのe-mailアドレス">
+      <p class="form-err-text">エラーメッセージ</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="form-head">都道府県 <span class="req">必須</span></th>
+      <td class="form-field">
+        <select class="form-control">
+          <option value="" selected="selected">都道府県</option>
+        </select>
+       <p class="form-err-text">エラーメッセージ</p>
+      </td>
+    </tr>
+
+
+    <tr class="form-unit">
+      <th class="form-head">ラジオボタン<span class="any">任意</span></th>
+      <td class="form-field">
+        <ul class="input-rc-group w50p w100p-sp ">
+          <li><input type="radio"><label for="radio">01</label></li>
+          <li><input type="radio"><label for="radio">02</label></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="form-unit">
+      <th class="form-head">チェックボックス<span class="any">任意</span></th>
+      <td class="form-field">
+        <ul class="input-rc-group w50p w100p-sp ">
+          <li><input type="checkbox"><label for="radio">01</label></li>
+          <li><input type="checkbox"><label for="radio">02</label></li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="form-unit">
+      <th class="form-head"><label for="form-contact">お問い合わせ内容<span class="any">任意</span></label></th>
+      <td class="form-field"><textarea cols="40" rows="10" class="form-control w100p"></textarea></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+```
+*/
+
+.acms-text-error {
+  display: block;
+  color: #FF0000;
+}
+
+.form-err-text {
+  display: none;
+  color: #FF0000;
+}
+
+.form-err {
+  .form-control,
+  select,
+  button {
+    border-color: #FF9797;
+    background-color: #FEE9E9;
+  }
+  .form-err-text {
+    display: block;
+  }
+}
+
+.form-err {
+  .form-control,
+  .input-rc-group.toggle,
+  select,
+  button {
+    border-color: #FF9797;
+    background-color: #FEE9E9;
+  }
+  .form-err-text {
+    display: block;
+  }
+}
+
+.form-err-text {
+  display: none;
+  color: #FF9797;
+  font-size: 12px;
+}
+
+.form-text-space {
+  @include mt(1.5em, false, 0);
+}
+
+.form-unit {
+  margin-bottom: 20px;
+}
+
+.form-head {
+}
+
+.form-field select,
+.form-field input,
+.form-field textarea {
+  //margin-bottom: .5rem;
+}
+
+.form-field input,
+.form-field textarea {
+  //@extend .form-control;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #CCC;
+}
+
+.form-control::-moz-placeholder {
+  color: #CCC;
+}
+
+.form-control:-moz-placeholder {
+  color: #CCC;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #CCC;
+}
+
+.form-control {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  padding: 6px 6px;
+  border: 1px solid $border-color;
+  color: #555;
+  vertical-align: middle;
+  border-radius: 0;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -moz-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+  @include form-control-focus();
+  &:focus,
+  &:hover {
+    background: #fafafa;
+  }
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: #EEE;
+    cursor: not-allowed;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.any {
+}
+
+.req {
+  color: #777;
+  font-size: 10px;
+  background-color: #FFF;
+  border-radius: 2px;
+  padding: 2px 4px;
+  border: 1px solid $border-color;
+  margin-left: 5px;
+  @include max-media($screen-sm-max) {
+    background-color: #EBEBEB;
+    color: #777777;
+    border-radius: 0;
+    border-width: 0;
+    padding: 4px;
+    font-size: 14px;
+  }
+}
+
+//select
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: .01px; /*Firefox用*/
+  text-overflow: ""; /*Firefox用*/
+  background: #fff url('#{$img-path}/form/form_icon_select_bottom.png') 100% center no-repeat;
+  text-align: left;
+  //display: block;
+  cursor: pointer;
+  color: #555;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  padding: 6px 30px 6px 10px;
+  border: 1px solid $border-color;
+  border-radius: 0;
+  &:hover {
+    background: #fff url('#{$img-path}/form/form_icon_select_top.png') 100% center no-repeat;
+  }
+  &:focus,
+  &:active {
+    background: #fff url('#{$img-path}/form/form_icon_select_bottom.png') 100% center no-repeat;
+
+  }
+}
+
+//radio
+
+.input-rc-group {
+  font-size: 0;
+  display: block;
+}
+
+.input-rc-group > li {
+  font-size: 0;
+  line-height: normal;
+  display: block;
+  position: relative;
+  overflow: visible;
+}
+
+.input-rc-group > li + li {
+  margin-top: 10px;
+}
+
+.input-rc-group > li.disabled {
+  opacity: 0.6;
+  color: #999;
+}
+
+.input-rc-group > li label {
+  padding-left: 30px;
+  min-height: 20px;
+  font-size: 14px;
+  color: #585858;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.input-rc-group > li input[type="checkbox"],
+.input-rc-group > li input[type="radio"] {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.input-rc-group > li input[type="checkbox"] + label:before,
+.input-rc-group > li input[type="radio"] + label:before {
+  content: "";
+  background: url('#{$img-path}/form/form_icons.png') 0 0 no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.input-rc-group > li input[type="checkbox"]:disabled + label,
+.input-rc-group > li input[type="radio"]:disabled + label {
+  opacity: 0.6;
+}
+
+.input-rc-group > li input[type="checkbox"]:focus + label,
+.input-rc-group > li input[type="radio"]:focus + label {
+  background-color: rgba(255, 6, 82, 0.1);
+  box-shadow: 0 0 2px 3px rgba(255, 6, 82, 0.1);
+  -webkit-box-shadow: 0 0 2px 3px rgba(255, 6, 82, 0.1);
+  -moz-box-shadow: 0 0 2px 3px rgba(255, 6, 82, 0.1);
+}
+
+.input-rc-group > li input[type="radio"].selected + label, .input-rc-group > li input[type="radio"]:checked + label,
+.input-rc-group > li input[type="checkbox"].selected + label,
+.input-rc-group > li input[type="checkbox"]:checked + label {
+  color: #333333;
+}
+
+.input-rc-group > li input[type="radio"] + label:before {
+  background-position: -40px -40px;
+}
+
+.input-rc-group > li input[type="radio"] + label.selected:before {
+  background-position: -140px -40px;
+}
+
+.input-rc-group > li input[type="radio"].selected + label:before, .input-rc-group > li input[type="radio"]:checked + label:before {
+  background-position: -140px -40px;
+}
+
+.input-rc-group > li input[type="checkbox"] + label:before {
+  background-position: -40px -140px;
+}
+
+.input-rc-group > li input[type="checkbox"] + label.selected:before {
+  background-position: -140px -140px;
+}
+
+.input-rc-group > li input[type="checkbox"].selected + label:before, .input-rc-group > li input[type="checkbox"]:checked + label:before {
+  background-position: -140px -140px;
+}
+
+.input-rc-group.line {
+  margin-top: -10px;
+}
+
+.input-rc-group.line > li {
+  margin-top: 10px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.input-rc-group.line > li:last-child {
+  margin-right: 0;
+}
+
+.input-rc-group.toggle {
+  border: solid 1px #d4d4d4;
+  display: block;
+  font-size: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.input-rc-group.toggle li {
+  margin: 0;
+  width: 50%;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+}
+
+.input-rc-group.toggle li label {
+  cursor: pointer;
+  padding: 6px 14px 4px;
+  display: block;
+}
+
+.input-rc-group.toggle li + li {
+  border-left: solid 1px #d4d4d4;
+  margin: 0;
+}
+
+.input-rc-group.toggle li input[type="checkbox"] + label:before,
+.input-rc-group.toggle li input[type="radio"] + label:before {
+  margin-right: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  left: auto;
+}

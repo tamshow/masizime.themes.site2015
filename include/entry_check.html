@@ -7,48 +7,31 @@
   <a href="https://www.google.co.jp/search?q=site:%{INHERLINK}" target="_brank">googleで確認</a> |
   <a href="http://search.yahoo.co.jp/search?p=site:%{INHERLINK}" target="_brank">yahooで確認</a>
  </p>
-
  <h3 class="acms-admin-edit-info-heading">情報設定</h3>
  <table class="acms-admin-table acms-edit-info-table">
   <tr>
-   <th>タイトル -
-    <small>title</small>
-   </th>
+   <th>タイトル - <small>title</small></th>
    <td><!--#include file="/include/head/title.txt"--></td>
   </tr>
-  <!-- BEGIN entry_meta_keywords:veil -->
+  <!-- BEGIN entry_meta_keywords:veil --><tr>
+  <th>キーワード - <small>keywords</small></th>
+  <td>{entry_meta_keywords}</td>
+ </tr><!-- END entry_meta_keywords:veil -->
   <tr>
-   <th>キーワード -
-    <small>keywords</small>
-   </th>
-   <td>{entry_meta_keywords}</td>
-  </tr>
-  <!-- END entry_meta_keywords:veil -->
-  <tr>
-   <th>概要文 -
-    <small>description</small>
-   </th>
+   <th>概要文 - <small>description</small></th>
    <td>
     <!-- BEGIN_MODULE Touch_Entry --><!-- BEGIN_MODULE Entry_Summary id="ogpSummary" --><!-- BEGIN unit:loop --><!-- BEGIN entry:loop --><!-- BEGIN image:veil --><!-- END image:veil --><!-- BEGIN_IF [{entry_meta_description}/nem/] -->{entry_meta_description}<!-- ELSE -->{summary}[trim(200, '...')]<!-- END_IF --><!-- BEGIN entry_meta_keywords:veil --><!-- END entry_meta_keywords:veil --><!-- END entry:loop --><!-- END unit:loop --><!-- END_MODULE Entry_Summary --><!-- END_MODULE Touch_Entry -->
    </td>
   </tr>
-  <!-- BEGIN entry_meta_info:veil -->
-  <tr>
-   <th>出力設定</th>
-   <td><!-- BEGIN_IF [{entry_meta_sitemap}/eq/disabled] --><span class="acms-admin-label acms-label-danger acms-inline-space">検索エンジンに表示しない</span><!-- END_IF --><!-- BEGIN_IF [{entry_meta_sitemap}/eq/disabled] --><span class="acms-admin-label acms-label-danger acms-inline-space">サイトマップに表示しない</span><!-- END_IF --><!-- BEGIN_IF [{entry_meta_rss}/eq/disabled] --><span class="acms-admin-label acms-label-danger acms-inline-space">RSSに出力しない</span><!-- END_IF -->
-   </td>
-  </tr>
-  <!-- END entry_meta_info:veil -->
-  <!-- BEGIN_MODULE Entry_Summary id="ogpSummary" --><!-- BEGIN ogpimageRow:veil -->
-  <tr>
-   <th>OGP画像 -
-    <small>og:image</small>
-   </th>
-   <td>
-    <!-- BEGIN unit:loop --><!-- BEGIN entry:loop --><!-- BEGIN ogpimage:veil --><img src="%{ROOT_DIR}{path}" alt="OGP画像" class="acms-admin-edit-info-ogpimage"/><!-- END ogpimage:veil --><!-- END entry:loop --><!-- END unit:loop -->
-   </td>
-  </tr>
-  <!-- END ogpimageRow:veil --><!-- END_MODULE Entry_Summary -->
+  <!-- BEGIN entry_meta_info:veil --><tr>
+  <th>出力設定</th>
+  <td><!-- BEGIN_IF [{entry_meta_sitemap}/eq/disabled] --><span class="acms-admin-label acms-label-danger acms-inline-space">検索エンジンに表示しない</span><!-- END_IF --><!-- BEGIN_IF [{entry_meta_sitemap}/eq/disabled] --><span class="acms-admin-label acms-label-danger acms-inline-space">サイトマップに表示しない</span><!-- END_IF --><!-- BEGIN_IF [{entry_meta_rss}/eq/disabled] --><span class="acms-admin-label acms-label-danger acms-inline-space">RSSに出力しない</span><!-- END_IF --></td>
+ </tr><!-- END entry_meta_info:veil -->
+  <!-- BEGIN_MODULE Entry_Summary id="ogpSummary" --><!-- BEGIN ogpimageRow:veil --><tr>
+  <th>OGP画像 - <small>og:image</small></th>
+  <td>
+   <!-- BEGIN unit:loop --><!-- BEGIN entry:loop --><!-- BEGIN ogpimage:veil --><img src="%{ROOT_DIR}{path}" alt="OGP画像" class="acms-admin-edit-info-ogpimage" /><!-- END ogpimage:veil --><!-- END entry:loop --><!-- END unit:loop --></td>
+ </tr><!-- END ogpimageRow:veil --><!-- END_MODULE Entry_Summary -->
  </table>
 </section>
 <!-- END_MODULE Entry_Field -->
