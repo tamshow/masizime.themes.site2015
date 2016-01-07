@@ -1,5 +1,7 @@
 ###a-blog cmsプレーンテーマ
 
+ - サンプルサイト http://www.masizime.com/acms/
+
 ####主な機能
  - site2015のカスタムフィールド値を引き継ぐ
  - レイアウト機能
@@ -26,7 +28,7 @@
  - ソースの圧縮をしたい場合はGruntを使用してください。
  - Guidelines http://www.masizime.com/guideline/
  - sass Mixins https://github.com/tamshow/masizime.sass.mixins
- - テーマダウンロード https://github.com/tamshow/masizime.themes.site2015」
+ - テーマダウンロード https://github.com/tamshow/masizime.themes.site2015
  - スタイルガイドライン http://www.masizime.com/guideline/
 
 
@@ -38,8 +40,13 @@
 
 ####対応ブラウザ
  - windows mobile
- - android 4.4
+ - android 4.4〜
+ - iOS8〜
  - ie8〜
+ - Edge 最新
+ - Chrome 最新
+ - Firefox 最新
+ - Safari 最新
 
 ####使用ツール
  - favicons http://realfavicongenerator.net/
@@ -80,10 +87,6 @@ $ grunt sprite
 
 ```bash
 $ grunt imgmin
-```
-
-```bash
-$ grunt screenshots
 ```
 
 
